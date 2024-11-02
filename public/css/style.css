@@ -69,10 +69,11 @@ a.text-primary {
   a.text-primary:hover {
     color: #b84592 !important; }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
-  font-family: "Cormorant Garamond", serif;
- 
-  color: #black; }
+    h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+      font-family: "Cormorant Garamond", serif;
+      color: black;
+    }
+    
 
 .btn {
   padding-top: 15px;
@@ -84,7 +85,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: .05rem;
-  border-radius: ; }
+  border-radius: 8px; }
   .btn:active, .btn:focus {
     outline: none;
     -webkit-box-shadow: none;
@@ -889,7 +890,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 .untree_co-section {
   padding: 100px 0;
   position: relative; }
-  
+
 .untree_co-section .bg-light {
     background-color: #ffffff;
     background-image: none; /* Xóa ảnh nền nếu có */
