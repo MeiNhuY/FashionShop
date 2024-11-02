@@ -889,6 +889,12 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 .untree_co-section {
   padding: 100px 0;
   position: relative; }
+  
+.untree_co-section .bg-light {
+    background-color: #ffffff;
+    background-image: none; /* Xóa ảnh nền nếu có */
+}
+
   @media (max-width: 991.98px) {
     .untree_co-section {
       padding: 50px 0; } }
@@ -1623,7 +1629,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 
 .site-footer {
   background-color:  #a35f0c;
-  font-size: 14px;
+  font-size: 15px;
   padding: 100px 0 70px 0; }
   .site-footer a {
     color: #000000;
@@ -1670,8 +1676,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
         background: #c769a8; }
   .site-footer .copyright a {
     color: #000000;
+    text-decoration: none;
     display: inline-block; }
     .site-footer .copyright a:before {
+      text-decoration: none;
       content: "";
       height: 1px;
       left: 0;

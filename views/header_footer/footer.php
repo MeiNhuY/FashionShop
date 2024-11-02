@@ -47,8 +47,8 @@
 								<path fill-rule="evenodd" d="M12 13a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 1a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
 							</svg>
 						</div>
-						<h3>Worldwide Delivery</h3>
-						<p>Far far away, behind the word mountains, far from the countries.</p>
+						<h3>Vận chuyển</h3>
+						<p>Free ship cho đơn hàng trên 200.000VND trên toàn quốc</p>
 					</div>
 				</div>
 				<div class="col-12 col-sm-6 col-md-4 mb-3 mb-md-0">
@@ -60,8 +60,8 @@
 								<path d="M7.411 8.034a.5.5 0 0 1 .493-.417h.156a.5.5 0 0 1 .492.414l.347 2a.5.5 0 0 1-.493.585h-.835a.5.5 0 0 1-.493-.582l.333-2z"/>
 							</svg>
 						</div>
-						<h3>Secure Payments</h3>
-						<p>Far far away, behind the word mountains, far from the countries.</p>
+						<h3>An toàn</h3>
+						<p>Vận chuyển đảm bảo sản phẩm còn nguyên vẹn</p>
 					</div>
 				</div>
 				<div class="col-12 col-sm-6 col-md-4 mb-3 mb-md-0">
@@ -72,8 +72,8 @@
 								<path fill-rule="evenodd" d="M7.854.146a.5.5 0 0 0-.708 0l-2.5 2.5a.5.5 0 0 0 0 .708l2.5 2.5a.5.5 0 1 0 .708-.708L5.707 3 7.854.854a.5.5 0 0 0 0-.708z"/>
 							</svg>
 						</div>
-						<h3>Simple Returns</h3>
-						<p>Far far away, behind the word mountains, far from the countries.</p>
+						<h3>Chất lượng</h3>
+						<p>Sản phẩm luôn chất lượng cao về mặt thẩm mỹ, chất liệu</p>
 					</div>
 				</div>
 			</div>
