@@ -432,6 +432,147 @@ a.text-primary {
 }
 
 
+/* chữ */
+.section-heading h3 {
+  font-size: 2.5rem;
+  font-weight: 700px;
+  color: #000;
+  position: relative;
+  margin-top: 30px;
+  padding-bottom: 20px;
+  margin-bottom: 70px;
+  font-family: "Cormorant Garamond", serif;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.section-heading h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%); /* Căn giữa dòng gạch dưới */
+  width: 90px; /* Độ rộng của dòng gạch dưới */
+  height: 1.2px; /* Độ dày của dòng gạch dưới */
+  background-color: #000; /* Màu sắc của dòng gạch dưới */
+}
+
+
+/* chu2 */
+.featured-rooms {
+  margin-top: 50px;  /* Khoảng cách phía trên */
+  margin-bottom: 70px; /* Khoảng cách phía dưới */
+}
+
+.suite-contents {
+  margin-top: 30px; /* Khoảng cách phía trên cho nội dung bên trong */
+}
+
+#khoangcach2 {
+    padding-top: 0px;
+}
+
+#khoangcach2 {
+  padding-bottom: 0px;
+}
+/* 
+room */
+.suite-wrap {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 16px;
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+  float: none; /* Bỏ float để tránh gây lỗi */
+  margin-bottom: 10rem;
+  transform: translateX(0); /* Không dịch chuyển trục X */
+}
+
+@media (max-width: 767.98px) {
+  .suite-wrap {
+    width: 100%;
+    margin-bottom: 5rem;
+  }
+}
+
+/* Bố cục cho ảnh 1 */
+.suite-wrap.overlap-image-1 .suite {
+  width: 60%;
+  float: left;
+  position: relative;
+  z-index: 1; /* Đảm bảo hiển thị trên nền */
+}
+
+@media (max-width: 767.98px) {
+  .suite-wrap.overlap-image-1 .suite {
+    width: 100%;
+  }
+}
+
+.suite-wrap.overlap-image-1 .suite img {
+  max-width: 100% !important;
+  height: 20%; /* Đảm bảo hình ảnh giữ tỷ lệ gốc */
+  display: block;
+}
+
+.suite-wrap.overlap-image-1 .suite .image-stack .image-stack-item {
+  overflow: hidden;
+  position: relative;
+}
+
+.suite-wrap.overlap-image-1 .suite .image-stack .image-stack-item .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  opacity: 0; /* Không có overlay để hiển thị */
+}
+
+.suite-wrap.overlap-image-1 .suite .image-stack .image-stack-item.image-stack-item-top {
+  float: left;
+  width: 55%;
+  margin-top: -10%; /* Điều chỉnh để tạo sự chồng chéo */
+  position: relative; /* Đặt vị trí tương đối */
+  z-index: 1; /* Chồng lên ảnh khác */
+ 
+}
+
+.suite-wrap.overlap-image-1 .suite .image-stack .image-stack-item.image-stack-item-bottom {
+  position: absolute; /* Đặt ảnh 2 vào vị trí tuyệt đối */
+  top: 5%; /* Điều chỉnh khoảng cách từ đỉnh ảnh 1 để chồng lên */
+  left: 37%; /* Điều chỉnh khoảng cách từ bên trái */
+  width: 39%; /* Kích thước của ảnh 2 */
+  z-index: 2; /* Đảm bảo ảnh 2 nằm trên ảnh 1 */
+}
+
+.suite-wrap.overlap-image-1 .suite-contents {
+  font-family: "Cormorant Garamond", serif;
+  position: relative;
+  width: 30%;
+  margin-top: 5%;
+  float: left;
+  margin-left: 50px;
+  z-index: 3; /* Đảm bảo nội dung hiển thị trên overlay */
+}
+
+@media (max-width: 767.98px) {
+  .suite-wrap.overlap-image-1 .suite-contents {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.deal-contents .subtitle {
+  color: #ffffff;
+}
+
+
+
+
+
+
       .site-nav .site-navigation .site-menu .has-children {
         position: relative; }
         .site-nav .site-navigation .site-menu .has-children > a {
@@ -888,7 +1029,7 @@ a.text-primary {
     min-height: 450px; }
 
 .untree_co-section {
-  padding: 100px 0;
+  padding: 80px 0;
   position: relative; }
 
 .untree_co-section .bg-light {
@@ -920,13 +1061,15 @@ a.text-primary {
     color: #a35f0c;
     font-size: 30px; }
   .feature h3 {
+    font-family: "Cormorant Garamond", serif;
     color:#ffffff;
-    font-size: 12px;
+    font-size: 16px;
     letter-spacing: .2rem;
     font-weight: 400;
     text-transform: uppercase; }
   .feature p {
-    font-size: 15px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 16px;
     color: #ffffff; }
 
 .product-item {
@@ -960,12 +1103,15 @@ a.text-primary {
       -ms-transform: scale(1.05);
       transform: scale(1.05); }
   .product-item h3 {
-    font-size: 15px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 19px;
     margin-bottom: 0; }
     .product-item h3 a {
       color: #000000; }
   .product-item .price {
-    font-size: 13px; }
+    font-family: "Cormorant Garamond", serif;
+    font-size: 17px;
+}
 
 .deal-hero {
   background-size: cover;
@@ -1630,7 +1776,7 @@ a.text-primary {
 
 .site-footer {
   background-color:  #a35f0c;
-  font-size: 15px;
+  font-size: 16px;
   padding: 100px 0 70px 0; }
   .site-footer a {
     color: #000000;

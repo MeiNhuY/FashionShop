@@ -53,8 +53,8 @@
 							<a href="?act=page">Chi Tiết</a>
 							<ul class="dropdown">
 								<li><a href="?act=intro">Giới Thiệu</a></li>
-								<li><a href="?act=sale">Khuyến Mãi</a></li>
 								<li><a href="?act=contact">Liên Hệ</a></li>
+								<li><a href="?act=sale">Khuyến Mãi</a></li>
 								<li><a href="?act=cart">Giỏ Hàng</a></li>
 								<li><a href="?act=checkout">Thanh Toán</a></li>
 								

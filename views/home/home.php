@@ -5,7 +5,7 @@
 
 
 
-<div class="owl-carousel owl-single home-slider">
+	<div class="owl-carousel owl-single home-slider">
 		<div class="item">
 			<div class="untree_co-hero" style="background-image: url('../public/images/banner/slider.jpg');">
 				<div class="container">		
@@ -42,31 +42,61 @@
 					</div>
 				</div>
 			</div> 
-		</div>
-		
+		</div>	
 	</div>
 
-    <!-- banner2 -->
-    <div class="untree_co-section">
-		<div class="container">
+
+<!-- Room -->
+<div class="untree_co--site-section float-left pb-0 featured-rooms">
+
+    <div class="row justify-content-center text-center">  
+        <div class="col-lg-6 section-heading" data-aos="fade-up">
+            <h3 class="text-center">Thời trang</h3>
+        </div>
+    </div>
+
+    <div class="container-fluid pt-5">
+        <div class="suite-wrap overlap-image-1">
+            <div class="suite">
+                <div class="image-stack">
+                    <div class="image-stack-item image-stack-item-top" data-jarallax-element="-50">
+                        <div class="overlay"></div>
+                        <img src="../public/images/room_1_a.jpg" alt="Image" class="img-fluid pic1">
+                    </div>
+                    <div class="image-stack-item image-stack-item-bottom">
+                        <div class="overlay"></div>
+                        <img src="../public/images/room_1_a.jpg" alt="Image" class="img-fluid pic2">
+                    </div>
+                </div>
+            </div> <!-- .suite -->
+
+            <div class="suite-contents" data-jarallax-element="50">
+                <h2 class="suite-title">Thời trang Nam</h2>
+                <div class="suite-excerpt">
+                    <p>Mẫu mã đa dạng, năng động. </p>
+                    <p><a href="#" class="readmore"></a></p>
+                </div>
+				<h2 class="suite-title">Thời trang Nữ</h2>
+                <div class="suite-excerpt">
+                    <p>Thiết kế tinh tế giúp tôn lên dáng vóc của bạn. Chất liệu đột phá thông minh mang đến sự mềm mại</p>
+                    <p><a href="#" class="readmore"></a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
-			<div class="deal-hero overlay" data-aos-delay="300" style="background-image: url('../public/images/banner/yody.jpg')"> 
-				<div class="deal-contents">
-					<span class="subtitle">Giảm giá 20%</span>
-					<h2 class="title mb-4"><a href="#">Bộ sưu tập Fall - Winter</a></h2>
-					<p class="mb-5">Mua sắm thỏa thích tại Aura Fashion</p>
-					<a href="#" class="btn btn-black" >Mua ngay</a>
-				</div>
-			</div> 
 
-		</div>
-	</div>
-
-	
 	<!-- product1 -->
-	<div class="untree_co-section">
+	<div class="untree_co-section" id="khoangcach1">
 		<div class="container">
+
+		<div class="row justify-content-center text-center">  
+				<div class="col-lg-6 section-heading" data-aos="fade-up">
+					<h3 class="text-center">Bộ Sưu Tập Thu Đông</h3>
+				</div>
+		</div>
 
 			<div class="row">
 				<div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4">
@@ -166,32 +196,17 @@
 			</div>
 		</div>
 	</div>
-
-
-
-
-	<!-- banner3 -->
-    <div class="container">
-
-
-		<div class="deal-hero overlay" style="background-image: url('../public/images/banner/hero-slider-3-min.jpg')"> 
-			<div class="deal-contents">
-				<span class="subtitle">Khuyến mãi 20% cho các mặt hàng</span>
-				<h2 class="title mb-4"><a href="#">Thời trang năng động</a></h2>
-				<p class="mb-5">Sống theo phong cách riêng</p>
-				<a href="#" class="btn btn-black">Mua ngay</a>
-			</div>
-		</div> 
-
-	</div>
-
+	
 	<!-- product2 -->
-	<div class="untree_co-section">
+	<div class="untree_co-section" id="khoangcach2">
 		<div class="container">
-			<div class="row mb-5 align-items-center">
-				<div class="col-md-6">
-					<h2 class="h3">Sản phẩm phổ biến</h2>        
+
+				<div class="row justify-content-center text-center">  
+					<div class="col-lg-6 section-heading" data-aos="fade-up">
+						<h3 class="text-center">Sản phẩm bán chạy</h3>
+					</div>
 				</div>
+
 				<div class="col-sm-6 carousel-nav text-sm-right">
 					<a href="#" class="prev js-custom-prev-v2">
 						<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-left-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
