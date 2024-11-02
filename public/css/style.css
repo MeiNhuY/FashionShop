@@ -229,7 +229,7 @@ a.text-primary {
         padding-left: 15px; } }
 
 .spinner-border {
-  color: #b84592; }
+  color:  #a35f0c; }
 
 /*PRELOADING------------ */
 #overlayer {
@@ -1184,8 +1184,12 @@ room */
   .carousel-nav a:hover {
     color: #000000; }
   .carousel-nav a svg {
-    
+    margin-bottom: 15px;
     font-size: 30px; }
+
+    #icon1 {
+      margin-left: 43%;
+    }
 
 .search-form {
   background: #ffffff;
