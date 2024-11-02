@@ -500,9 +500,9 @@ a.text-primary {
               padding: 5px 20px;
               display: block; }
               .site-nav .site-navigation .site-menu .has-children .dropdown > li > a:hover {
-                color: #b84592; }
+                color: #a35f0c; }
             .site-nav .site-navigation .site-menu .has-children .dropdown > li.active > a {
-              color: #b84592; }
+              color: #a35f0c; }
             .site-nav .site-navigation .site-menu .has-children .dropdown > li.has-children > a:before {
               content: "\e315";
               right: 20px; }
@@ -510,9 +510,9 @@ a.text-primary {
               left: 100%;
               top: 0; }
               .site-nav .site-navigation .site-menu .has-children .dropdown > li.has-children > .dropdown li a:hover, .site-nav .site-navigation .site-menu .has-children .dropdown > li.has-children > ul li a:hover {
-                color: #b84592; }
+                color: #a35f0c; }
             .site-nav .site-navigation .site-menu .has-children .dropdown > li.has-children:hover > a, .site-nav .site-navigation .site-menu .has-children .dropdown > li.has-children:active > a, .site-nav .site-navigation .site-menu .has-children .dropdown > li.has-children:focus > a {
-              color: #b84592; }
+              color: #a35f0c; }
         .site-nav .site-navigation .site-menu .has-children:hover > a, .site-nav .site-navigation .site-menu .has-children:focus > a, .site-nav .site-navigation .site-menu .has-children:active > a {
           color: #000000; }
         .site-nav .site-navigation .site-menu .has-children:hover, .site-nav .site-navigation .site-menu .has-children:focus, .site-nav .site-navigation .site-menu .has-children:active {
@@ -1547,7 +1547,7 @@ a.text-primary {
       border-radius: 50%;
       background: rgba(0, 0, 0, 0.2); }
     .owl-single .owl-dots .owl-dot.active span, .owl-carousel .owl-dots .owl-dot.active span {
-      background: #b84592; }
+      background: #a35f0c; }
 
 .owl-single.no-dots .owl-dots, .owl-carousel.no-dots .owl-dots {
   display: none; }
