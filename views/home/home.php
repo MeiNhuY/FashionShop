@@ -3,7 +3,12 @@
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 </head>
 
-
+<div id="overlayer"></div>
+	<div class="loader">
+		<div class="spinner-border" role="status">
+			<span class="sr-only">Loading...</span>
+		</div>
+	</div>
 
 	<div class="owl-carousel owl-single home-slider">
 		<div class="item">
@@ -17,7 +22,7 @@
 							</div>
 							
 
-							<p class="mb-0" data-aos="fade-up" data-aos-delay="30"><a href="#" class="btn btn-outline-black">Khám phá</a></p>
+							<p class="mb-0" data-aos="fade-up" data-aos-delay="30"><a href="?act=shop" class="btn btn-outline-black">Khám phá</a></p>
 
 						</div>
 					</div>
@@ -36,7 +41,7 @@
 							<div class="mb-5 text-white desc mx-auto" data-aos="fade-up" data-aos-delay="200">
 							</div>
 
-							<p class="mb-0" data-aos="fade-up" data-aos-delay="300"><a href="#" class="btn btn-outline-black">Khám phá</a></p>
+							<p class="mb-0" data-aos="fade-up" data-aos-delay="300"><a href="?act=shop" class="btn btn-outline-black">Khám phá</a></p>
 
 						</div>
 					</div>
