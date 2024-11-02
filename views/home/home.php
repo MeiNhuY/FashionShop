@@ -61,11 +61,11 @@
                 <div class="image-stack">
                     <div class="image-stack-item image-stack-item-top" data-jarallax-element="-50">
                         <div class="overlay"></div>
-                        <img src="../public/images/room_1_a.jpg" alt="Image" class="img-fluid pic1">
+                        <img src="../public/images/page/maunam.jpg" alt="Image" class="img-fluid pic1">
                     </div>
                     <div class="image-stack-item image-stack-item-bottom">
                         <div class="overlay"></div>
-                        <img src="../public/images/room_1_a.jpg" alt="Image" class="img-fluid pic2">
+                        <img src="../public/images/page/maunu.jpg" alt="Image" class="img-fluid pic2">
                     </div>
                 </div>
             </div> <!-- .suite -->

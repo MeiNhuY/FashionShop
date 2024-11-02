@@ -531,14 +531,16 @@ room */
 }
 
 .suite-wrap.overlap-image-1 .suite .image-stack .image-stack-item.image-stack-item-top {
+  border-radius: 7px;
   position: absolute; /* Đặt ảnh 2 vào vị trí tuyệt đối */
-  bottom: 7%; /* Điều chỉnh khoảng cách từ đỉnh ảnh 1 để chồng lên */
-  right: 37%; /* Điều chỉnh khoảng cách từ bên trái */
+  bottom: 14%; /* Điều chỉnh khoảng cách từ đỉnh ảnh 1 để chồng lên */
+  right: 40%; /* Điều chỉnh khoảng cách từ bên trái */
   width: 45%; /* Giảm kích thước của ảnh trên (nhỏ hơn ảnh dưới) */
   z-index: 2; /* Đảm bảo ảnh 2 nằm trên ảnh 1 */
 }
 
 .suite-wrap.overlap-image-1 .suite .image-stack .image-stack-item.image-stack-item-bottom {
+  border-radius: 7px;
   float: right;
   width: 55%; /* Giữ kích thước của ảnh dưới */
   margin-top: 0; /* Đặt lại để không tạo chồng chéo */
