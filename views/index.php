@@ -47,7 +47,6 @@
 
 	<?php include ('header_footer/footer.php'); ?>
 
-	<!-- thay đổi -->
 
 
 	<script src="../public/js/jquery-3.4.1.min.js"></script>

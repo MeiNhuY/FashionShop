@@ -30,6 +30,34 @@ body {
     opacity: 1;
     visibility: visible; }
 
+    /* shop */
+.custom-pagination ul {
+  padding-left: 150px; /* Tăng khoảng cách từ lề trái cho cả danh sách */
+  padding-top: 40px;
+}
+
+.custom-pagination ul li {
+  margin-left: 10px; /* Tăng khoảng cách giữa các nút phân trang */
+}
+
+.custom-pagination ul li :hover {
+  background-color: #a35f0c; /* Màu nền khi hover */
+  cursor: pointer; /* Thêm hiệu ứng con trỏ */
+}
+
+.categories li a {
+  color: #000; /* Màu chữ mặc định */
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.categories li a:hover {
+  transform: scale(1.1) translateX(10%); /* Tăng kích thước và dịch nhẹ sang trái */
+  color: #a35f0c; /* Đổi màu chữ khi hover */
+}
+
+
+
+
 .text-black {
   color: #000000 !important; }
 
@@ -62,12 +90,12 @@ a {
   color: #ffffff; }
 
 .text-primary {
-  color: #b84592 !important; }
+  color: #a35f0c !important; }
 
 a.text-primary {
-  color: #b84592 !important; }
+  color: #a35f0c !important; }
   a.text-primary:hover {
-    color: #b84592 !important; }
+    color: #a35f0c !important; }
 
     h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
       font-family: "Cormorant Garamond", serif;
@@ -138,10 +166,10 @@ a.text-primary {
       color: #e3a617;
       background: #000000; }
   .btn.btn-outline-primary {
-    border-color: #b84592;
-    color: #b84592; }
+    border-color: #a35f0c;
+    color: #a35f0c; }
     .btn.btn-outline-primary:hover {
-      background: #b84592;
+      background: #a35f0c;
       color: #ffffff; }
   .btn.btn-outline-white {
     border-color: #ffffff;
