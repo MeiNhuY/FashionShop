@@ -105,3 +105,17 @@
 			</div>
 		</div>
 	</nav>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+    const menuItems = document.querySelectorAll('.site-menu > li > a');
+    menuItems.forEach(item => {
+        if (item.href === window.location.href) {
+            item.parentElement.classList.add('active');
+        } else {
+            item.parentElement.classList.remove('active');
+        }
+    });
+});
+
+	</script>
