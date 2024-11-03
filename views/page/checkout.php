@@ -2,8 +2,8 @@
     <div class="container">
       <div class="row align-items-end text-center">
         <div class="col-lg-7 mx-auto">
-          <h1>Checkout</h1>  
-          <p class="mb-4"><a href="index.html">Home</a> / <strong>Checkout</strong></p>        
+          <h1>Thanh Toán</h1>  
+          <p class="mb-4"><a href="index.html">Trang chủ</a> / <strong>Thanh Toán</strong></p>        
         </div>
       </div>
     </div>
@@ -16,13 +16,13 @@
       <div class="row mb-5">
         <div class="col-md-12">
           <div class="border p-4 rounded" role="alert">
-            Returning customer? <a href="#">Click here</a> to login
+            Returning customer? <a href="#">Click here</a> to Đăng Nhập
           </div>
         </div>
       </div>
       <div class="row">
         <div class="col-md-6 mb-5 mb-md-0">
-          <h2 class="h3 mb-3 text-black">Billing Details</h2>
+          <h2 class="h3 mb-3 text-black">Chi tiết hóa đơn</h2>
           <div class="p-3 p-lg-5 border">
             <div class="form-group">
               <label for="c_country" class="text-black">Country <span class="text-danger">*</span></label>
@@ -191,14 +191,14 @@
 
           <div class="row mb-5">
             <div class="col-md-12">
-              <h2 class="h3 mb-3 text-black">Coupon Code</h2>
+              <h2 class="h3 mb-3 text-black">Mã giảm giá</h2>
               <div class="p-3 p-lg-5 border">
 
                 <label for="c_code" class="text-black mb-3">Enter your coupon code if you have one</label>
                 <div class="input-group w-75">
                   <input type="text" class="form-control" id="c_code" placeholder="Coupon Code" aria-label="Coupon Code" aria-describedby="button-addon2">
                   <div class="input-group-append">
-                    <button class="btn btn-black btn-sm" type="button" id="button-addon2">Apply</button>
+                    <button class="btn btn-black btn-sm" type="button" id="button-addon2">Áp dụng</button>
                   </div>
                 </div>
 
@@ -208,12 +208,12 @@
 
           <div class="row mb-5">
             <div class="col-md-12">
-              <h2 class="h3 mb-3 text-black">Your Order</h2>
+              <h2 class="h3 mb-3 text-black">Đơn hàng của bạn</h2>
               <div class="p-3 p-lg-5 border">
                 <table class="table site-block-order-table mb-5">
                   <thead>
-                    <th>Product</th>
-                    <th>Total</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Thành tiền</th>
                   </thead>
                   <tbody>
                     <tr>
@@ -266,7 +266,7 @@
                 </div>
 
                 <div class="form-group">
-                  <button class="btn btn-black btn-lg py-3 btn-block" onclick="window.location='thankyou.html'">Place Order</button>
+                  <button class="btn btn-black btn-lg py-3 btn-block" onclick="window.location='thankyou.php'">Thanh Toán</button>
                 </div>
 
               </div>
