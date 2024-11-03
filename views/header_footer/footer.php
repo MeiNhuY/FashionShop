@@ -48,7 +48,7 @@
 							</svg>
 						</div>
 						<h3>Vận chuyển</h3>
-						<p>Free ship cho đơn hàng trên 200.000VND trên toàn quốc</p>
+						<p>Giao hàng nhanh trong vòng 24h freeship cho đơn hàng trên 200.000VND trên toàn quốc.</p>
 					</div>
 				</div>
 				<div class="col-12 col-sm-6 col-md-4 mb-3 mb-md-0">

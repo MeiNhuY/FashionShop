@@ -19,8 +19,8 @@ switch ($act) {
     case "cart":
         require_once("cart/cart.php");
         break;
-    case "sale":
-        require_once("page/sale.php");
+    case "promotion":
+        require_once("page/promotion.php");
         break;
     case "intro":
         require_once("page/intro.php");

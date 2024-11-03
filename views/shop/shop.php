@@ -1,34 +1,35 @@
-
-<div class="page-heading bg-light">
+<div class="page-heading bg-light" style="background-image: url('../public/images/banner/hero-slider-1-min.jpg'); background-size: cover;  height: 400px;">
     <div class="container">
       <div class="row align-items-end text-center">
         <div class="col-lg-7 mx-auto">
-          <h1>Shop</h1>  
-          <p class="mb-4"><a href="index.html">Home</a> / <strong>Shop</strong></p>        
+          <h1 >Cửa hàng</h1>  
+          <p class="mb-4" ><a href="index.php" >Trang chủ</a> / <strong>Cửa hàng</strong></p>        
         </div>
       </div>
     </div>
-  </div>
+</div>
+
 
   <div class="untree_co-section pt-3">
     <div class="container">
 
       <div class="row align-items-center mb-5">
         <div class="col-lg-8">
-          <h2 class="mb-3 mb-lg-0">Products</h2>
+          <h2 class="mb-3 mb-lg-0">Sản phẩm</h2>
         </div>
         <div class="col-lg-4">
 
-          <div class="d-flex sort align-items-center justify-content-lg-end">
-            <strong class="mr-3">Sort by:</strong>
+
+        <div class="d-flex sort align-items-center justify-content-lg-end">
+            <strong class="mr-2"><b>Sắp xếp sản phẩm:</b></strong>
             <form action="#">
               <select class="" required>
-                <option value="">Newest Items</option>
-                <option value="1">Best Selling</option>
-                <option value="2">Price: Ascending</option>
-                <option value="2">Price: Descending</option>
-                <option value="3">Rating(High to Low)</option>
+                <option value="1">Sản phẩm mới nhất</option>
+                <option value="2">Sản phẩm bán chạy</option>
+                <option value="3">Giá: tăng dần</option>
+                <option value="4">Giá: giảm dần</option>
               </select>
+
             </form>
           </div>
         </div>
@@ -36,18 +37,21 @@
 
       <div class="row">
 
-        <div class="col-md-3">
+      <div class="col-md-2">
           <ul class="list-unstyled categories">
-            <li><a href="#">New <span>2,919</span></a></li>
-            <li><a href="#">Men <span>5,381</span></a></li>
-            <li><a href="#">Women <span>7,119</span></a></li>
-            <li><a href="#">Jewelries <span>1,012</span></a></li>
-            <li><a href="#">Accessories <span>919</span></a></li>
-            <li><a href="#">Shoes <span>4,344</span></a></li>
-            <li><a href="#">Clothing <span>7,919</span></a></li>
+            <li><a href="#">Sản phẩm mới <span></span></a></li>
+            <li><a href="#">Thời trang nam <span></span></a></li>
+            <li><a href="#">Thời trang nữ <span></span></a></li>
+            <li><a href="#">Váy thời trang<span></span></a></li>
+            <li><a href="#">Quần thời trang<span></span></a></li>
+            <li><a href="#">Áo thời trang<span></span></a></li>
+            <li><a href="#">Áo Jacket<span></span></a></li>
+            <li><a href="#">Áo Bomber<span></span></a></li>
+            <li><a href="#">Áo Sweater<span></span></a></li>
+            <li><a href="#">Quần Jeans<span></span></a></li>
           </ul>
         </div>
-        <div class="col-md-9">
+        <div class="col-md-10">
           <div class="row">
             <div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4">
               <div class="product-item">
@@ -58,7 +62,7 @@
                   </div>
 
 
-                  <img src="images/products/jacket-1-min.jpg" alt="Image" class="img-fluid">
+                  <img src="../public/images/products/jacket-1-min.jpg" alt="Image" class="img-fluid">
                 </a>
                 <h3 class="title"><a href="#">Dark Jacket</a></h3>
                 <div class="price">
@@ -77,7 +81,7 @@
                   <div class="label sale top-right second">
                     <div class='content'>Sale</div>
                   </div>
-                  <img src="images/products/bottoms-1-min.jpg" alt="Image" class="img-fluid">
+                  <img src="../public/images/products/bottoms-1-min.jpg" alt="Image" class="img-fluid">
                 </a>
                 <h3 class="title"><a href="#">Chino Bottoms</a></h3>
                 <div class="price">
@@ -89,7 +93,7 @@
             <div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4">
               <div class="product-item">
                 <a href="shop-single.html" class="product-img">
-                  <img src="images/products/shoe-1-min.jpg" alt="Image" class="img-fluid">
+                  <img src="../public/images/products/shoe-1-min.jpg" alt="Image" class="img-fluid">
                 </a>
                 <h3 class="title"><a href="#">Brown Shoe</a></h3>
                 <div class="price">
@@ -101,7 +105,7 @@
             <div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4">
               <div class="product-item">
                 <a href="shop-single.html" class="product-img">
-                  <img src="images/products/sock-1-min.jpg" alt="Image" class="img-fluid">
+                  <img src="../public/images/products/sock-1-min.jpg" alt="Image" class="img-fluid">
                 </a>
                 <h3 class="title"><a href="#">The Modern Sock</a></h3>
                 <div class="price">
@@ -116,7 +120,7 @@
                   <div class="label sale top-right">
                     <div class='content'>Sale</div>
                   </div>
-                  <img src="images/products/sweater-2-min.jpg" alt="Image" class="img-fluid">
+                  <img src="../public/images/products/sweater-2-min.jpg" alt="Image" class="img-fluid">
                 </a>
                 <h3 class="title"><a href="#">Double Knit Sweater</a></h3>
                 <div class="price">
@@ -131,7 +135,7 @@
                   <div class="label sale top-right">
                     <div class='content'>Sale</div>
                   </div>
-                  <img src="images/products/watch-1-min.jpg" alt="Image" class="img-fluid">
+                  <img src="../public/images/products/watch-1-min.jpg" alt="Image" class="img-fluid">
                 </a>
                 <h3 class="title"><a href="#">The Murray</a></h3>
                 <div class="price">
@@ -180,7 +184,7 @@
       <div class="container">
         <div class="row mb-5 align-items-center">
           <div class="col-md-6">
-            <h2 class="h3">Popular Items</h2>        
+            <h2 class="h3">Sản phẩm phổ biến</h2>        
           </div>
           <div class="col-sm-6 carousel-nav text-sm-right">
             <a href="#" class="prev js-custom-prev-v2">
@@ -206,7 +210,7 @@
                 <div class="label sale top-right">
                   <div class='content'>Sale</div>
                 </div>
-                <img src="images/products/watch-1-min.jpg" alt="Image" class="img-fluid">
+                <img src="../public/images/products/watch-1-min.jpg" alt="Image" class="img-fluid">
               </a>
               <h3 class="title"><a href="#">The Murray</a></h3>
               <div class="price">
@@ -225,7 +229,7 @@
                 </div>
 
 
-                <img src="images/products/jacket-1-min.jpg" alt="Image" class="img-fluid">
+                <img src="../public/images/products/jacket-1-min.jpg" alt="Image" class="img-fluid">
               </a>
               <h3 class="title"><a href="#">Dark Jacket</a></h3>
               <div class="price">
@@ -245,7 +249,7 @@
                 <div class="label sale top-right second">
                   <div class='content'>Sale</div>
                 </div>
-                <img src="images/products/bottoms-1-min.jpg" alt="Image" class="img-fluid">
+                <img src="../public/images/products/bottoms-1-min.jpg" alt="Image" class="img-fluid">
               </a>
               <h3 class="title"><a href="#">Chino Bottoms</a></h3>
               <div class="price">
@@ -257,7 +261,7 @@
           <div class="item">
             <div class="product-item">
               <a href="shop-single.html" class="product-img">
-                <img src="images/products/sock-1-min.jpg" alt="Image" class="img-fluid">
+                <img src="../public/images/products/sock-1-min.jpg" alt="Image" class="img-fluid">
               </a>
               <h3 class="title"><a href="#">The Modern Sock</a></h3>
               <div class="price">
