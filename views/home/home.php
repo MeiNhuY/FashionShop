@@ -69,7 +69,7 @@
             </div> <!-- .suite -->
 
             <div class="suite-contents" data-jarallax-element="50">
-                <h2 class="suite-title">Thời trang Nam</h2>
+                <h2 class="suite-title" >Thời trang Nam</h2>
                 <div class="suite-excerpt">
                     <p>Mẫu mã đa dạng, năng động. </p>
                     <p><a href="#" class="readmore"></a></p>
