@@ -383,7 +383,7 @@ a.text-primary {
           padding: 10px 15px;
           display: block;
           text-decoration: none !important;
-          color: rgba(0, 0, 0, 0.5);
+          color: #000000;
           position: relative; }
           .site-nav .site-navigation .site-menu > li > a:hover {
             color: #000000; }
@@ -406,12 +406,12 @@ a.text-primary {
           display: inline-block; }
           .site-nav .site-navigation .site-menu > li.active > a:after {
             content: "";
-            height: 2px;
+            height: 1.5px;
             left: 15px;
             right: 15px;
             bottom: 0;
             position: absolute;
-            background: #000000; }
+            background: #a35f0c; }
 
 /* ý */
 /* Cài đặt mặc định cho các mục menu */
@@ -431,32 +431,31 @@ a.text-primary {
 .site-nav .site-navigation .site-menu > li.active > a::after {
   content: "";
   position: absolute;
-  left: 20;
+  /* left: 30px; */
   bottom: -2px; /* Đường kẻ xuất hiện ngay dưới chữ */
-  width: 50%;
-  height: 1px;
+  width: 65px;
+  height: 1.5px;
   background-color: z; /* Màu đường kẻ */
   transition: width 0.3s ease;
 }
 
 /* Hiệu ứng hover: đổi màu chữ và thêm đường kẻ ngang */
 .site-menu > li > a:hover {
-  color: #a35f0c;/* Đổi màu khi hover */
+  color: #000000;/* Đổi màu khi hover */
 }
 
 /* Hiệu ứng đường kẻ khi hover */
 .site-menu > li > a:hover::after {
   content: "";
   position: absolute;
-  left: 20;
   bottom: -2px;
-  width: 50%;
-  height: 1px;
+  width: 65px;
+  height: 1.5px;
   left: 20%;   
   background-color: #a35f0c;
-  webkit-transition: .5s width ease-in-out;
-    -o-transition: .5s width ease-in-out;
-    transition: .5s width ease-in-out;
+  -webkit-transition: .2s width ease-in-out;
+  -o-transition: .2s width ease-in-out;
+  transition: .2s width ease-in-out;
 }
 
 
@@ -809,7 +808,7 @@ room */
       position: relative;
       display: block; }
       .site-mobile-menu .site-nav-wrap li.active > a {
-        color: #b84592; }
+        color: #a35f0c; }
     .site-mobile-menu .site-nav-wrap .arrow-collapse {
       position: absolute;
       right: 0px;

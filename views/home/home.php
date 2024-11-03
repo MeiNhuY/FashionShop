@@ -3,13 +3,6 @@
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 </head>
 
-<div id="overlayer"></div>
-	<div class="loader">
-		<div class="spinner-border" role="status">
-			<span class="sr-only">Loading...</span>
-		</div>
-	</div>
-
 	<div class="owl-carousel owl-single home-slider">
 		<div class="item">
 			<div class="untree_co-hero" style="background-image: url('../public/images/banner/slider.jpg');">
