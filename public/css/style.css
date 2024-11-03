@@ -32,7 +32,7 @@ body {
 
     /* shop */
 .custom-pagination ul {
-  padding-left: 150px; /* Tăng khoảng cách từ lề trái cho cả danh sách */
+  padding-left: 200px; /* Tăng khoảng cách từ lề trái cho cả danh sách */
   padding-top: 40px;
 }
 
@@ -45,17 +45,280 @@ body {
   cursor: pointer; /* Thêm hiệu ứng con trỏ */
 }
 
-.categories li a {
-  color: #000; /* Màu chữ mặc định */
-  transition: transform 0.2s ease, color 0.2s ease;
+
+/* Animation CSS */
+.page-heading {
+  position: relative;
+  overflow: hidden; /* Ẩn phần vượt ra ngoài */
+  height: 500px; /* Chiều cao của banner */
+  border-bottom-left-radius: 40px; /* Đường viền mềm mại */
+  border-bottom-right-radius: 40px; /* Đường viền mềm mại */
+  box-shadow: 0 4px 8px rgba(205, 196, 196, 0.1); /* Bóng đổ */
 }
 
-.categories li a:hover {
-  transform: scale(1.1) translateX(10%); /* Tăng kích thước và dịch nhẹ sang trái */
-  color: #a35f0c; /* Đổi màu chữ khi hover */
+.page-heading .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0; /* Bắt đầu với độ mờ 0 */
+  transition: opacity 2s ease-in-out; /* Hiệu ứng chuyển đổi mờ */
+  z-index: 1; /* Đặt z-index để giữ hình ảnh ở phía sau */
+}
+.page-heading.hidden {
+  opacity: 0; /* Ẩn banner khi lướt xuống */
+}
+
+.page-heading .slide img {
+  width: 100%; /* Đảm bảo hình ảnh lấp đầy khu vực slide */
+  height: auto; /* Giữ tỷ lệ của hình ảnh */
+}
+
+.page-heading .slide.active {
+  opacity: 1; /* Độ mờ 1 cho ảnh đang hiển thị */
+}
+
+.container {
+  position: relative;
+  z-index: 2; /* Đặt z-index cao hơn để nội dung luôn hiển thị trên ảnh */
 }
 
 
+
+/* Hiệu ứng zoom khi hover vào ảnh */
+/* Thêm overlay cho các icon */
+.product-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  z-index: 2;
+}
+
+.product-item:hover .overlay {
+  opacity: 1;
+}
+/* Container cho icon yêu thích và giỏ hàng */
+.product-item .icons {
+  display: flex;
+  gap: 20px;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.product-item .icons a.favorite {
+color: white;
+font-size: 40px; /* Thay đổi kích thước icon yêu thích */
+position: relative;
+transition: transform 0.3s, color 0.3s;
+}
+
+.product-item .icons a.add-to-cart {
+color: white;
+font-size: 40px; /* Thay đổi kích thước icon giỏ hàng */
+position: relative;
+transition: transform 0.3s, color 0.3s;
+}
+
+
+/* Hiệu ứng cho icon yêu thích */
+.product-item .icons a.favorite:hover {
+  color: rgb(235, 155, 50);
+  transform: scale(1.2);
+  
+}
+
+.product-item .icons a.add-to-cart:hover {
+  color: rgb(235, 155, 50);
+  transform: scale(1.2);
+}
+
+/* Hiệu ứng lấp lánh */
+@keyframes sparkle {
+  0%, 100% { transform: scale(1); color: rgb(235, 155, 50); }
+  50% { transform: scale(1.2); color: rgb(235, 155, 50); }
+}
+
+.product-item .icons a.add-to-cart .cart-count {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: rgb(253, 110, 39);;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  display: none;
+}
+
+.product-item:hover .icons a.add-to-cart .cart-count {
+  display: inline-block;
+}
+
+
+/* Container cho icon yêu thích và giỏ hàng */
+.product-item .icons {
+  display: flex;
+  gap: 20px;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.product-item .icons a.favorite {
+color: white;
+font-size: 40px; /* Thay đổi kích thước icon yêu thích */
+position: relative;
+transition: transform 0.3s, color 0.3s;
+}
+
+.product-item .icons a.add-to-cart {
+color: white;
+font-size: 40px; /* Thay đổi kích thước icon giỏ hàng */
+position: relative;
+transition: transform 0.3s, color 0.3s;
+}
+
+
+/* Hiệu ứng cho icon yêu thích */
+.product-item .icons a.favorite:hover {
+  color: rgb(235, 155, 50);
+  transform: scale(1.2);
+  
+}
+
+.product-item .icons a.add-to-cart:hover {
+  color: rgb(235, 155, 50);
+  transform: scale(1.2);
+}
+
+.product-item.visible {
+  transform: translateY(0); /* Về vị trí gốc khi có class 'visible' */
+  opacity: 1; /* Hiện mục */
+}
+
+
+
+
+/* Bộ sưu tập */
+
+.container {
+  max-width: 1200px;
+  width: 95%;
+}
+.slider-wrapper {
+  position: relative;
+}
+.slider-wrapper .slide-button {
+  position: absolute;
+  top: 50%;
+  outline: none;
+  border: none;
+  height: 50px;
+  width: 50px;
+  z-index: 5;
+  color: #fff;
+  display: flex;
+  cursor: pointer;
+  font-size: 2.2rem;
+  background: #000;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+.slider-wrapper .slide-button:hover {
+  background: #404040;
+}
+.slider-wrapper .slide-button#prev-slide {
+  left: -25px;
+  display: none;
+}
+.slider-wrapper .slide-button#next-slide {
+  right: -25px;
+}
+.slider-wrapper .image-list {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 18px;
+  font-size: 0;
+  list-style: none;
+  margin-bottom: 30px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.slider-wrapper .image-list::-webkit-scrollbar {
+  display: none;
+}
+.slider-wrapper .image-list .image-item {
+  width: 325px;
+  height: 400px;
+  object-fit: cover;
+}
+.container .slider-scrollbar {
+  height: 24px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.slider-scrollbar .scrollbar-track {
+  background: #ccc;
+  width: 100%;
+  height: 2px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  position: relative;
+}
+.slider-scrollbar:hover .scrollbar-track {
+  height: 4px;
+}
+.slider-scrollbar .scrollbar-thumb {
+  position: absolute;
+  background: #000;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  height: 100%;
+  cursor: grab;
+  border-radius: inherit;
+}
+.slider-scrollbar .scrollbar-thumb:active {
+  cursor: grabbing;
+  height: 8px;
+  top: -2px;
+}
+.slider-scrollbar .scrollbar-thumb::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10px;
+  bottom: -10px;
+}
+/* Styles for mobile and tablets */
+@media only screen and (max-width: 1023px) {
+  .slider-wrapper .slide-button {
+    display: none !important;
+  }
+  .slider-wrapper .image-list {
+    gap: 10px;
+    margin-bottom: 15px;
+    scroll-snap-type: x mandatory;
+  }
+  .slider-wrapper .image-list .image-item {
+    width: 280px;
+    height: 380px;
+  }
+  .slider-scrollbar .scrollbar-thumb {
+    width: 20%;
+  }
+}
 
 
 .text-black {
@@ -598,10 +861,6 @@ room */
 }
 
 
-
-
-
-
       .site-nav .site-navigation .site-menu .has-children {
         position: relative; }
         .site-nav .site-navigation .site-menu .has-children > a {
@@ -1102,7 +1361,11 @@ room */
     color: #ffffff; }
 
 .product-item {
-  text-align: center; }
+  text-align: center;
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Tăng thời gian chuyển động và thêm opacity */
+  transform: translateY(20px); /* Đặt vị trí ban đầu thấp hơn */
+
+ }
   .product-item .product-img {
     position: relative;
     overflow: hidden;
@@ -1141,6 +1404,7 @@ room */
     font-family: "Cormorant Garamond", serif;
     font-size: 17px;
 }
+
 
 .deal-hero {
   background-size: cover;
@@ -1303,27 +1567,52 @@ room */
     border: none; }
     .sort select:active, .sort select:focus {
       outline: none; }
-
+  
+  
 .categories li {
-  display: block;
-  margin-bottom: 10px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #f8f9fa; }
-  .categories li a {
-    color: #000000;
-    display: block;
-    position: relative; }
+        display: block;
+        margin-bottom: 10px;
+        padding: 15px 10px; /* Tăng khoảng cách bên trong */
+        border-radius: 8px; /* Bo tròn góc */
+        background-color: #ffffff; /* Màu nền cho li */
+        border: 1px solid #f8f9fa; /* Thêm viền nhẹ cho li */
+        transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng chuyển màu nền và bóng đổ */
+    }
+    
+    /* Định dạng cho liên kết */
+    .categories li a {
+        color: #000000; /* Màu chữ */
+        display: block;
+        position: relative;
+        text-decoration: none; /* Xóa gạch chân */
+    }
+    
+    /* Định dạng cho span bên phải */
     .categories li a span {
-      position: absolute;
-      right: 0;
-      font-size: 12px;
-      color: #ccc;
-      top: 50%;
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%); }
+        position: absolute;
+        right: 0;
+        font-size: 12px;
+        color: #ccc; /* Màu chữ cho span */
+        top: 50%;
+        transform: translateY(-50%); /* Định vị span chính xác ở giữa */
+    }
+    
+    /* Hiệu ứng hover cho span */
     .categories li a:hover span {
-      color: #000000; }
+        color: #000000; /* Màu chữ cho span khi hover */
+    }
+    
+    /* Hiệu ứng hover cho li */
+    .categories li:hover {
+        background-color: #f8f9fa; /* Màu nền khi hover */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ khi hover */
+    }
+    
+    /* Hiệu ứng thêm cho li khi hover */
+    .categories li:hover a {
+        color: #a35f0c; /* Thay đổi màu chữ của liên kết khi hover */
+    }
+    
 
 .custom-pagination ul li {
   display: inline !important; }

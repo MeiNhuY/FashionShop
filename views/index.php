@@ -14,7 +14,8 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM0TTA4axcbiCClJ6awly6Z1sp6uAoKJjk4TBqW" crossorigin="anonymous">
- 	<!-- LOGIN -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+	<!-- LOGIN -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
   	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
   	<link rel="stylesheet" href="css/bootstrap-login-form.min.css" />
@@ -61,8 +62,8 @@
 	<script src="../public/js/aos.js"></script>
 	<script src="../public/js/custom.js"></script>
 <!-- LOGIN -->
-	<script type="text/javascript" src="js/mdb.min.js"></script>
-  	<script type="text/javascript"></script>
+	<script type="text/javascript" src="../public/js/mdb.min.js"></script>
+  	<script type="text/javascript" src="../public/js/script.js"></script>
 	
 
 
