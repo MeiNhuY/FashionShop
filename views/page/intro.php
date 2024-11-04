@@ -41,7 +41,7 @@
 
  
  
- <div class="page-heading bg-light">
+ <div class="page-heading bg-light" style="background-image: url('../public/images/banner/banner5.png'); background-size: cover;  height: 400px;">
     <div class="container">
       <div class="row align-items-end text-center">
         <div class="col-lg-7 mx-auto">
@@ -87,11 +87,11 @@
               <div class="col-md-8">
                 <div class="row justify-content-center">
                   <div class="col-md-10">
-                    <h2 class="mb-4" data-aos="fade-up" id="id1">Sứ mệnh</h2>
+                    <h2 class="mb-4" data-aos="fade-up" id="id1">Sứ mệnh  Look good feel good</h2>
                     <div class="row" id="2">
                       <div class="col-md-6" data-aos="fade-up">
                       
-                        <p>Đồng hành cùng phụ nữ Việt Nam từ năm 2002, AURA tự hào là thương hiệu góp phần thay đổi diện mạo thời trang Việt Nam trên chặng đường hoà mình cùng dòng chảy thời trang thế giới. </p>
+                        <p>Đồng hành cùng phụ nữ Việt Nam từ năm 2022, AURA tự hào là thương hiệu góp phần thay đổi diện mạo thời trang Việt Nam trên chặng đường hoà mình cùng dòng chảy thời trang thế giới. </p>
                         <p>Những thiết kế từ NEM luôn đơn giản nhưng tinh tế, kết hợp giữa sự thanh lịch và nét đẹp truyền thống của người Á Đông.</p>
                       </div>
                       <div class="col-md-6"  data-aos="fade-up">
@@ -112,11 +112,13 @@
           <div class="col-md-9">
             <div class="row mb-5 align-items-center">
               <div class="col-md-5 mr-auto" id="id3">
-                <h2 class="display-4" data-aos="fade-up">Watch LuxuryHotel Video</h2>
+                <h2 class="display-4" data-aos="fade-up">Chi nhánh Aura Fashion</h2>
               </div>
               <div class="col-md-7 ml-auto" data-aos="fade-up">
-                <p>Cùng những nét đặc trưng riêng trong thiết kế, NEM tự tin mang đến cho khách hàng “giải pháp” thời trang phù hợp với nhiều độ tuổi, phong cách ăn mặc và hoàn cảnh sử dụng khác nhau. </p>
-                <p>A hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided may range from a modest-quality mattress in a small room to large suites with bigger.</p>                  
+                <p>22 Chùa Bộc – Hà Nội.</p>
+                <p>196 - 198 Phan Châu Trinh - Tp. Tam Kỳ </p>
+                <p>45 Phan Châu Trinh - TP. Tam Kỳ</p>
+                <p>Đường An Định - Phường Việt Hòa - Thành phố Hải Dương</p>
               </div>
             </div>
           </div>
@@ -132,22 +134,23 @@
         <div class="untree_co--site-section py-5 bg-body-darker cta">
         <div class="row no-gutters">
               <div class="col-md-4"  data-aos="fade-up">
-                 <img src="../public/images/page/khanhvy.jpg" alt="Image" class="img-fluid" data-jarallax-element="-140">
+                 <img src="../public/images/page/pic4.jpg" alt="Image" class="img-fluid" data-jarallax-element="-140">
               </div>
               <div class="col-md-8">
                 <div class="row justify-content-center">
                   <div class="col-md-10">
-                    <h2 class="mb-4" data-aos="fade-up" id="id1">Sứ mệnh</h2>
+                    <h2 class="mb-4" data-aos="fade-up" id="id1">Tầm nhìn</h2>
                     <div class="row" id="2">
                       <div class="col-md-6" data-aos="fade-up">
                         
-                        <p>A hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided may range from a modest-quality mattress in a small room to large suites with bigger.</p>                  
+                      <p>Cùng những nét đặc trưng riêng trong thiết kế, AURA tự tin mang đến cho khách hàng “giải pháp” thời trang phù hợp với nhiều độ tuổi, phong cách ăn mặc và hoàn cảnh sử dụng khác nhau. </p>
 
-                        <p>Higher-quality beds, a dresser, a refrigerator and other kitchen facilities, upholstered chairs, a flat screen television, and en-suite bathrooms. Small, lower-priced hotels may offer only the most basic guest services and facilities. </p>
+                      <p>Aura sắp ra mắt Bộ sưu tập EverydayWear 2025 với dòng sản phẩm mới là Polo cafe tổ ong, đứng đầu về chất liệu và tính năng trên thị. </p>
                     
                       </div>
                       <div class="col-md-6"  data-aos="fade-up">
-                        <p>Larger, higher-priced hotels may provide additional guest facilities such as a swimming pool, business centre (with computers, printers, and other office equipment), childcare, conference and event facilities, tennis or basketball courts, gymnasium, restaurants, day spa, and social function services.</p>
+                        <p>Dự án Clean Việt Nam ra đời bao gồm các dòng sản phẩm Áo thun Recycle làm từ nhựa tái chế. Yody cùng chung tay hướng tới bảo vệ môi trường và xu hướng ESG. </p>
+                        <p>Chúng tôi mong muốn mang đến cho toàn bộ khách hàng trên khắp mọi miền tổ quốc Việt Nam những sản phẩm thời trang đẳng cấp, </p>
                       </div>
                     </div>
                   </div>

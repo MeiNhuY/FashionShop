@@ -1,7 +1,7 @@
 
 
 
-  <div class="page-heading bg-light">
+  <div class="page-heading bg-light" style="background-image: url('../public/images/banner/bannerCart.png'); background-size: cover;  height: 400px;">
     <div class="container">
       <div class="row align-items-end text-center">
         <div class="col-lg-7 mx-auto">
@@ -26,14 +26,14 @@
                   <th class="product-name">Sản phẩm</th>
                   <th class="product-price">Giá</th>
                   <th class="product-quantity">Số lượng</th>
-                  <th class="product-total">Tổng tiền</th>
+                  <th class="product-total">Thành tiền</th>
                   <th class="product-remove">Xóa</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td class="product-thumbnail">
-                    <img src="images/products/jacket-1-min.jpg" alt="Image" class="img-fluid">
+                    <img src="../public/images/products/jacket-1-min.jpg" alt="Image" class="img-fluid">
                   </td>
                   <td class="product-name">
                     <h2 class="h5 text-black">Top Up T-Shirt</h2>
@@ -88,7 +88,7 @@
         <div class="col-md-6">
           <div class="row mb-5">
             <div class="col-md-6 mb-3 mb-md-0">
-              <button class="btn btn-black btn-sm btn-block">Cập nhật giỏ hàng</button>
+              <button class="btn btn-black btn-sm btn-block">Thêm sản phẩm</button>
             </div>
             <div class="col-md-6">
               <button class="btn btn-outline-black btn-sm btn-block">Quay lại cửa hàng</button>
