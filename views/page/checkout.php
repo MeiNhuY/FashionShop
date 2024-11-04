@@ -3,7 +3,7 @@
       <div class="row align-items-end text-center">
         <div class="col-lg-7 mx-auto">
           <h1>Thanh Toán</h1>  
-          <p class="mb-4"><a href="index.html">Trang chủ</a> / <strong>Thanh Toán</strong></p>        
+          <p class="mb-4"><a href="index.php">Trang chủ</a> / <strong>Thanh Toán</strong></p>        
         </div>
       </div>
     </div>
