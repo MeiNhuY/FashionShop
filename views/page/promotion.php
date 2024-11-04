@@ -1,26 +1,20 @@
-  <div class="untree_co-hero" style="background-image: url('../public/images/banner/hero-slider-3-min.jpg');">
-    <div class="container">
-      <div class="row align-items-center justify-content-center">
-        <div class="col-lg-8 text-center text-lg-center">
-          <h1 class="mb-4 heading text-white" data-aos="fade-up" data-aos-delay="100">Khuyến mãi</a></h1>
-          <p class="mb-0" data-aos="fade-up" data-aos-delay="300"><a href="shop.php" class="btn btn-black">Khám phá</a></p>
-
-        </div>
+<div class="row justify-content-center text-center pt-0 pb-5">  
+      <div class="col-lg-6 section-heading" data-aos="fade-up" style="margin-top: 80px;">
+          <h3 class="text-center"><b>Sản Phẩm Khuyến Mãi</b></h3>
       </div>
-    </div>
-  </div> 
+</div>
 
 <!-- banner intro -->
   <div class="untree_co-section">
     <div class="container">
       <div class="row justify-content-between">
         <div class="col-lg-5 mb-5">
-          <h2 class="line-bottom mb-4" data-aos="fade-up" data-aos-delay="0">Why Choose Us</h2>
+          <h2 class="line-bottom mb-4" data-aos="fade-up" data-aos-delay="0">Mã giảm giá:</h2>
           <p data-aos="fade-up" data-aos-delay="100">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
           <ul class="list-unstyled ul-check mb-5 primary" data-aos="fade-up" data-aos-delay="200">
-            <li>Separated they live</li>
-            <li>Bookmarksgrove right at the coast</li>
-            <li>large language ocean</li>
+            <li><i class="fa-solid fa-tag"></i>Separated they live</li>
+            <li><i class="fa-solid fa-tag"></i>Bookmarksgrove right at the coast</li>
+            <li><i class="fa-solid fa-tag"></i>large language ocean</li>
           </ul>
 
           <div class="row count-numbers mb-5">
@@ -43,14 +37,8 @@
             <a href="#" class="btn btn-outline-black">Learn More</a>
           </p>
         </div>
-        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-          <div class="bg-1"></div>
-          <a href="https://vimeo.com/342333493" data-fancybox class="video-wrap">
-            <span class="play-wrap"><span class="icon-play"></span></span>
-            <img src="../public/images/page/gal_1.jpg" alt="Image" class="img-fluid rounded">
-          </a>
-        </div>
-      </div>
+        
+      
     </div>
   </div> 
 

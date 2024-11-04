@@ -1,11 +1,14 @@
-<div class="page-heading bg-light" style="background-image: url('../public/images/banner/hero-slider-1-min.jpg'); background-size: cover;  height: 400px;">
+<div class="page-heading bg-light animated-banner" style="height: 500px;">
+    <div class="slide active" style="background-image: url('../public/images/banner/man_style.jpg'); background-position: cover; "></div>
+    <div class="slide" style="background-image: url('../public/images/banner/style_seoul.jpg');background-position: auto;"></div>
+    <div class="slide" style="background-image: url('../public/images/banner/clothes.jpg');background-position: auto;"></div>
     <div class="container">
-      <div class="row align-items-end text-center">
-        <div class="col-lg-7 mx-auto">
-          <h1 >Cửa hàng</h1>  
-          <p class="mb-4" ><a href="index.php" >Trang chủ</a> / <strong>Cửa hàng</strong></p>        
+        <div class="row align-items-end text-center">
+            <div class="col-lg-7 mx-auto">
+                <h1 style="font-size: 50px;"><b>Cửa hàng</b></h1>
+                <p class="mb-4" font-size: 30px;><a href="index.php">Trang chủ</a> / <strong>Cửa hàng</strong></p>
+            </div>
         </div>
-      </div>
     </div>
 </div>
 
@@ -15,11 +18,9 @@
 
       <div class="row align-items-center mb-5">
         <div class="col-lg-8">
-          <h2 class="mb-3 mb-lg-0">Sản phẩm</h2>
+          <h2 class="mb-3 mb-lg-0"><b>Sản phẩm</b></h2>
         </div>
         <div class="col-lg-4">
-
-
         <div class="d-flex sort align-items-center justify-content-lg-end">
             <strong class="mr-2"><b>Sắp xếp sản phẩm:</b></strong>
             <form action="#">
@@ -53,35 +54,52 @@
         </div>
         <div class="col-md-10">
           <div class="row">
-            <div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4">
-              <div class="product-item">
-                <a href="shop-single.html" class="product-img">
-
-                  <div class="label new top-right">
-                    <div class='content'>New</div>
+          <div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4">
+            <!-- product -->
+                  <div class="product-item">
+                  <a href="shop-single.php" class="product-img">
+                      <div class="label new top-right">
+                          <div class='content'>New</div>
+                      </div>
+                      <img src="../public/images/products/jacket-1-min.jpg" alt="Image" class="img-fluid">
+                      <div class="overlay">
+                          <div class="icons">
+                              <a href="shop-single.php" class="favorite"><i class="fa fa-heart"></i></a>
+                              <a href="?act=cart" class="add-to-cart">
+                                  <i class="fa fa-shopping-cart"></i>
+                                  <span class="cart-count">1</span>
+                              </a>
+                          </div>
+                      </div>
+                  </a>
+                  <h3 class="title"><a href="#">Dark Jacket</a></h3>
+                  <div class="price">
+                      <span>£69.00</span>
                   </div>
-
-
-                  <img src="../public/images/products/jacket-1-min.jpg" alt="Image" class="img-fluid">
-                </a>
-                <h3 class="title"><a href="#">Dark Jacket</a></h3>
-                <div class="price">
-                  <span>£69.00</span>
-                </div>
               </div>
-            </div>
+          </div>
+
+
 
             <div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4">
               <div class="product-item">
-                <a href="shop-single.html" class="product-img">
+                <a href="shop-single.php" class="product-img">
                   <div class="label new top-right">
                     <div class='content'>New</div>
                   </div>
-
                   <div class="label sale top-right second">
                     <div class='content'>Sale</div>
                   </div>
                   <img src="../public/images/products/bottoms-1-min.jpg" alt="Image" class="img-fluid">
+                  <div class="overlay">
+                          <div class="icons">
+                              <a href="shop-single.php" class="favorite"><i class="fa fa-heart"></i></a>
+                              <a href="?act=cart" class="add-to-cart">
+                                  <i class="fa fa-shopping-cart"></i>
+                                  <span class="cart-count">1</span>
+                              </a>
+                          </div>
+                      </div>
                 </a>
                 <h3 class="title"><a href="#">Chino Bottoms</a></h3>
                 <div class="price">
@@ -92,8 +110,17 @@
 
             <div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4">
               <div class="product-item">
-                <a href="shop-single.html" class="product-img">
+                <a href="shop-single.php" class="product-img">
                   <img src="../public/images/products/shoe-1-min.jpg" alt="Image" class="img-fluid">
+                  <div class="overlay">
+                          <div class="icons">
+                              <a href="shop-single.php" class="favorite"><i class="fa fa-heart"></i></a>
+                              <a href="?act=cart" class="add-to-cart">
+                                  <i class="fa fa-shopping-cart"></i>
+                                  <span class="cart-count">1</span>
+                              </a>
+                          </div>
+                      </div>
                 </a>
                 <h3 class="title"><a href="#">Brown Shoe</a></h3>
                 <div class="price">
@@ -106,6 +133,15 @@
               <div class="product-item">
                 <a href="shop-single.html" class="product-img">
                   <img src="../public/images/products/sock-1-min.jpg" alt="Image" class="img-fluid">
+                  <div class="overlay">
+                          <div class="icons">
+                              <a href="shop-single.php" class="favorite"><i class="fa fa-heart"></i></a>
+                              <a href="?act=cart" class="add-to-cart">
+                                  <i class="fa fa-shopping-cart"></i>
+                                  <span class="cart-count">1</span>
+                              </a>
+                          </div>
+                      </div>
                 </a>
                 <h3 class="title"><a href="#">The Modern Sock</a></h3>
                 <div class="price">
@@ -121,6 +157,15 @@
                     <div class='content'>Sale</div>
                   </div>
                   <img src="../public/images/products/sweater-2-min.jpg" alt="Image" class="img-fluid">
+                  <div class="overlay">
+                          <div class="icons">
+                              <a href="shop-single.php" class="favorite"><i class="fa fa-heart"></i></a>
+                              <a href="?act=cart" class="add-to-cart">
+                                  <i class="fa fa-shopping-cart"></i>
+                                  <span class="cart-count">1</span>
+                              </a>
+                          </div>
+                      </div>
                 </a>
                 <h3 class="title"><a href="#">Double Knit Sweater</a></h3>
                 <div class="price">
@@ -136,6 +181,15 @@
                     <div class='content'>Sale</div>
                   </div>
                   <img src="../public/images/products/watch-1-min.jpg" alt="Image" class="img-fluid">
+                  <div class="overlay">
+                          <div class="icons">
+                              <a href="shop-single.php" class="favorite"><i class="fa fa-heart"></i></a>
+                              <a href="?act=cart" class="add-to-cart">
+                                  <i class="fa fa-shopping-cart"></i>
+                                  <span class="cart-count">1</span>
+                              </a>
+                          </div>
+                      </div>
                 </a>
                 <h3 class="title"><a href="#">The Murray</a></h3>
                 <div class="price">
@@ -180,11 +234,47 @@
       </div>
     </div> <!-- /.untree_co-section -->
 
+    <div class="container">
+    <div class="row justify-content-center text-center pt-0 pb-5">  
+              <div class="col-lg-6 section-heading" data-aos="fade-up">
+                <h3 class="text-center"><b>Aura Fashion</b></h3>
+              </div>
+            </div>
+      <div class="slider-wrapper">
+        <button id="prev-slide" class="slide-button material-symbols-rounded">
+          chevron_left
+        </button>
+        <ul class="image-list">
+          <img class="image-item" src="../public/images/banner/Lseoul.jpg" alt="img-1" />
+          <img class="image-item" src="../public/images/banner/style_seoul.jpg" alt="img-2" />
+          <img class="image-item" src="../public/images/banner/woman.jpg" alt="img-3" />
+          <img class="image-item" src="../public/images/banner/style.jpg" alt="img-4" />
+          <img class="image-item" src="../public/images/banner/man_style.jpg" alt="img-5" />
+          <img class="image-item" src="../public/images/banner/style_seoul2.jpg" alt="img-6" />
+          <img class="image-item" src="../public/images/banner/walk_style.jpg" alt="img-7" />
+          <img class="image-item" src="../public/images/banner/style_winter.jpg" alt="img-8" />
+          <img class="image-item" src="../public/images/banner/kendall.jpg" alt="img-9" />
+          <img class="image-item" src="../public/images/banner/Lseoul.jpg" alt="img-10" />
+        </ul>
+        <button id="next-slide" class="slide-button material-symbols-rounded">
+          chevron_right
+        </button>
+      </div>
+      <div class="slider-scrollbar">
+        <div class="scrollbar-track">
+          <div class="scrollbar-thumb"></div>
+        </div>
+      </div>
+    </div>
+          
+    
+
+
     <div class="untree_co-section">
       <div class="container">
         <div class="row mb-5 align-items-center">
           <div class="col-md-6">
-            <h2 class="h3">Sản phẩm phổ biến</h2>        
+            <h1 class="h3"><b>Sản phẩm phổ biến</b></h1>        
           </div>
           <div class="col-sm-6 carousel-nav text-sm-right">
             <a href="#" class="prev js-custom-prev-v2">
@@ -211,6 +301,15 @@
                   <div class='content'>Sale</div>
                 </div>
                 <img src="../public/images/products/watch-1-min.jpg" alt="Image" class="img-fluid">
+                <div class="overlay">
+                          <div class="icons">
+                              <a href="shop-single.php" class="favorite"><i class="fa fa-heart"></i></a>
+                              <a href="?act=cart" class="add-to-cart">
+                                  <i class="fa fa-shopping-cart"></i>
+                                  <span class="cart-count">1</span>
+                              </a>
+                          </div>
+                      </div>
               </a>
               <h3 class="title"><a href="#">The Murray</a></h3>
               <div class="price">
@@ -227,9 +326,16 @@
                 <div class="label new top-right">
                   <div class='content'>New</div>
                 </div>
-
-
                 <img src="../public/images/products/jacket-1-min.jpg" alt="Image" class="img-fluid">
+                <div class="overlay">
+                          <div class="icons">
+                              <a href="shop-single.php" class="favorite"><i class="fa fa-heart"></i></a>
+                              <a href="?act=cart" class="add-to-cart">
+                                  <i class="fa fa-shopping-cart"></i>
+                                  <span class="cart-count">1</span>
+                              </a>
+                          </div>
+                      </div>
               </a>
               <h3 class="title"><a href="#">Dark Jacket</a></h3>
               <div class="price">
@@ -250,6 +356,15 @@
                   <div class='content'>Sale</div>
                 </div>
                 <img src="../public/images/products/bottoms-1-min.jpg" alt="Image" class="img-fluid">
+                <div class="overlay">
+                          <div class="icons">
+                              <a href="shop-single.php" class="favorite"><i class="fa fa-heart"></i></a>
+                              <a href="?act=cart" class="add-to-cart">
+                                  <i class="fa fa-shopping-cart"></i>
+                                  <span class="cart-count">1</span>
+                              </a>
+                          </div>
+                      </div>
               </a>
               <h3 class="title"><a href="#">Chino Bottoms</a></h3>
               <div class="price">
@@ -262,6 +377,15 @@
             <div class="product-item">
               <a href="shop-single.html" class="product-img">
                 <img src="../public/images/products/sock-1-min.jpg" alt="Image" class="img-fluid">
+                <div class="overlay">
+                          <div class="icons">
+                              <a href="shop-single.php" class="favorite"><i class="fa fa-heart"></i></a>
+                              <a href="?act=cart" class="add-to-cart">
+                                  <i class="fa fa-shopping-cart"></i>
+                                  <span class="cart-count">1</span>
+                              </a>
+                          </div>
+                      </div>
               </a>
               <h3 class="title"><a href="#">The Modern Sock</a></h3>
               <div class="price">
