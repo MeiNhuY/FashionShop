@@ -99,7 +99,7 @@
 			<div class="row">
 				<div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4">
 					<div class="product-item">
-						<a href="shop-single.php" class="product-img">
+						<a href="?act=shop-single" class="product-img">
 
 							<div class="label new top-right">
 								<div class='content'>New</div>
@@ -107,7 +107,7 @@
 							<img src="../public/images/products/jacket-1-min.jpg" alt="Image" class="img-fluid">
 							<div class="overlay">
 							<div class="icons">
-								<a href="shop-single.php" class="favorite"><i class="fa fa-heart"></i></a>
+							<a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
 								<a href="?act=cart" class="add-to-cart">
 									<i class="fa fa-shopping-cart"></i>
 									<span class="cart-count">1</span>
@@ -123,7 +123,7 @@
 				</div>
 				<div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4">
 					<div class="product-item">
-						<a href="shop-single.php" class="product-img">
+						<a href="?act=shop-single" class="product-img">
 							<div class="label new top-right">
 								<div class='content'>New</div>
 							</div>
@@ -134,7 +134,7 @@
 							<img src="../public/images/products/bottoms-1-min.jpg" alt="Image" class="img-fluid">
 							<div class="overlay">
 							<div class="icons">
-								<a href="shop-single.php" class="favorite"><i class="fa fa-heart"></i></a>
+							<a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
 								<a href="?act=cart" class="add-to-cart">
 									<i class="fa fa-shopping-cart"></i>
 									<span class="cart-count">1</span>
@@ -150,11 +150,11 @@
 				</div>
 				<div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4">
 					<div class="product-item">
-						<a href="shop-single.php" class="product-img">
+						<a href="?act=shop-single" class="product-img">
 							<img src="../public/images/products/shoe-1-min.jpg" alt="Image" class="img-fluid">
 							<div class="overlay">
 							<div class="icons">
-								<a href="shop-single.php" class="favorite"><i class="fa fa-heart"></i></a>
+							<a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
 								<a href="?act=cart" class="add-to-cart">
 									<i class="fa fa-shopping-cart"></i>
 									<span class="cart-count">1</span>
@@ -172,11 +172,11 @@
 				<div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4">
 
 					<div class="product-item">
-						<a href="shop-single.php" class="product-img">
+						<a href="?act=shop-single" class="product-img">
 							<img src="../public/images/products/sock-1-min.jpg" alt="Image" class="img-fluid">
 							<div class="overlay">
 							<div class="icons">
-								<a href="shop-single.php" class="favorite"><i class="fa fa-heart"></i></a>
+							<a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
 								<a href="?act=cart" class="add-to-cart">
 									<i class="fa fa-shopping-cart"></i>
 									<span class="cart-count">1</span>
@@ -194,14 +194,14 @@
 				<div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4">
 
 					<div class="product-item">
-						<a href="shop-single.php" class="product-img">
+						<a href="?act=shop-single" class="product-img">
 							<div class="label sale top-right">
 								<div class='content'>Sale</div>
 							</div>
 							<img src="../public/images/products/sweater-2-min.jpg" alt="Image" class="img-fluid">
 							<div class="overlay">
 							<div class="icons">
-								<a href="shop-single.php" class="favorite"><i class="fa fa-heart"></i></a>
+							<a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
 								<a href="?act=cart" class="add-to-cart">
 									<i class="fa fa-shopping-cart"></i>
 									<span class="cart-count">1</span>
@@ -220,14 +220,14 @@
 				<div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4">
 
 					<div class="product-item">
-						<a href="shop-single.php" class="product-img">
+						<a href="?act=shop-single" class="product-img">
 							<div class="label sale top-right">
 								<div class='content'>Sale</div>
 							</div>
 							<img src="../public/images/products/watch-1-min.jpg" alt="Image" class="img-fluid">
 							<div class="overlay">
 							<div class="icons">
-								<a href="shop-single.php" class="favorite"><i class="fa fa-heart"></i></a>
+							<a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
 								<a href="?act=cart" class="add-to-cart">
 									<i class="fa fa-shopping-cart"></i>
 									<span class="cart-count">1</span>
@@ -277,15 +277,15 @@
 			<div class="owl-3-slider owl-carousel">
 				<div class="item">
 					<div class="product-item">
-						<a href="shop-single.php" class="product-img">
+						<a href="?act=shop-single" class="product-img">
 							<div class="label sale top-right">
 								<div class='content'>Sale</div>
 							</div>
 							<img src="../public/images/products/watch-1-min.jpg" alt="Image" class="img-fluid">
 							<div class="overlay">
 							<div class="icons">
-								<a href="shop-single.php" class="favorite"><i class="fa fa-heart"></i></a>
-								<a href="?act=cart" class="add-to-cart">
+							<a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
+							<a href="?act=cart" class="add-to-cart">
 									<i class="fa fa-shopping-cart"></i>
 									<span class="cart-count">1</span>
 								</a>
@@ -302,7 +302,7 @@
 
 				<div class="item">
 					<div class="product-item">
-						<a href="shop-single.php" class="product-img">
+						<a href="?act=shop-single" class="product-img">
 
 							<div class="label new top-right">
 								<div class='content'>New</div>
@@ -310,8 +310,8 @@
 							<img src="../public/images/products/jacket-1-min.jpg" alt="Image" class="img-fluid">
 							<div class="overlay">
 							<div class="icons">
-								<a href="shop-single.php" class="favorite"><i class="fa fa-heart"></i></a>
-								<a href="?act=cart" class="add-to-cart">
+							<a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
+							<a href="?act=cart" class="add-to-cart">
 									<i class="fa fa-shopping-cart"></i>
 									<span class="cart-count">1</span>
 								</a>
@@ -328,7 +328,7 @@
 
 				<div class="item">
 					<div class="product-item">
-						<a href="shop-single.html" class="product-img">
+						<a href="?act=shop-single" class="product-img">
 							<div class="label new top-right">
 								<div class='content'>New</div>
 							</div>
@@ -339,8 +339,8 @@
 							<img src="../public/images/products/bottoms-1-min.jpg" alt="Image" class="img-fluid">
 							<div class="overlay">
 							<div class="icons">
-								<a href="shop-single.php" class="favorite"><i class="fa fa-heart"></i></a>
-								<a href="?act=cart" class="add-to-cart">
+							<a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
+							<a href="?act=cart" class="add-to-cart">
 									<i class="fa fa-shopping-cart"></i>
 									<span class="cart-count">1</span>
 								</a>
@@ -356,12 +356,12 @@
 
 				<div class="item">
 					<div class="product-item">
-						<a href="shop-single.html" class="product-img">
+						<a href="s?act=shop-single" class="product-img">
 							<img src="../public/images/products/sock-1-min.jpg" alt="Image" class="img-fluid">
 							<div class="overlay">
 							<div class="icons">
-								<a href="shop-single.php" class="favorite"><i class="fa fa-heart"></i></a>
-								<a href="?act=cart" class="add-to-cart">
+							<a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
+							<a href="?act=cart" class="add-to-cart">
 									<i class="fa fa-shopping-cart"></i>
 									<span class="cart-count">1</span>
 								</a>

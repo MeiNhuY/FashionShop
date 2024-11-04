@@ -39,9 +39,9 @@
 						<li class="has-children" >
 							<a href="?act=shop">Cửa Hàng</a>
 							<ul class="dropdown">
-								<li class="has-children"><a href="#">Áo</a></li>
-								<li class="has-children"><a href="#">Váy</a></li>
-								<li class="has-children"><a href="#">Quần</a></li>
+								<li class="has-children"><a href="?act=shop">Áo</a></li>
+								<li class="has-children"><a href="?act=shop">Váy</a></li>
+								<li class="has-children"><a href="?act=shop">Quần</a></li>
 							</ul>
 						</li>
 

@@ -37,8 +37,8 @@
                       <button class="btn btn-dark btn-lg btn-block" type="button">Đăng nhập</button>
                     </div>
   
-                    <a class="small text-muted" href="#!">Quên mật khẩu?</a>
-                    <p class="mb-5 pb-lg-2" style="color: #393f81;">Bạn chưa có tài khoản? <a href="#!" style="color: #393f81;">Đăng kí tại đây</a></p>
+                    <a class="small text-muted" href="?act=forget_pass">Quên mật khẩu?</a>
+                    <p class="mb-5 pb-lg-2" style="color: #393f81;">Bạn chưa có tài khoản? <a href="?act=myaccount" style="color: #393f81;">Đăng kí tại đây</a></p>
                     <a href="#!" class="small text-muted">Terms of use.</a>
                     <a href="#!" class="small text-muted">Privacy policy</a>
                   </form>

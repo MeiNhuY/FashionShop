@@ -16,15 +16,18 @@
       <div class="row mb-5">
         <div class="col-md-12">
           <div class="border p-4 rounded" role="alert">
-            <a href="#">Click here để Đăng Nhập</a>
+            <a href="?act=login">Click here để Đăng Nhập</a>
           </div>
         </div>
       </div>
       <div class="row">
         <div class="col-md-6 mb-5 mb-md-0">
-          <h2 class="h3 mb-3 text-black">Thông tin nhận hàng</h2>
-          <div class="p-3 p-lg-5 border">
-    
+              <div class="row">
+                  <div class="col-md-12 text-center mb-5">
+                    <h3 class="text-black h4 text-uppercase">Thông tin đặt hàng</h3>
+                  </div>
+              </div>          
+              <div class="p-3 p-lg-5 border">
             <div class="form-group row">
               <div class="col-md-12">
                 <label for="c_fname" class="text-black">Tên người nhận <span class="text-danger">*</span></label>
@@ -66,8 +69,12 @@
         <div class="col-md-6">
           <div class="row mb-6">
             <div class="col-md-12">
-              <h2 class="h3 mb-3 text-black">Đơn hàng của bạn</h2>
-              <div class="p-3 p-lg-5 border">
+                <div class="row">
+                    <div class="col-md-12 text-center mb-5">
+                      <h3 class="text-black h4 text-uppercase">Đơn hàng của bạn</h3>
+                    </div>
+                </div>                 
+                <div class="p-3 p-lg-5 border">
                 <table class="table site-block-order-table mb-5">
                   <thead>
                     <th>Tên sản phẩm</th>
@@ -86,11 +93,11 @@
                       <td>$100.00</td>
                     </tr>
                     <tr>
-                      <td class="text-black font-weight-bold"><strong>Cart Subtotal</strong></td>
+                      <td class="text-black font-weight-bold"><strong>Tổng Giỏ Hàng</strong></td>
                       <td class="text-black">$350.00</td>
                     </tr>
                     <tr>
-                      <td class="text-black font-weight-bold"><strong>Order Total</strong></td>
+                      <td class="text-black font-weight-bold"><strong>Tổng Đặt Hàng</strong></td>
                       <td class="text-black font-weight-bold"><strong>$350.00</strong></td>
                     </tr>
                   </tbody>

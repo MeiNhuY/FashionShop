@@ -14,8 +14,17 @@
 
   
 
+  
+
   <div class="untree_co-section">
     <div class="container">
+
+    <div class="row">
+     <div class="col-md-12 text-left mb-2">
+        <h3 class="text-black h4 text-uppercase">Giỏ hàng của bạn</h3>
+     </div>
+   </div>  
+
       <div class="row mb-5">
         <form class="col-md-12" method="post">
           <div class="site-blocks-table">
@@ -96,8 +105,12 @@
           </div>
           <div class="row">
             <div class="col-md-12">
-              <label class="text-black h4" for="coupon">Mã giảm giá</label>
-              <p>Nhập mã giảm giá của bạn nếu có</p>
+              <div class="row">
+                      <div class="col-md-12 text-left mb-3">
+                        <h3 class="text-black h4 text-uppercase">Mã giảm giá</h3>
+                      </div>
+                </div>                 
+                <p>Nhập mã giảm giá của bạn nếu có</p>
             </div>
             <div class="col-md-8 mb-3 mb-md-0">
               <input type="text" class="form-control py-3" id="coupon" placeholder="Nhập mã giảm giá tại đây">
@@ -111,21 +124,38 @@
           <div class="row justify-content-end">
             <div class="col-md-7">
               <div class="row">
-                <div class="col-md-12 text-right border-bottom mb-5">
+                <div class="col-md-12 text-center border-bottom mb-5">
                   <h3 class="text-black h4 text-uppercase">Chi tiết đơn hàng</h3>
                 </div>
               </div>
+
               <div class="row mb-3">
                 <div class="col-md-6">
-                  <span class="text-black">Subtotal</span>
-                </div>
-                <div class="col-md-6 text-right">
-                  <strong class="text-black">$230.00</strong>
+                  <span class="text-black">Sản Phẩm</span>
                 </div>
               </div>
+
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <span class="text-black">Quần Jean x 1</span>
+                </div>
+                <div class="col-md-6 text-right">
+                  <strong class="text-black">200.000Đ</strong>
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <span class="text-black">Áo Jacket x 2</span>
+                </div>
+                <div class="col-md-6 text-right">
+                  <strong class="text-black">250.000Đ</strong>
+                </div>
+              </div>
+
               <div class="row mb-5">
                 <div class="col-md-6">
-                  <span class="text-black">Total</span>
+                  <span class="text-black">Tổng Cộng</span>
                 </div>
                 <div class="col-md-6 text-right">
                   <strong class="text-black">$230.00</strong>
