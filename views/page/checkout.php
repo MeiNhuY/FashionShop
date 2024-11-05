@@ -27,18 +27,11 @@
                     <h3 class="text-black h4 text-uppercase">Thông tin đặt hàng</h3>
                   </div>
               </div>          
-              <div class="p-3 p-lg-5 border">
+          <div class="p-3 p-lg-5 border">
             <div class="form-group row">
               <div class="col-md-12">
                 <label for="c_fname" class="text-black">Tên người nhận <span class="text-danger">*</span></label>
                 <input type="text" class="form-control" id="c_fname" name="c_fname" placeholder="Tên người nhận">
-              </div>
-            </div>
-
-            <div class="form-group row">
-              <div class="col-md-12">
-                <label for="c_address" class="text-black">Địa chỉ<span class="text-danger">*</span></label>
-                <input type="text" class="form-control" id="c_address" name="c_address" placeholder="Địa chỉ nhận hàng">
               </div>
             </div>
 
@@ -51,6 +44,13 @@
               <div class="col-md-6">
                 <label for="c_phone" class="text-black">Số điện thoại<span class="text-danger">*</span></label>
                 <input type="text" class="form-control" id="c_phone" name="c_phone" placeholder="Số điện thoại">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <div class="col-md-12">
+                <label for="c_address" class="text-black">Địa chỉ<span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="c_address" name="c_address" placeholder="Địa chỉ nhận hàng">
               </div>
             </div>
 
@@ -71,34 +71,35 @@
             <div class="col-md-12">
                 <div class="row">
                     <div class="col-md-12 text-center mb-5">
-                      <h3 class="text-black h4 text-uppercase">Đơn hàng của bạn</h3>
+                      <h3 class="text-black h4 text-uppercase">HÓA ĐƠN</h3>
                     </div>
                 </div>                 
                 <div class="p-3 p-lg-5 border">
                 <table class="table site-block-order-table mb-5">
+
                   <thead>
                     <th>Tên sản phẩm</th>
                     <th>Số lượng</th>
                     <th>Thành tiền</th>
                   </thead>
+
                   <tbody>
                     <tr>
-                      <td>Top Up T-Shirt</td>
+                      <td>Áo polo cao cấp</td>
                       <td>1</td>
                       <td>$250.00</td>
                     </tr>
                     <tr>
-                      <td>Polo Shirt</td>
-                      <td>2</td>
-                      <td>$100.00</td>
+                      <td class="text-black font-weight-bold"><strong>Giảm giá</strong></td>
+                      <td class="text-black">20<span> %</span></td>
                     </tr>
                     <tr>
-                      <td class="text-black font-weight-bold"><strong>Tổng Giỏ Hàng</strong></td>
-                      <td class="text-black">$350.00</td>
+                      <td class="text-black font-weight-bold"><strong>Vận chuyển</strong></td>
+                      <td class="text-black">25000<span> VND</span></td>
                     </tr>
                     <tr>
-                      <td class="text-black font-weight-bold"><strong>Tổng Đặt Hàng</strong></td>
-                      <td class="text-black font-weight-bold"><strong>$350.00</strong></td>
+                      <td class="text-black font-weight-bold"><strong>Tổng thanh toán</strong></td>
+                      <td class="text-black">360000<span> VND</span></td>
                     </tr>
                   </tbody>
                 </table>

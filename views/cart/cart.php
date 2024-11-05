@@ -125,47 +125,50 @@
             <div class="col-md-7">
               <div class="row">
                 <div class="col-md-12 text-center border-bottom mb-5">
-                  <h3 class="text-black h4 text-uppercase">Chi tiết đơn hàng</h3>
+                  <h3 class="text-black h4 text-uppercase">Chi tiết thanh toán</h3>
                 </div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-md-6">
-                  <span class="text-black">Sản Phẩm</span>
+                  <strong class="text-black">Tổng giỏ hàng</strong>
+                </div>
+                <div class="col-md-6 text-right">
+                  <span class="text-black">180000<span> VND</spp></span>
                 </div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-md-6">
-                  <span class="text-black">Quần Jean x 1</span>
+                  <strong class="text-black">Giảm giá</strong>
                 </div>
                 <div class="col-md-6 text-right">
-                  <strong class="text-black">200.000Đ</strong>
+                  <span class="text-black">20<span> %</span></span>
                 </div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-md-6">
-                  <span class="text-black">Áo Jacket x 2</span>
+                  <strong class="text-black" >Vận chuyển</strong>
                 </div>
                 <div class="col-md-6 text-right">
-                  <strong class="text-black">250.000Đ</strong>
+                  <span class="text-black">20000<span> VND</span></span>
                 </div>
               </div>
 
-              <div class="row mb-5">
+              <div class="row mb-3 border-top mb-5">
                 <div class="col-md-6">
-                  <span class="text-black">Tổng Cộng</span>
+                  <strong class="text-black"style="padding-top: 50px;" >Tổng cộng</strong>
                 </div>
                 <div class="col-md-6 text-right">
-                  <strong class="text-black">$230.00</strong>
+                  <span class="text-black" style="color:brown;">20000<span> VND</span></span>
                 </div>
               </div>
 
               <div class="row">
                 <div class="col-md-12">
                   <!-- <button class="btn btn-black btn-lg py-3 btn-block" onclick="window.location='?act=checkout.php'">Mua hàng</button> -->
-                  <button class="btn btn-black btn-lg py-3 btn-block" href="?act=checkout.php" aria-label="Mua hàng">Mua hàng</button>
+                  <button class="btn btn-black btn-lg py-3 btn-block" href="?act=checkout.php" aria-label="Mua hàng">Đặt hàng</button>
 
                   
                 </div>
