@@ -20,7 +20,7 @@ switch ($act) {
         require_once("cart/cart.php");
         break;
     case "shop-single":
-        require_once("shop/shop-single.php");
+        require_once("shop/product_detail.php");
         break; 
     case "promotion":
         require_once("page/promotion.php");
@@ -32,7 +32,7 @@ switch ($act) {
         require_once("login/login.php");
         break; 
     case "myaccount":
-        require_once("login/myaccount.php");
+        require_once("login/register.php");
         break;
     case "forget_pass":
         require_once("login/forget_pass.php");

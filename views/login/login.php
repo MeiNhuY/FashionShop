@@ -1,4 +1,4 @@
-<section class="vh-100" style="background-color: #F0F0F0;  margin-top: 70px;">
+<section class="vh-100" style="background-color: #FFFFFF;  margin-top: 70px; margin-bottom: 70px;">
     <div class="container py-5 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col col-xl-10">
@@ -25,7 +25,7 @@
   
                     <div class="form-outline mb-4">
                       <input type="email" id="form2Example17" class="form-control form-control-lg" />
-                      <label class="form-label" for="form2Example17">Email</label>
+                      <label class="form-label" for="form2Example17">Tên đăng nhập</label>
                     </div>
   
                     <div class="form-outline mb-4">

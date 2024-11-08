@@ -38,7 +38,14 @@
         <li>Số lượng: 200</li>
         <li>Xuất xứ: Việt Nam</li>
       </ul>
-
+      <label for=""><b>Đánh giá:</b></label>
+      <div class="rating" style="color: #FFD700;">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-alt"></i> <!-- half-star for 4.5 rating, or use fa-star for full -->
+      </div>
       <!-- Chọn kích thước -->
       <div class="product-option mb-3">
         <label for="size">Kích thước:</label>

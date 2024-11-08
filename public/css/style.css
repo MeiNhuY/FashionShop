@@ -405,6 +405,7 @@ transition: transform 0.3s, color 0.3s;
 @keyframes animation {
   0% {
     transform: perspective(1000px) rotateY(0deg);
+
   }
   100% {
     transform: perspective(1000px) rotateY(360deg);
@@ -459,7 +460,8 @@ transition: transform 0.3s, color 0.3s;
 }
 
 .back-img {
-  transform: rotateY(180deg);
+  border-radius: 4px;
+  transform: rotateY(170deg);
 }
 
 /* Định dạng gọn gàng cho kích thước, màu sắc và số lượng */
@@ -476,15 +478,18 @@ transition: transform 0.3s, color 0.3s;
 
 /* Nút chọn kích thước */
 .size-btn {
-  border: 1px solid #ccc;
+  border-radius: 4px;
+  border: 1px solid #000000;
   padding: 8px 12px;
-  background-color: #f8f9fa;
+  color:#a35f0c;
+  background-color: #2b2b2b;
   cursor: pointer;
   transition: border-color 0.3s;
 }
 
 .size-btn:hover, .size-btn:focus {
-  border-color: #007bff;
+  border-color: #000000;
+  background-color: #000000;
 }
 
 /* Nút chọn màu sắc */
@@ -624,8 +629,8 @@ a.text-primary {
   font-size: 16px;
   height: 48px;
   background: transparent;
-  border: 1px solid #43434d;
-  border-radius: 0;
+  border: 1px solid #000000;
+  border-radius: 7px;
   color: #000000; }
   .form-control:active, .form-control:focus, .custom-select:active, .custom-select:focus {
     color: #000000;
@@ -855,6 +860,8 @@ a.text-primary {
             background: #a35f0c; }
 
 /* ý */
+
+
 /* Cài đặt mặc định cho các mục menu */
 .site-nav .site-navigation .site-menu > li > a {
   position: relative;

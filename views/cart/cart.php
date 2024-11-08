@@ -1,6 +1,4 @@
 
-
-
   <div class="page-heading bg-light" style="background-image: url('../public/images/banner/bannerCart.png'); background-size: cover;  height: 400px;">
     <div class="container">
       <div class="row align-items-end text-center">
