@@ -1,0 +1,30 @@
+<?php
+require_once("connectDB.php");
+
+class RegisterModel {
+    private $conn;
+
+    public function __construct() {
+        $connection = new ConnectDB();
+        $this->conn = $connection->conn;
+    }
+
+    public function registerUser($data) {
+        $query = "INSERT INTO nguoidung (HoTen, GioiTinh, Diachi, Email, MatKhau, SDT) 
+                  VALUES (?, ?, ?, ?, ?, ?)";
+        
+        $stmt = $this->conn->prepare($query);
+        $stmt->bind_param(
+            "ssssss",
+            $data['HoTen'],
+            $data['GioiTinh'],
+            $data['Diachi'],
+            $data['Email'],
+            md5($data['MatKhau']),  // Mã hóa mật khẩu
+            $data['SDT']
+        );
+        
+        return $stmt->execute();
+    }
+}
+?>

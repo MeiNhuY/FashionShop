@@ -115,6 +115,13 @@
 							</div>
 						</div>
 						</a>
+						<div class="rating" style="color: #FFD700;">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-half-alt"></i> <!-- half-star for 4.5 rating, or use fa-star for full -->
+						</div>
 						<h3 class="title"><a href="#">Dark Jacket</a></h3>
 						<div class="price">
 							<span>200.000VND</span>
@@ -142,6 +149,13 @@
 							</div>
                       </div>
 						</a>
+						<div class="rating" style="color: #FFD700;">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-half-alt"></i> <!-- half-star for 4.5 rating, or use fa-star for full -->
+						</div>
 						<h3 class="title"><a href="#">Chino Bottoms</a></h3>
 						<div class="price">
 							<del>£99.00</del> &mdash; <span>£69.00</span>
@@ -162,6 +176,13 @@
 							</div>
                     	  </div>
 						</a>
+						<div class="rating" style="color: #FFD700;">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-half-alt"></i> <!-- half-star for 4.5 rating, or use fa-star for full -->
+						</div>
 						<h3 class="title"><a href="#">Brown Shoe</a></h3>
 						<div class="price">
 							<span>£29.00</span>
@@ -184,6 +205,13 @@
 							</div>
                       		</div>
 						</a>
+						<div class="rating" style="color: #FFD700;">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-half-alt"></i> <!-- half-star for 4.5 rating, or use fa-star for full -->
+						</div>
 						<h3 class="title"><a href="#">The Modern Sock</a></h3>
 						<div class="price">
 							<span>£29.00</span>
@@ -209,6 +237,13 @@
 							</div>
                       		</div>
 						</a>
+						<div class="rating" style="color: #FFD700;">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-half-alt"></i> <!-- half-star for 4.5 rating, or use fa-star for full -->
+						</div>
 						<h3 class="title"><a href="#">Double Knit Sweater</a></h3>
 						<div class="price">
 							<del>£99.00</del> &mdash; <span>£69.00</span>
@@ -235,7 +270,14 @@
 							</div>
                       		</div>
 						</a>
-						<h3 class="title"><a href="#">The Murray</a></h3>
+						<div class="rating" style="color: #FFD700;">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-half-alt"></i> <!-- half-star for 4.5 rating, or use fa-star for full -->
+						</div>
+								<h3 class="title"><a href="#">The Murray</a></h3>
 						<div class="price">
 							<del>£99.00</del> &mdash; <span>£69.00</span>
 						</div>
@@ -292,6 +334,13 @@
 							</div>
                       		</div>
 						</a>
+						<div class="rating" style="color: #FFD700;">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-half-alt"></i> <!-- half-star for 4.5 rating, or use fa-star for full -->
+						</div>
 						<h3 class="title"><a href="#">The Murray</a></h3>
 						<div class="price">
 							<del>£99.00</del> &mdash; <span>£69.00</span>
@@ -318,6 +367,13 @@
 							</div>
                       		</div>
 						</a>
+						<div class="rating" style="color: #FFD700;">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-half-alt"></i> <!-- half-star for 4.5 rating, or use fa-star for full -->
+						</div>
 						<h3 class="title"><a href="#">Dark Jacket</a></h3>
 						<div class="price">
 							<span>£69.00</span>
@@ -347,6 +403,13 @@
 							</div>
                       		</div>
 						</a>
+						<div class="rating" style="color: #FFD700;">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-half-alt"></i> <!-- half-star for 4.5 rating, or use fa-star for full -->
+						</div>
 						<h3 class="title"><a href="#">Chino Bottoms</a></h3>
 						<div class="price">
 							<del>£99.00</del> &mdash; <span>£69.00</span>
@@ -368,6 +431,13 @@
 							</div>
                       		</div>
 						</a>
+						<div class="rating" style="color: #FFD700;">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-half-alt"></i> <!-- half-star for 4.5 rating, or use fa-star for full -->
+						</div>
 						<h3 class="title"><a href="#">The Modern Sock</a></h3>
 						<div class="price">
 							<span>£29.00</span>
