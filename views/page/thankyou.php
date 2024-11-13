@@ -10,7 +10,7 @@
           </span>
           <h2 class="display-3 text-black">CẢM ƠN</h2>
           <p class="lead mb-5">Bạn đã thanh toán đơn hàng thành công !</p>
-          <p><a href="shop.html" class="btn btn-sm btn-outline-black">Quay lại </a></p>
+          <p><a href="?act=shop" class="btn btn-sm btn-outline-black">Quay lại </a></p>
         </div>
       </div>
     </div>

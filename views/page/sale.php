@@ -1,5 +1,5 @@
 <!-- cái này là khuyến mãi nha sửa giao diện là được -->
-  <div class="untree_co-hero" style="background-image: url('../../public/images/banner/hero-slider-1-min.jpg');">
+  <div class="untree_co-hero" style="background-image: url('public/images/banner/hero-slider-1-min.jpg');">
     <div class="container">
       <div class="row align-items-center justify-content-center">
         <div class="col-lg-8 text-center text-lg-center">
@@ -51,7 +51,7 @@
           <div class="bg-1"></div>
           <a href="https://vimeo.com/342333493" data-fancybox class="video-wrap">
             <span class="play-wrap"><span class="icon-play"></span></span>
-            <img src="../../public/images/page/gal_1.jpg" alt="Image" class="img-fluid rounded">
+            <img src="public/images/page/gal_1.jpg" alt="Image" class="img-fluid rounded">
           </a>
         </div>
       </div>
@@ -69,7 +69,7 @@
       <div class="row">
         <div class="col-12 col-sm-6 col-md-6 mb-4 mb-lg-0 col-lg-4" data-aos="fade-up" data-aos-delay="0">
           <div class="team text-center">
-            <div class="mb-4"><img src="../../public/images/page/person_1.jpg" alt="Image" class="img-fluid"></div>
+            <div class="mb-4"><img src="public/images/page/person_1.jpg" alt="Image" class="img-fluid"></div>
             <div class="team-body">
               <h3 class="staff-name">Mina Collins</h3>
               <span class="d-block position mb-4">Teacher in Math</span>
@@ -84,7 +84,7 @@
         </div>
         <div class="col-12 col-sm-6 col-md-6 mb-4 mb-lg-0 col-lg-4" data-aos="fade-up" data-aos-delay="100">
           <div class="team text-center">
-            <div class="mb-4"><img src="../../public/images/page/person_2.jpg" alt="Image" class="img-fluid"></div>
+            <div class="mb-4"><img src="public/images/page/person_2.jpg" alt="Image" class="img-fluid"></div>
             <div class="person-body">
               <h3 class="staff-name">Anderson Matthew</h3>
               <span class="d-block position mb-4">Teacher in Music</span>
@@ -99,7 +99,7 @@
         </div>
         <div class="col-12 col-sm-6 col-md-6 mb-4 mb-lg-0 col-lg-4" data-aos="fade-up" data-aos-delay="200">
           <div class="team text-center">
-            <div class="mb-4"><img src="../../public/images/page/person_3.jpg" alt="Image" class="img-fluid"></div>
+            <div class="mb-4"><img src="public/images/page/person_3.jpg" alt="Image" class="img-fluid"></div>
             <div class="team-body">
               <h3 class="staff-name">Cynthia Misso</h3>
               <span class="d-block position mb-4">Teacher English</span>
@@ -147,7 +147,7 @@
               <div class="label sale top-right">
                 <div class='content'>Sale</div>
               </div>
-              <img src="../../public/images/products/watch-1-min.jpg" alt="Image" class="img-fluid">
+              <img src="public/images/products/watch-1-min.jpg" alt="Image" class="img-fluid">
             </a>
             <h3 class="title"><a href="#">The Murray</a></h3>
             <div class="price">
@@ -165,7 +165,7 @@
               </div>
 
               
-              <img src="../../public/images/products/jacket-1-min.jpg" alt="Image" class="img-fluid">
+              <img src="public/images/products/jacket-1-min.jpg" alt="Image" class="img-fluid">
             </a>
             <h3 class="title"><a href="#">Dark Jacket</a></h3>
             <div class="price">
@@ -185,7 +185,7 @@
               <div class="label sale top-right second">
                 <div class='content'>Sale</div>
               </div>
-              <img src="../../public/images/products/bottoms-1-min.jpg" alt="Image" class="img-fluid">
+              <img src="public/images/products/bottoms-1-min.jpg" alt="Image" class="img-fluid">
             </a>
             <h3 class="title"><a href="#">Chino Bottoms</a></h3>
             <div class="price">
@@ -197,7 +197,7 @@
         <div class="item">
           <div class="product-item">
             <a href="../shop/shop-single.php" class="product-img">
-              <img src="../../public/images/products/sock-1-min.jpg" alt="Image" class="img-fluid">
+              <img src="public/images/products/sock-1-min.jpg" alt="Image" class="img-fluid">
             </a>
             <h3 class="title"><a href="#">The Modern Sock</a></h3>
             <div class="price">
@@ -210,9 +210,9 @@
     </div>
   </div> 
 <!-- contact -->
- <?php include '../home/detail.php'; ?>
+ <?php include 'views/home/detail.php'; ?>
 <!-- footer -->
- <?php include '../header_footer/footer.php'; ?>
+ <?php include 'views/header_footer/footer.php'; ?>
 
 
   <div id="overlayer"></div>

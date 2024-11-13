@@ -1,7 +1,7 @@
 <div class="page-heading bg-light animated-banner" style="height: 500px;">
-    <div class="slide active" style="background-image: url('../public/images/banner/man_style.jpg'); background-position: cover; "></div>
-    <div class="slide" style="background-image: url('../public/images/banner/style_seoul.jpg');background-position: auto;"></div>
-    <div class="slide" style="background-image: url('../public/images/banner/clothes.jpg');background-position: auto;"></div>
+    <div class="slide active" style="background-image: url('public/images/banner/man_style.jpg'); background-position: cover; "></div>
+    <div class="slide" style="background-image: url('public/images/banner/style_seoul.jpg');background-position: auto;"></div>
+    <div class="slide" style="background-image: url('public/images/banner/clothes.jpg');background-position: auto;"></div>
     <div class="container">
         <div class="row align-items-end text-center">
             <div class="col-lg-7 mx-auto">
@@ -61,7 +61,7 @@
                       <div class="label new top-right">
                           <div class='content'>New</div>
                       </div>
-                      <img src="../public/images/products/jacket-1-min.jpg" alt="Image" class="img-fluid">
+                      <img src="public/images/products/jacket-1-min.jpg" alt="Image" class="img-fluid">
                       <div class="overlay">
                           <div class="icons">
                               <a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
@@ -97,7 +97,7 @@
                   <div class="label sale top-right second">
                     <div class='content'>Sale</div>
                   </div>
-                  <img src="../public/images/products/bottoms-1-min.jpg" alt="Image" class="img-fluid">
+                  <img src="public/images/products/bottoms-1-min.jpg" alt="Image" class="img-fluid">
                   <div class="overlay">
                           <div class="icons">
                               <a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
@@ -125,7 +125,7 @@
             <div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4">
               <div class="product-item">
                 <a href="shop-single.php" class="product-img">
-                  <img src="../public/images/products/shoe-1-min.jpg" alt="Image" class="img-fluid">
+                  <img src="public/images/products/shoe-1-min.jpg" alt="Image" class="img-fluid">
                   <div class="overlay">
                           <div class="icons">
                               <a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
@@ -153,7 +153,7 @@
             <div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4">
               <div class="product-item">
                 <a href="shop-single.html" class="product-img">
-                  <img src="../public/images/products/sock-1-min.jpg" alt="Image" class="img-fluid">
+                  <img src="public/images/products/sock-1-min.jpg" alt="Image" class="img-fluid">
                   <div class="overlay">
                           <div class="icons">
                               <a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
@@ -184,7 +184,7 @@
                   <div class="label sale top-right">
                     <div class='content'>Sale</div>
                   </div>
-                  <img src="../public/images/products/sweater-2-min.jpg" alt="Image" class="img-fluid">
+                  <img src="public/images/products/sweater-2-min.jpg" alt="Image" class="img-fluid">
                   <div class="overlay">
                           <div class="icons">
                               <a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
@@ -215,7 +215,7 @@
                   <div class="label sale top-right">
                     <div class='content'>Sale</div>
                   </div>
-                  <img src="../public/images/products/watch-1-min.jpg" alt="Image" class="img-fluid">
+                  <img src="public/images/products/watch-1-min.jpg" alt="Image" class="img-fluid">
                   <div class="overlay">
                           <div class="icons">
                               <a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
@@ -287,16 +287,16 @@
           chevron_left
         </button>
         <ul class="image-list">
-          <img class="image-item" src="../public/images/banner/Lseoul.jpg" alt="img-1" />
-          <img class="image-item" src="../public/images/banner/style_seoul.jpg" alt="img-2" />
-          <img class="image-item" src="../public/images/banner/slider.jpg" alt="img-3" />
-          <img class="image-item" src="../public/images/banner/style.jpg" alt="img-4" />
-          <img class="image-item" src="../public/images/banner/man_style.jpg" alt="img-5" />
-          <img class="image-item" src="../public/images/banner/style_seoul2.jpg" alt="img-6" />
-          <img class="image-item" src="../public/images/banner/walk_style.jpg" alt="img-7" />
-          <img class="image-item" src="../public/images/banner/style_winter.jpg" alt="img-8" />
-          <img class="image-item" src="../public/images/banner/kendall.jpg" alt="img-9" />
-          <img class="image-item" src="../public/images/banner/Lseoul.jpg" alt="img-10" />
+          <img class="image-item" src="public/images/banner/Lseoul.jpg" alt="img-1" />
+          <img class="image-item" src="public/images/banner/style_seoul.jpg" alt="img-2" />
+          <img class="image-item" src="public/images/banner/slider.jpg" alt="img-3" />
+          <img class="image-item" src="public/images/banner/style.jpg" alt="img-4" />
+          <img class="image-item" src="public/images/banner/man_style.jpg" alt="img-5" />
+          <img class="image-item" src="public/images/banner/style_seoul2.jpg" alt="img-6" />
+          <img class="image-item" src="public/images/banner/walk_style.jpg" alt="img-7" />
+          <img class="image-item" src="public/images/banner/style_winter.jpg" alt="img-8" />
+          <img class="image-item" src="public/images/banner/kendall.jpg" alt="img-9" />
+          <img class="image-item" src="public/images/banner/Lseoul.jpg" alt="img-10" />
         </ul>
         <button id="next-slide" class="slide-button material-symbols-rounded">
           chevron_right
@@ -338,11 +338,11 @@
         <div class="owl-3-slider owl-carousel">
           <div class="item">
             <div class="product-item">
-              <a href="shop-single.html" class="product-img">
+              <a href="product_detail.php" class="product-img">
                 <div class="label sale top-right">
                   <div class='content'>Sale</div>
                 </div>
-                <img src="../public/images/products/watch-1-min.jpg" alt="Image" class="img-fluid">
+                <img src="public/images/products/watch-1-min.jpg" alt="Image" class="img-fluid">
                 <div class="overlay">
                           <div class="icons">
                               <a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
@@ -363,12 +363,12 @@
 
           <div class="item">
             <div class="product-item">
-              <a href="shop-single.html" class="product-img">
+              <a href="product_detail.php" class="product-img">
 
                 <div class="label new top-right">
                   <div class='content'>New</div>
                 </div>
-                <img src="../public/images/products/jacket-1-min.jpg" alt="Image" class="img-fluid">
+                <img src="public/images/products/jacket-1-min.jpg" alt="Image" class="img-fluid">
                 <div class="overlay">
                           <div class="icons">
                               <a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
@@ -388,7 +388,7 @@
 
 
           <div class="item">
-            <div class="product-item">
+            <div class="product_detail.php">
               <a href="shop-single.html" class="product-img">
                 <div class="label new top-right">
                   <div class='content'>New</div>
@@ -397,7 +397,7 @@
                 <div class="label sale top-right second">
                   <div class='content'>Sale</div>
                 </div>
-                <img src="../public/images/products/bottoms-1-min.jpg" alt="Image" class="img-fluid">
+                <img src="public/images/products/bottoms-1-min.jpg" alt="Image" class="img-fluid">
                 <div class="overlay">
                           <div class="icons">
                               <a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
@@ -417,8 +417,8 @@
 
           <div class="item">
             <div class="product-item">
-              <a href="shop-single.html" class="product-img">
-                <img src="../public/images/products/sock-1-min.jpg" alt="Image" class="img-fluid">
+              <a href="product_detail.php" class="product-img">
+                <img src="public/images/products/sock-1-min.jpg" alt="Image" class="img-fluid">
                 <div class="overlay">
                           <div class="icons">
                               <a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>

@@ -1,4 +1,4 @@
-<div class="page-heading bg-light" style="background-image: url('../public/images/banner/clothes.jpg'); background-position: auto;  height: 400px;">
+<div class="page-heading bg-light" style="background-image: url('public/images/banner/clothes.jpg'); background-position: auto;  height: 400px;">
     <div class="container">
       <div class="row align-items-end text-center">
         <div class="col-lg-7 mx-auto">
@@ -12,23 +12,23 @@
 <div class="box">
       <span style="--i: 1">
       <a href="?act=shop">
-        <img src="../public/images/banner/kendall.jpg" alt="" />
+        <img src="public/images/banner/kendall.jpg" alt="" />
       </a>
     </span>
       <span style="--i: 2">
-        <img src="../public/images/banner/Lseoul.jpg" alt="" />
+        <img src="public/images/banner/Lseoul.jpg" alt="" />
       </span>
       <span style="--i: 3">
-        <img src="../public/images/banner/walk_style.jpg" alt="" />
+        <img src="public/images/banner/walk_style.jpg" alt="" />
       </span>
       <span style="--i: 4">
-        <img src="../public/images/banner/style_seoul.jpg" alt="" />
+        <img src="public/images/banner/style_seoul.jpg" alt="" />
       </span>
       <span style="--i: 5">
-        <img src="../public/images/banner/style_seoul2.jpg" alt="" />
+        <img src="public/images/banner/style_seoul2.jpg" alt="" />
       </span>
       <span style="--i: 6">
-        <img src="../public/images/banner/man_style.jpg" alt="" />
+        <img src="public/images/banner/man_style.jpg" alt="" />
       </span>
 </div>
 
@@ -42,7 +42,7 @@
   <a href="?act=shop_single">
     <div class="card_sale">
       <div class="side">
-        <img src="../public/images/banner/style.jpg" alt="" style="width: 100%; height: 100%; border-radius: 10px;">
+        <img src="public/images/banner/style.jpg" alt="" style="width: 100%; height: 100%; border-radius: 10px;">
       </div>
       <div class="side back">
         <i class="fa-solid fa-tag fa-3x"></i>
@@ -58,7 +58,7 @@
 <a href="?act=shop_single">
   <div class="card_sale">
     <div class="side">
-      <img src="../public/images/banner/style_seoul.jpg" alt="" style="width: 100%; height: 100%;">
+      <img src="public/images/banner/style_seoul.jpg" alt="" style="width: 100%; height: 100%;">
     </div>
     <div class="side back">
       <i class="fa-solid fa-tag fa-3x"></i>
@@ -73,7 +73,7 @@
 <a href="?act=shop_single">
   <div class="card_sale">
   <div class="side">
-      <img src="../public/images/banner/style_seoul2.jpg" alt="" style="width: 100%; height: 100%;">
+      <img src="public/images/banner/style_seoul2.jpg" alt="" style="width: 100%; height: 100%;">
     </div>
     <div class="side back">
       <i class="fa-solid fa-tag fa-3x"></i>
@@ -88,7 +88,7 @@
 <a href="?act=shop_single">
   <div class="card_sale">
   <div class="side">
-     <img src="../public/images/banner/walk_style.jpg" alt="" style="width: 100%; height: 100%;">
+     <img src="public/images/banner/walk_style.jpg" alt="" style="width: 100%; height: 100%;">
     </div>
     <div class="side back">
       <i class="fa-solid fa-tag fa-3x"></i>
@@ -112,7 +112,7 @@
 <a href="?act=shop_single">
   <div class="card_sale">
   <div class="side">
-      <img src="../public/images/banner/Lseoul.jpg" alt="" style="width: 100%; height: 100%;">
+      <img src="public/images/banner/Lseoul.jpg" alt="" style="width: 100%; height: 100%;">
     </div>
     <div class="side back">
       <i class="fa-solid fa-tag fa-3x"></i>
@@ -127,7 +127,7 @@
 <a href="?act=shop_single">
   <div class="card_sale">
   <div class="side">
-      <img src="../public/images/products/sweater-1-min.jpg" alt="" style="width: 100%; height: 100%;">
+      <img src="public/images/products/sweater-1-min.jpg" alt="" style="width: 100%; height: 100%;">
     </div>
     <div class="side back">
       <i class="fa-solid fa-tag fa-3x"></i>
@@ -142,7 +142,7 @@
 <a href="?act=shop_single">
   <div class="card_sale">
   <div class="side">
-      <img src="../public/images/products/sweater-2-min.jpg" alt="" style="width: 100%; height: 100%;">
+      <img src="public/images/products/sweater-2-min.jpg" alt="" style="width: 100%; height: 100%;">
     </div>
     <div class="side back">
       <i class="fa-solid fa-tag fa-3x"></i>
@@ -157,7 +157,7 @@
 <a href="?act=shop_single">
   <div class="card_sale">
   <div class="side">
-      <img src="../public/images/products/jacket-1-min.jpg" alt="" style="width: 100%; height: 100%;">
+      <img src="public/images/products/jacket-1-min.jpg" alt="" style="width: 100%; height: 100%;">
     </div>
     <div class="side back">
       <i class="fa-solid fa-tag fa-3x"></i>
@@ -181,7 +181,7 @@
 <a href="?act=shop_single">
   <div class="card_sale">
   <div class="side">
-      <img src="../public/images/banner/Lseoul.jpg" alt="" style="width: 100%; height: 100%;">
+      <img src="public/images/banner/Lseoul.jpg" alt="" style="width: 100%; height: 100%;">
     </div>
     <div class="side back">
       <i class="fa-solid fa-tag fa-3x"></i>
@@ -196,7 +196,7 @@
 <a href="?act=shop_single">
   <div class="card_sale">
   <div class="side">
-      <img src="../public/images/products/sweater-1-min.jpg" alt="" style="width: 100%; height: 100%;">
+      <img src="public/images/products/sweater-1-min.jpg" alt="" style="width: 100%; height: 100%;">
     </div>
     <div class="side back">
       <i class="fa-solid fa-tag fa-3x"></i>
@@ -211,7 +211,7 @@
 <a href="?act=shop_single">
   <div class="card_sale">
   <div class="side">
-      <img src="../public/images/products/sweater-2-min.jpg" alt="" style="width: 100%; height: 100%;">
+      <img src="public/images/products/sweater-2-min.jpg" alt="" style="width: 100%; height: 100%;">
     </div>
     <div class="side back">
       <i class="fa-solid fa-tag fa-3x"></i>
@@ -226,7 +226,7 @@
 <a href="?act=shop_single">
   <div class="card_sale">
   <div class="side">
-      <img src="../public/images/products/jacket-1-min.jpg" alt="" style="width: 100%; height: 100%;">
+      <img src="public/images/products/jacket-1-min.jpg" alt="" style="width: 100%; height: 100%;">
     </div>
     <div class="side back">
       <i class="fa-solid fa-tag fa-3x"></i>
@@ -326,7 +326,7 @@
                 <div class="label sale top-right">
                   <div class='content'>Sale</div>
                 </div>
-                <img src="../public/images/products/watch-1-min.jpg" alt="Image" class="img-fluid">
+                <img src="public/images/products/watch-1-min.jpg" alt="Image" class="img-fluid">
                 <div class="overlay">
                           <div class="icons">
                               <a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
@@ -352,7 +352,7 @@
                 <div class="label new top-right">
                   <div class='content'>New</div>
                 </div>
-                <img src="../public/images/products/jacket-1-min.jpg" alt="Image" class="img-fluid">
+                <img src="public/images/products/jacket-1-min.jpg" alt="Image" class="img-fluid">
                 <div class="overlay">
                           <div class="icons">
                               <a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
@@ -381,7 +381,7 @@
                 <div class="label sale top-right second">
                   <div class='content'>Sale</div>
                 </div>
-                <img src="../public/images/products/bottoms-1-min.jpg" alt="Image" class="img-fluid">
+                <img src="public/images/products/bottoms-1-min.jpg" alt="Image" class="img-fluid">
                 <div class="overlay">
                           <div class="icons">
                               <a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
@@ -402,7 +402,7 @@
           <div class="item">
             <div class="product-item">
               <a href="shop-single.html" class="product-img">
-                <img src="../public/images/products/sock-1-min.jpg" alt="Image" class="img-fluid">
+                <img src="public/images/products/sock-1-min.jpg" alt="Image" class="img-fluid">
                 <div class="overlay">
                           <div class="icons">
                               <a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>

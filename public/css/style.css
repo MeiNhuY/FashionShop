@@ -30,6 +30,49 @@ body {
     opacity: 1;
     visibility: visible; }
 
+/* header */
+.profile-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-dropdown .dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  list-style: none;
+  margin: 0;
+  z-index: 1000;
+}
+
+.profile-dropdown .dropdown-menu li {
+  padding: 8px 12px;
+}
+
+.profile-dropdown .dropdown-menu li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+}
+
+.profile-dropdown .dropdown-menu li a:hover {
+  color: #a35f0c;
+}
+
+.profile-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+
+
     /* shop */
 .custom-pagination ul {
   padding-left: 200px; /* Tăng khoảng cách từ lề trái cho cả danh sách */

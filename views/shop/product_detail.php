@@ -1,5 +1,5 @@
 <!-- Banner Phần Chi Tiết Sản Phẩm -->
-<div class="page-heading bg-light" style="background-image: url('../public/images/banner/bannerCart.png'); background-size: cover; height: 400px;">
+<div class="page-heading bg-light" style="background-image: url('public/images/banner/bannerCart.png'); background-size: cover; height: 400px;">
   <div class="container">
     <div class="row align-items-end text-center">
       <div class="col-lg-7 mx-auto">
@@ -17,8 +17,8 @@
     <div class="col-lg-6">
       <div class="flip-image-container">
         <div class="flip-image">
-          <img src="../public/images/banner/style.jpg" alt="Ảnh trước" class="front-img">
-          <img src="../public/images/banner/style_seoul.jpg" alt="Ảnh sau" class="back-img">
+          <img src="public/images/banner/style.jpg" alt="Ảnh trước" class="front-img">
+          <img src="public/images/banner/style_seoul.jpg" alt="Ảnh sau" class="back-img">
         </div>
       </div>
     </div>
@@ -113,7 +113,7 @@
                 <div class="label sale top-right">
                   <div class='content'>Sale</div>
                 </div>
-                <img src="../public/images/products/watch-1-min.jpg" alt="Image" class="img-fluid">
+                <img src="public/images/products/watch-1-min.jpg" alt="Image" class="img-fluid">
                 <div class="overlay">
                           <div class="icons">
                               <a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
@@ -139,7 +139,7 @@
                 <div class="label new top-right">
                   <div class='content'>New</div>
                 </div>
-                <img src="../public/images/products/jacket-1-min.jpg" alt="Image" class="img-fluid">
+                <img src="public/images/products/jacket-1-min.jpg" alt="Image" class="img-fluid">
                 <div class="overlay">
                           <div class="icons">
                               <a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
@@ -168,7 +168,7 @@
                 <div class="label sale top-right second">
                   <div class='content'>Sale</div>
                 </div>
-                <img src="../public/images/products/bottoms-1-min.jpg" alt="Image" class="img-fluid">
+                <img src="public/images/products/bottoms-1-min.jpg" alt="Image" class="img-fluid">
                 <div class="overlay">
                           <div class="icons">
                               <a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
@@ -189,7 +189,7 @@
           <div class="item">
             <div class="product-item">
               <a href="shop-single.html" class="product-img">
-                <img src="../public/images/products/sock-1-min.jpg" alt="Image" class="img-fluid">
+                <img src="public/images/products/sock-1-min.jpg" alt="Image" class="img-fluid">
                 <div class="overlay">
                           <div class="icons">
                               <a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>

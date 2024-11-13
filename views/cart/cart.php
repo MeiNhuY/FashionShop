@@ -1,5 +1,5 @@
 
-  <div class="page-heading bg-light" style="background-image: url('../public/images/banner/bannerCart.png'); background-size: cover;  height: 400px;">
+  <div class="page-heading bg-light" style="background-image: url('public/images/banner/bannerCart.png'); background-size: cover;  height: 400px;">
     <div class="container">
       <div class="row align-items-end text-center">
         <div class="col-lg-7 mx-auto">
@@ -10,9 +10,6 @@
     </div>
   </div>
 
-  
-
-  
 
   <div class="untree_co-section">
     <div class="container">
@@ -40,7 +37,7 @@
               <tbody>
                 <tr>
                   <td class="product-thumbnail">
-                    <img src="../public/images/products/jacket-1-min.jpg" alt="Image" class="img-fluid">
+                    <img src="public/images/products/jacket-1-min.jpg" alt="Image" class="img-fluid">
                   </td>
                   <td class="product-name">
                     <h2 class="h5 text-black">Top Up T-Shirt</h2>

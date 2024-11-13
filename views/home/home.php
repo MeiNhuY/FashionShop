@@ -5,7 +5,7 @@
 
 	<div class="owl-carousel owl-single home-slider">
 		<div class="item">
-			<div class="untree_co-hero" style="background-image: url('../public/images/banner/slider.jpg');">
+			<div class="untree_co-hero" style="background-image: url('public/images/banner/slider.jpg');">
 				<div class="container">		
 					<div class="row align-items-center">
 						<div class="col-lg-6">
@@ -25,7 +25,7 @@
 
 
 		<div class="item">
-			<div class="untree_co-hero" style="background-image: url('../public/images/banner/balace.jpg');">
+			<div class="untree_co-hero" style="background-image: url('public/images/banner/balace.jpg');">
 				<div class="container">
 					<div class="row align-items-center">
 						<div class="col-lg-6">
@@ -59,11 +59,11 @@
                 <div class="image-stack">
                     <div class="image-stack-item image-stack-item-top" data-jarallax-element="-50">
                         <div class="overlay"></div>
-                        <img src="../public/images/page/maunam.jpg" alt="Image" class="img-fluid pic1">
+                        <img src="public/images/page/maunam.jpg" alt="Image" class="img-fluid pic1">
                     </div>
                     <div class="image-stack-item image-stack-item-bottom">
                         <div class="overlay"></div>
-                        <img src="../public/images/page/maunu.jpg" alt="Image" class="img-fluid pic2">
+                        <img src="public/images/page/maunu.jpg" alt="Image" class="img-fluid pic2">
                     </div>
                 </div>
             </div> <!-- .suite -->
@@ -104,7 +104,7 @@
 							<div class="label new top-right">
 								<div class='content'>New</div>
 							</div>
-							<img src="../public/images/products/jacket-1-min.jpg" alt="Image" class="img-fluid">
+							<img src="public/images/products/jacket-1-min.jpg" alt="Image" class="img-fluid">
 							<div class="overlay">
 							<div class="icons">
 							<a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
@@ -138,7 +138,7 @@
 							<div class="label sale top-right second">
 								<div class='content'>Sale</div>
 							</div>
-							<img src="../public/images/products/bottoms-1-min.jpg" alt="Image" class="img-fluid">
+							<img src="public/images/products/bottoms-1-min.jpg" alt="Image" class="img-fluid">
 							<div class="overlay">
 							<div class="icons">
 							<a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
@@ -165,7 +165,7 @@
 				<div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4">
 					<div class="product-item">
 						<a href="?act=shop-single" class="product-img">
-							<img src="../public/images/products/shoe-1-min.jpg" alt="Image" class="img-fluid">
+							<img src="public/images/products/shoe-1-min.jpg" alt="Image" class="img-fluid">
 							<div class="overlay">
 							<div class="icons">
 							<a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
@@ -194,7 +194,7 @@
 
 					<div class="product-item">
 						<a href="?act=shop-single" class="product-img">
-							<img src="../public/images/products/sock-1-min.jpg" alt="Image" class="img-fluid">
+							<img src="public/images/products/sock-1-min.jpg" alt="Image" class="img-fluid">
 							<div class="overlay">
 							<div class="icons">
 							<a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
@@ -226,7 +226,7 @@
 							<div class="label sale top-right">
 								<div class='content'>Sale</div>
 							</div>
-							<img src="../public/images/products/sweater-2-min.jpg" alt="Image" class="img-fluid">
+							<img src="public/images/products/sweater-2-min.jpg" alt="Image" class="img-fluid">
 							<div class="overlay">
 							<div class="icons">
 							<a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
@@ -259,7 +259,7 @@
 							<div class="label sale top-right">
 								<div class='content'>Sale</div>
 							</div>
-							<img src="../public/images/products/watch-1-min.jpg" alt="Image" class="img-fluid">
+							<img src="public/images/products/watch-1-min.jpg" alt="Image" class="img-fluid">
 							<div class="overlay">
 							<div class="icons">
 							<a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
@@ -323,7 +323,7 @@
 							<div class="label sale top-right">
 								<div class='content'>Sale</div>
 							</div>
-							<img src="../public/images/products/watch-1-min.jpg" alt="Image" class="img-fluid">
+							<img src="public/images/products/watch-1-min.jpg" alt="Image" class="img-fluid">
 							<div class="overlay">
 							<div class="icons">
 							<a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
@@ -356,7 +356,7 @@
 							<div class="label new top-right">
 								<div class='content'>New</div>
 							</div>
-							<img src="../public/images/products/jacket-1-min.jpg" alt="Image" class="img-fluid">
+							<img src="public/images/products/jacket-1-min.jpg" alt="Image" class="img-fluid">
 							<div class="overlay">
 							<div class="icons">
 							<a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
@@ -392,7 +392,7 @@
 							<div class="label sale top-right second">
 								<div class='content'>Sale</div>
 							</div>
-							<img src="../public/images/products/bottoms-1-min.jpg" alt="Image" class="img-fluid">
+							<img src="public/images/products/bottoms-1-min.jpg" alt="Image" class="img-fluid">
 							<div class="overlay">
 							<div class="icons">
 							<a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
@@ -420,7 +420,7 @@
 				<div class="item">
 					<div class="product-item">
 						<a href="s?act=shop-single" class="product-img">
-							<img src="../public/images/products/sock-1-min.jpg" alt="Image" class="img-fluid">
+							<img src="public/images/products/sock-1-min.jpg" alt="Image" class="img-fluid">
 							<div class="overlay">
 							<div class="icons">
 							<a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>

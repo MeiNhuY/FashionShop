@@ -144,3 +144,23 @@ const initSlider = () => {
 
 window.addEventListener("resize", initSlider);
 window.addEventListener("load", initSlider);
+
+
+// header
+document.addEventListener("DOMContentLoaded", function() {
+    const profileIcon = document.querySelector('.user-profile');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+
+    // Toggle dropdown when profile icon is clicked
+    profileIcon.addEventListener('click', function(event) {
+        event.preventDefault();
+        dropdownMenu.classList.toggle('show');
+    });
+
+    // Close dropdown if clicked outside
+    document.addEventListener('click', function(event) {
+        if (!profileIcon.contains(event.target)) {
+            dropdownMenu.classList.remove('show');
+        }
+    });
+});

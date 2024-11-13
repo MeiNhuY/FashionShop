@@ -41,7 +41,7 @@
 
  
  
- <div class="page-heading bg-light" style="background-image: url('../public/images/banner/banner5.png'); background-size: cover;  height: 400px;">
+ <div class="page-heading bg-light" style="background-image: url('public/images/banner/banner5.png'); background-size: cover;  height: 400px;">
     <div class="container">
       <div class="row align-items-end text-center">
         <div class="col-lg-7 mx-auto">
@@ -82,7 +82,7 @@
             
             <div class="row no-gutters">
               <div class="col-md-4"  data-aos="zoom-out-right">
-                 <img src="../public/images/page/khanhvy.jpg" alt="Image" class="img-fluid" data-jarallax-element="-140">
+                 <img src="public/images/page/khanhvy.jpg" alt="Image" class="img-fluid" data-jarallax-element="-140">
               </div>
               <div class="col-md-8">
                 <div class="row justify-content-center">
@@ -125,7 +125,7 @@
         </div>
         <div class="row">
           <div class="col-md-12">
-            <img src="../public/images/page/room2.png" alt="Image" class="img-fluid" id="anh2">
+            <img src="public/images/page/room2.png" alt="Image" class="img-fluid" id="anh2">
           </div>
         </div>
       </div>
@@ -134,7 +134,7 @@
         <div class="untree_co--site-section py-5 bg-body-darker cta">
         <div class="row no-gutters">
               <div class="col-md-4"  data-aos="fade-up">
-                 <img src="../public/images/page/pic4.jpg" alt="Image" class="img-fluid" data-jarallax-element="-140">
+                 <img src="public/images/page/pic4.jpg" alt="Image" class="img-fluid" data-jarallax-element="-140">
               </div>
               <div class="col-md-8">
                 <div class="row justify-content-center">

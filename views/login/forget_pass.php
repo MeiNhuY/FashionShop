@@ -25,16 +25,16 @@
   
                     <div class="form-outline mb-4">
                       <input type="email" id="form2Example17" class="form-control form-control-lg" />
-                      <label class="form-label" for="form2Example17">Email</label>
+                      <label class="form-label" for="form2Example17">Tên Người Dùng</label>
                     </div>
   
                     <div class="form-outline mb-4">
                       <input type="password" id="form2Example27" class="form-control form-control-lg" />
-                      <label class="form-label" for="form2Example27">Mật khẩu</label>
+                      <label class="form-label" for="form2Example27">Email</label>
                     </div>
   
                     <div class="pt-1 mb-4">
-                      <button class="btn btn-dark btn-lg btn-block" type="button">Đăng nhập</button>
+                      <button class="btn btn-dark btn-lg btn-block" type="button">Gửi thông tin</button>
                     </div>
 
                   </form>
