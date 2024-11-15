@@ -1,6 +1,6 @@
  <!doctype html>
 <html lang="en">
-<!-- sua index -->
+	<!-- chay lai index -->
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -40,7 +40,7 @@
 	<link rel="stylesheet" href="public/css/style.css">
 
 
-	<title>Aura Fashion</title>
+	<chae>Aura Fashion</title>
 </head>
 
 <body>
