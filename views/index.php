@@ -1,9 +1,5 @@
  <!doctype html>
 <html lang="en">
-<<<<<<< HEAD
-=======
-	<!-- chay lai index -->
->>>>>>> 3349799ec890e8fefe9822c196fc5b05dd4c2adc
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
