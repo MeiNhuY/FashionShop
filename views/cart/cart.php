@@ -23,7 +23,7 @@
       <div class="row mb-5">
         <form class="col-md-12" method="post">
           <div class="site-blocks-table">
-            <table class="table table-bordered">
+            <table class="table table-bordered" id="call">
               <thead>
                 <tr>
                   <th class="product-thumbnail">Hình ảnh</th>
@@ -35,53 +35,40 @@
                 </tr>
               </thead>
               <tbody>
+               
+            <!-- product -->
+            <?php
+							if (isset($_SESSION['product'])) {
+								foreach ($_SESSION['product'] as $value) { ?>
                 <tr>
-                  <td class="product-thumbnail">
-                    <img src="public/images/products/jacket-1-min.jpg" alt="Image" class="img-fluid">
-                  </td>
-                  <td class="product-name">
-                    <h2 class="h5 text-black">Top Up T-Shirt</h2>
-                  </td>
-                  <td>$49.00</td>
-                  <td>
-                    <div class="input-group mb-3" style="max-width: 120px;">
-                      <div class="input-group-prepend">
-                        <button class="btn btn-outline-black js-btn-minus" type="button">&minus;</button>
+                    <td class="product-thumbnail">
+                        <a href="?act=detail&id=<?= $value['ProductID'] ?>"><img src="public/images/products/<?= $value['Image'] ?>" alt="Image" class="img-fluid"/></a>
+                        <!-- <img src="public/images/products/jacket-1-min.jpg" alt="Image" class="img-fluid"> -->
+                    </td>
+                    <td class="product-name">
+                       <h2 class="h5 text-black"><a href="?act=detail&id=<?= $value['ProductID'] ?>"><?= $value['ProductName'] ?></a></h2>
+                    </td>
+                    <td><?($value['Price']) ?> VNĐ</td>
+      
+                    <td>
+                      <div class="input-group mb-3" style="max-width: 120px;">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-outline-black js-btn-minus" type="button"><a href="?act=cart&xuli=delete&id=<?=$value['MaSP']?>" ></a>&minus;</button>
+                        </div>
+                        <input type="text" class="form-control text-center" name="Quantity" value="<?= $value['Quantity'] ?>" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-black js-btn-plus" type="button"><a href="?act=cart&xuli=update&id=<?=$value['MaSP']?>"></a>&plus;</button>
+                        </div>
                       </div>
-                      <input type="text" class="form-control text-center" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-                      <div class="input-group-append">
-                        <button class="btn btn-outline-black js-btn-plus" type="button">&plus;</button>
-                      </div>
-                    </div>
+                    </td>
 
-                  </td>
-                  <td>$49.00</td>
-                  <td><a href="#" class="btn btn-black btn-sm">X</a></td>
+                    <td><strong><?($value['ThanhTien']) ?> VNĐ</strong></td>
+                    <td><a href="?act=cart&xuli=deleteall&id=<?= $value['ProductID'] ?>"><i class="btn btn-black btn-sm" title="Remove this product"></i>X</a></td>
                 </tr>
+                <?php }
+							} ?>
+            <!-- product -->
 
-                <tr>
-                  <td class="product-thumbnail">
-                    <img src="images/products/bottoms-1-min.jpg" alt="Image" class="img-fluid">
-                  </td>
-                  <td class="product-name">
-                    <h2 class="h5 text-black">Polo Shirt</h2>
-                  </td>
-                  <td>$49.00</td>
-                  <td>
-                    <div class="input-group mb-3" style="max-width: 120px;">
-                      <div class="input-group-prepend">
-                        <button class="btn btn-outline-black js-btn-minus" type="button">&minus;</button>
-                      </div>
-                      <input type="text" class="form-control text-center" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-                      <div class="input-group-append">
-                        <button class="btn btn-outline-black js-btn-plus" type="button">&plus;</button>
-                      </div>
-                    </div>
-
-                  </td>
-                  <td>$49.00</td>
-                  <td><a href="#" class="btn btn-black btn-sm">X</a></td>
-                </tr>
               </tbody>
             </table>
           </div>
@@ -129,7 +116,7 @@
                   <strong class="text-black">Tổng giỏ hàng</strong>
                 </div>
                 <div class="col-md-6 text-right">
-                  <span class="text-black">180000<span> VND</spp></span>
+                  <span class="text-black"><? ($count) ?> <span> VND</spp></span>
                 </div>
               </div>
 
@@ -138,7 +125,7 @@
                   <strong class="text-black">Giảm giá</strong>
                 </div>
                 <div class="col-md-6 text-right">
-                  <span class="text-black">20<span> %</span></span>
+                  <span class="text-black">0<span> %</span></span>
                 </div>
               </div>
 
@@ -147,7 +134,7 @@
                   <strong class="text-black" >Vận chuyển</strong>
                 </div>
                 <div class="col-md-6 text-right">
-                  <span class="text-black">20000<span> VND</span></span>
+                  <span class="text-black">25000<span> VND</span></span>
                 </div>
               </div>
 
@@ -156,7 +143,7 @@
                   <strong class="text-black"style="padding-top: 50px;" >Tổng cộng</strong>
                 </div>
                 <div class="col-md-6 text-right">
-                  <span class="text-black" style="color:brown;">20000<span> VND</span></span>
+                  <span class="text-black" style="color:brown;"><?($count+25000)?><span> VND</span></span>
                 </div>
               </div>
 

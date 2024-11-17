@@ -39,7 +39,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <section class="vh-100" style="background-color: #FFFFFF; margin-top: 70px; margin-bottom: 35%;">
+  <section class="vh-100" style="background-color: #FFFFFF; margin-top: 70px; margin-bottom: 50%;">
     <div class="container py-5 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col col-xl-10">

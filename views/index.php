@@ -40,7 +40,7 @@
 	<link rel="stylesheet" href="public/css/style.css">
 
 
-	<chae>Aura Fashion</title>
+	<title>Aura Fashion</title>
 </head>
 
 <body>
