@@ -88,17 +88,15 @@
 
 
 
-            <div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4">
+          <div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4">
+            <!-- product -->
               <div class="product-item">
-                <a href="shop-single.php" class="product-img">
-                  <div class="label new top-right">
-                    <div class='content'>New</div>
-                  </div>
-                  <div class="label sale top-right second">
-                    <div class='content'>Sale</div>
-                  </div>
-                  <img src="public/images/products/bottoms-1-min.jpg" alt="Image" class="img-fluid">
-                  <div class="overlay">
+                  <a href="shop-single.php" class="product-img">
+                      <div class="label new top-right">
+                          <div class='content'>New</div>
+                      </div>
+                      <img src="public/images/products/jacket-1-min.jpg" alt="Image" class="img-fluid">
+                      <div class="overlay">
                           <div class="icons">
                               <a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
                               <a href="?act=cart" class="add-to-cart">
@@ -107,20 +105,20 @@
                               </a>
                           </div>
                       </div>
-                </a>
-                <div class="rating" style="color: #FFD700;">
+                  </a>
+                  <div class="rating" style="color: #FFD700;">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star-half-alt"></i> <!-- half-star for 4.5 rating, or use fa-star for full -->
                   </div>
-                <h3 class="title"><a href="#">Chino Bottoms</a></h3>
-                <div class="price">
-                  <del>£99.00</del> &mdash; <span>£69.00</span>
-                </div>
+                  <h3 class="title"><a href="#">Dark Jacket</a></h3>
+                  <div class="price">
+                      <span>£69.00</span>
+                  </div>
               </div>
-            </div>
+          </div>
 
             <div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4">
               <div class="product-item">
@@ -388,16 +386,13 @@
 
 
           <div class="item">
-            <div class="product_detail.php">
-              <a href="shop-single.html" class="product-img">
+            <div class="product-item">
+              <a href="product_detail.php" class="product-img">
+
                 <div class="label new top-right">
                   <div class='content'>New</div>
                 </div>
-
-                <div class="label sale top-right second">
-                  <div class='content'>Sale</div>
-                </div>
-                <img src="public/images/products/bottoms-1-min.jpg" alt="Image" class="img-fluid">
+                <img src="public/images/products/jacket-1-min.jpg" alt="Image" class="img-fluid">
                 <div class="overlay">
                           <div class="icons">
                               <a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
@@ -408,9 +403,9 @@
                           </div>
                       </div>
               </a>
-              <h3 class="title"><a href="#">Chino Bottoms</a></h3>
+              <h3 class="title"><a href="#">Dark Jacket</a></h3>
               <div class="price">
-                <del>£99.00</del> &mdash; <span>£69.00</span>
+                <span>£69.00</span>
               </div>
             </div>
           </div> <!-- /.item -->

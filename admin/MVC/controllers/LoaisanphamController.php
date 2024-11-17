@@ -24,7 +24,7 @@ class LoaisanphamController
 	}
 	public function store()
 	{
-		$target_dir = "../public/img/company/";  // thư mục chứa file upload
+		$target_dir = "../public/images/company/";  // thư mục chứa file upload
 
         $HinhAnh = "";
         $target_file = $target_dir . basename($_FILES["HinhAnh"]["name"]); // link sẽ upload file lên
@@ -36,10 +36,10 @@ class LoaisanphamController
 		}
 
 		$data = array(
-			'TenLSP' => $_POST['TenLSP'],
-			'HinhAnh' => $HinhAnh,
-			'MoTa' => $_POST['MoTa'],
-			'MaDM' => $_POST['MaDM']
+			'ProductTypeName' => $_POST['TenLSP'],
+			'Image' => $HinhAnh,
+			'Description' => $_POST['MoTa'],
+			'CategoryID' => $_POST['MaDM']
 		);
 		foreach ($data as $key => $value) {
             if (strpos($value, "'") != false) {
@@ -74,7 +74,7 @@ class LoaisanphamController
 	}
 	public function update()
 	{
-		$target_dir = "../public/img/company/";  // thư mục chứa file upload
+		$target_dir = "../public/images/company/";  // thư mục chứa file upload
 
         $HinhAnh = "";
         $target_file = $target_dir . basename($_FILES["HinhAnh"]["name"]); // link sẽ upload file lên
@@ -86,11 +86,12 @@ class LoaisanphamController
 		}
 
 		$data = array(
-			'MaLSP' => $_POST['MaLSP'],
-			'TenLSP' => $_POST['TenLSP'],
-			'HinhAnh' => $HinhAnh,
-			'MoTa' => $_POST['MoTa'],
-			'MaDM' => $_POST['MaDM']
+			'ProductTypeID' => $_POST['MaLSP'],
+			'ProductTypeName' => $_POST['TenLSP'],
+			'Image' => $HinhAnh,
+			'Description' => $_POST['MoTa'],
+			'CategoryID' => $_POST['MaDM']
+			
 		);
 
 		foreach ($data as $key => $value) {
@@ -100,7 +101,7 @@ class LoaisanphamController
             }
 		}
 		if ($HinhAnh == "") {
-            unset($data['HinhAnh']);
+            unset($data['Image']);
         }
 		$this->loaisanpham_model->update($data);
 	}

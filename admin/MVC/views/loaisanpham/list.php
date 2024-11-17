@@ -1,5 +1,5 @@
 <?php if (isset($_SESSION['isLogin_Admin']) && $_SESSION['isLogin_Admin'] == true) { ?>
-<a href="?mod=loaisanpham&act=add" type="button" class="btn btn-primary">Thêm mới</a>
+<a href="?mod=loaisanpham&act=add" type="button" class="btn btn-success">Thêm mới</a>
 <?php } ?>
 <?php if (isset($_COOKIE['msg'])) { ?>
   <div class="alert alert-success">
@@ -14,23 +14,23 @@
       <th scope="col">Tên LSP</th>
       <th scope="col">Hình Ảnh</th>
       <th scope="col">Mô tả</th>
-      <th>#</th>
+      <th>Tùy chọn</th>
     </tr>
   </thead>
   <tbody>
     <?php foreach ($data as $row) { ?>
       <tr>
-        <td><?= $row['MaLSP'] ?></td>
-        <td><?= $row['TenLSP'] ?></td>
+        <td><?= $row['ProductTypeID'] ?></td>
+        <td><?= $row['ProductTypeName'] ?></td>
         <td>
-          <img src="../public/img/company/<?= $row['HinhAnh'] ?>" height="60px">
+          <img src="../public/images/company/<?= $row['Image'] ?>" height="60px">
         </td>
-        <td><?= $row['Mota'] ?></td>
+        <td><?= $row['Description'] ?></td>
         <td>
-          <a href="?mod=loaisanpham&act=detail&id=<?= $row['MaLSP'] ?>" class="btn btn-success">Xem</a>
+          <a href="?mod=loaisanpham&act=detail&id=<?= $row['ProductTypeID'] ?>" class="btn btn-success">Xem</a>
           <?php if (isset($_SESSION['isLogin_Admin']) && $_SESSION['isLogin_Admin'] == true) { ?>
-          <a href="?mod=loaisanpham&act=edit&id=<?= $row['MaLSP'] ?>" class="btn btn-warning">Sửa</a>
-          <a href="?mod=loaisanpham&act=delete&id=<?= $row['MaLSP'] ?>" onclick="return confirm('Bạn có thật sự muốn xóa ?');" type="button" class="btn btn-danger">Xóa</a>
+          <a href="?mod=loaisanpham&act=edit&id=<?= $row['ProductTypeID'] ?>" class="btn btn-warning">Sửa</a>
+          <a href="?mod=loaisanpham&act=delete&id=<?= $row['ProductTypeID'] ?>" onclick="return confirm('Bạn có thật sự muốn xóa ?');" type="button" class="btn btn-danger">Xóa</a>
           <?php }?>
         </td>
       </tr>

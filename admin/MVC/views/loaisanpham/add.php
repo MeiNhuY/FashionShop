@@ -21,10 +21,10 @@
             <label for="cars">Danh mục: </label>
             <select id="" name="MaDM" class="form-control">
                 <?php foreach ($data as $row) { ?>
-                    <option value="<?= $row['MaDM'] ?>"><?= $row['TenDM'] ?></option>
+                    <option value="<?= $row['CategoryID'] ?>"><?= $row['CategoryName'] ?></option>
                 <?php } ?>
             </select>
         </div>
-        <button type="submit" class="btn btn-primary">Create</button>
+        <button type="submit" class="btn btn-primary">Thêm</button>
     </form>
 </table>

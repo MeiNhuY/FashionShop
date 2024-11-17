@@ -47,6 +47,6 @@
                <label for="">Email</label>
                <input type="Email" class="form-control" id="" placeholder="" name="Email">
            </div>
-           <button type="submit" class="btn btn-primary">Create</button>
+           <button type="submit" class="btn btn-primary">Thêm</button>
        </form>
    </table>

@@ -1,5 +1,5 @@
-<a href="?mod=hoadon&id=1" type="button" class="btn btn-primary">Đã duyệt</a>
-<a href="?mod=hoadon&id=0" type="button" class="btn btn-primary">Chưa duyệt</a>
+<a href="?mod=hoadon&id=1" type="button" class="btn btn-success">Đã duyệt</a>
+<a href="?mod=hoadon&id=0" type="button" class="btn btn-success">Chưa duyệt</a>
 <?php if (isset($_COOKIE['msg'])) { ?>
   <div class="alert alert-success">
     <strong>Thông báo</strong> <?= $_COOKIE['msg'] ?>
@@ -15,26 +15,26 @@
       <th scope="col">Địa chỉ</th>
       <th scope="col">SĐT</th>
       <th scope="col">Trạng thái</th>
-      <th>#</th>
+      <th>Tùy chọn</th>
     </tr>
   </thead>
   <tbody>
     <?php foreach ($data as $row) { ?>
       <tr>
-        <td><?= $row['NguoiNhan'] ?></td>
-        <td><?= $row['NgayLap'] ?></td>
-        <td><?= number_format($row['TongTien']) ?>VNĐ</td>
-        <td><?= $row['DiaChi'] ?></td>
-        <td><?= $row['SDT'] ?></td>
-        <td><?php if($row['TrangThai']==0){
+        <td><?= $row['RecipientName'] ?></td>
+        <td><?= $row['OrderDate'] ?></td>
+        <td><?= number_format($row['TotalAmount']) ?>VNĐ</td>
+        <td><?= $row['Address'] ?></td>
+        <td><?= $row['PhoneNumber'] ?></td>
+        <td><?php if($row['Status']==0){
             echo 'Chưa xét duyệt';
         }else{
             echo 'Đã xét duyệt';
         }
         ?></td>
         <td>
-          <a href="?mod=hoadon&act=chitiet&id=<?= $row['MaHD'] ?>" class="btn btn-success" >Xem chi tiết</a>
-          <a href="?mod=hoadon&act=delete&id=<?= $row['MaHD'] ?>" onclick="return confirm('Bạn có thật sự muốn xóa ?');" type="button" class="btn btn-danger">Xóa</a>
+          <a href="?mod=hoadon&act=chitiet&id=<?= $row['OrderID'] ?>" class="btn btn-success" >Xem chi tiết</a>
+          <a href="?mod=hoadon&act=delete&id=<?= $row['OrderID'] ?>" onclick="return confirm('Bạn có thật sự muốn xóa ?');" type="button" class="btn btn-danger">Xóa</a>
         </td>
       </tr>
     <?php } ?>

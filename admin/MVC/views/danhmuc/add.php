@@ -13,6 +13,6 @@
             <label for="">Tên danh mục</label>
             <input type="text" class="form-control" id="" placeholder="" name="TenDM">
         </div>
-        <button type="submit" class="btn btn-primary">Create</button>
+        <button type="submit" class="btn btn-primary">Thêm</button>
     </form>
 </table>

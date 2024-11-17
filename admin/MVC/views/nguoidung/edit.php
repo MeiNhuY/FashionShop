@@ -6,42 +6,42 @@
 <hr>
 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
     <form action="?mod=nguoidung&act=update" method="POST" role="form" enctype="multipart/form-data">
-        <input type="hidden" name="MaND" value="<?= $data['MaND']?>">
+        <input type="hidden" name="MaND" value="<?= $data['UserID']?>">
         <div class="form-group">
                <label for="">Họ</label>
-               <input type="text" class="form-control" id="" placeholder="" name="Ho" value="<?= $data['Ho']?>">
+               <input type="text" class="form-control" id="" placeholder="" name="Ho" value="<?= $data['FirstName']?>">
            </div>
            <div class="form-group">
                <label for="">Tên</label>
-               <input type="text" class="form-control" id="" placeholder="" name="Ten" value="<?= $data['Ten']?>">
+               <input type="text" class="form-control" id="" placeholder="" name="Ten" value="<?= $data['LastName']?>">
            </div>
            <div class="form-group">
                <label for="">Tên Tài Khoản</label>
-               <input type="text" class="form-control" id="" placeholder="" name="TaiKhoan" value="<?= $data['TaiKhoan']?>">
+               <input type="text" class="form-control" id="" placeholder="" name="TaiKhoan" value="<?= $data['Username']?>">
            </div>
            <div class="form-group">
                <label for="">Giới tính</label>
                <select id="" name="GioiTinh" class="form-control">
-                    <option <?= ($data['GioiTinh'] == 'Nam')?'selected':''?> value="Nam"> Nam</option>
-                    <option <?= ($data['GioiTinh'] == 'Nữ')?'selected':''?> value="Nữ"> Nữ</option>
-                    <option <?= ($data['GioiTinh'] == 'Khác')?'selected':''?> value="Khác"> Khác</option>
+                    <option <?= ($data['Gender'] == 'Nam')?'selected':''?> value="Nam"> Nam</option>
+                    <option <?= ($data['Gender'] == 'Nữ')?'selected':''?> value="Nữ"> Nữ</option>
+                    <option <?= ($data['Gender'] == 'Khác')?'selected':''?> value="Khác"> Khác</option>
                </select>
            </div>
            <div class="form-group">
                <label for="">Số Điện Thoại</label>
-               <input type="text" class="form-control" id="" placeholder="" name="SDT" value="<?= $data['SDT']?>">
+               <input type="text" class="form-control" id="" placeholder="" name="SDT" value="<?= $data['PhoneNumber']?>">
            </div>
            <div class="form-group">
                <label for="">Địa chỉ</label>
-               <input type="text" class="form-control" id="" placeholder="" name="DiaChi" value="<?= $data['DiaChi']?>">
+               <input type="text" class="form-control" id="" placeholder="" name="DiaChi" value="<?= $data['Address']?>">
            </div>
            <div class="form-group">
                <label for="">Mật Khẩu</label>
-               <input type="Password" class="form-control" id="" placeholder="" name="MatKhau" value="<?= $data['MatKhau']?>">
+               <input type="Password" class="form-control" id="" placeholder="" name="MatKhau" value="<?= $data['Password']?>">
            </div>
            <div class="form-group">
                <label for="">Trạng Thái</label>
-               <input type="text" class="form-control" id="" placeholder="" name="TrangThai" value="<?= $data['TrangThai']?>">
+               <input type="text" class="form-control" id="" placeholder="" name="TrangThai" value="<?= $data['Status']?>">
            </div>
            <div class="form-group">
                <label for="">Email</label>
@@ -51,13 +51,12 @@
            <div class="form-group">
                <label for="">Mã quyền</label>
                <select id="" name="MaQuyen" class="form-control">
-                    <option <?= ($data['MaQuyen'] == '1')?'selected':''?> value="1"> Khách hàng</option>
-                    <option <?= ($data['MaQuyen'] == '2')?'selected':''?> value="2"> Quản trị viên</option>
-                    <option <?= ($data['MaQuyen'] == '3')?'selected':''?> value="3"> Nhân viên</option>
+                    <option <?= ($data['RoleID'] == '1')?'selected':''?> value="1"> Quản trị viên</option>
+                    <option <?= ($data['RoleID'] == '2')?'selected':''?> value="2"> Khách hàng</option>
                </select>
            </div>
            </div>
-           <button type="submit" class="btn btn-primary">Create</button>
+           <button type="submit" class="btn btn-primary">Sửa</button>
     </form>
     </tbody>
 </table>

@@ -1,12 +1,12 @@
  <!-- Sidebar -->
- <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+ <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
 
 <!-- Sidebar - Brand -->
 <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
   <div class="sidebar-brand-icon rotate-n-15">
-    <i class="fas fa-laugh-wink"></i>
+  <img src="public/img/logo2.png" alt="" style="width: 50px; height: auto;">
   </div>
-  <div class="sidebar-brand-text mx-3">DTP<sup>Shop</sup></div>
+  <div class="sidebar-brand-text mx-3">Aura<sup>Fashion</sup></div>
 </a>
 
 <!-- Divider -->
@@ -16,9 +16,6 @@
 <hr class="sidebar-divider">
 
 <!-- Heading -->
-<div class="sidebar-heading">
-  Chức năng
-</div>
 
 <!-- Nav Item - Pages Collapse Menu -->
 <?php if (isset($_SESSION['isLogin_Admin']) && $_SESSION['isLogin_Admin'] == true) { ?>

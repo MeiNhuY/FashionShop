@@ -24,8 +24,8 @@ class DanhmucController
 	public function store()
 	{
 		$data = array(
-			'MaDM' => $_POST['MaDM'],
-			'TenDM' => $_POST['TenDM']
+			'CategoryID' => $_POST['MaDM'],
+			'CategoryName' => $_POST['TenDM']
 		);
 		foreach ($data as $key => $value) {
             if (strpos($value, "'") != false) {
@@ -58,8 +58,8 @@ class DanhmucController
 	public function update()
 	{
 		$data = array(
-			'MaDM' => $_POST['MaDM'],
-			'TenDM' => $_POST['TenDM'],
+			'CategoryID' => $_POST['MaDM'],
+			'CategoryName' => $_POST['TenDM'],
 		);
 		foreach ($data as $key => $value) {
             if (strpos($value, "'") != false) {

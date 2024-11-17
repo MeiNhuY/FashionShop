@@ -9,6 +9,6 @@
             <label for="">Hình ảnh</label>
             <input type="file" class="form-control" id="" placeholder="" name="HinhAnh">
         </div>
-        <button type="submit" class="btn btn-primary">Create</button>
+        <button type="submit" class="btn btn-primary">Thêm</button>
     </form>
 </table>

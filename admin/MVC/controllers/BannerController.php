@@ -23,7 +23,7 @@ class BannerController
 	}
 	public function store()
 	{
-        $target_dir = "../public/img/banners/";  // thư mục chứa file upload
+        $target_dir = "../public/images/banner/";  // thư mục chứa file upload
         $HinhAnh = "";
 
         $target_file = $target_dir . basename($_FILES["HinhAnh"]["name"]); // link sẽ upload file lên
@@ -31,10 +31,10 @@ class BannerController
         $status_upload = move_uploaded_file($_FILES["HinhAnh"]["tmp_name"], $target_file);
 
         if ($status_upload) { // nếu upload file không có lỗi 
-            $HinhAnh =  "img/banners/" . basename($_FILES["HinhAnh"]["name"]);
+            $HinhAnh =  "images/banner/" . basename($_FILES["HinhAnh"]["name"]);
         }
 		$data = array(
-			'HinhAnh' => $HinhAnh
+			'Image' => $HinhAnh
 		);
 		foreach ($data as $key => $value) {
             if (strpos($value, "'") != false) {
@@ -66,7 +66,7 @@ class BannerController
 	}
 	public function update()
 	{
-        $target_dir = "../public/img/banners/";  // thư mục chứa file upload
+        $target_dir = "../public/images/banner/";  // thư mục chứa file upload
         $HinhAnh = "";
 
         $target_file = $target_dir . basename($_FILES["HinhAnh"]["name"]); // link sẽ upload file lên
@@ -74,11 +74,11 @@ class BannerController
         $status_upload = move_uploaded_file($_FILES["HinhAnh"]["tmp_name"], $target_file);
 
         if ($status_upload) { // nếu upload file không có lỗi 
-            $HinhAnh =  "img/banners/" . basename($_FILES["HinhAnh"]["name"]);
+            $HinhAnh =  "images/banner/" . basename($_FILES["HinhAnh"]["name"]);
         }
 		$data = array(
-			'Id' => $_POST['id'],
-			'HinhAnh' =>  $HinhAnh,
+			'BannerID' => $_POST['id'],
+			'Image' =>  $HinhAnh,
 		);
 		foreach ($data as $key => $value) {
             if (strpos($value, "'") != false) {
@@ -87,7 +87,7 @@ class BannerController
             }
         }
         if ($HinhAnh == "") {
-            unset($data['HinhAnh']);
+            unset($data['Image']);
         }
 		$this->banner_model->update($data);
 	}

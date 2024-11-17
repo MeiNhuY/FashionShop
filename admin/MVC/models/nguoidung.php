@@ -2,6 +2,6 @@
 require_once("model.php");
 class nguoidung extends Model
 {
-    var $table = "nguoidung";
-    var $contens = "MaND";
+    var $table = "users";
+    var $contens = "UserID";
 }

@@ -75,7 +75,7 @@ class Model
             setcookie('msg', 'Duyệt thành công', time() + 2);
             header('Location: ?mod=' . $this->table);
         } else {
-            setcookie('msg', 'Update vào không thành công', time() + 2);
+            setcookie('msg', 'Câpj nhật vào không thành công', time() + 2);
             header('Location: ?mod=' . $this->table . '&act=edit&id=' . $data['id']['id']);
         }
     }

@@ -24,8 +24,8 @@ class HoaDonController
     function xetduyet()
     {
         $data = array(
-            'MaHD' => $_GET['id'],
-            'TrangThai' => 1,
+            'OrderID' => $_GET['id'],
+            'Status' => 1,
         );
         $this->hoadon_model->update($data);
     }

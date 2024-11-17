@@ -8,12 +8,12 @@
     <form action="?mod=danhmuc&act=update" method="POST" role="form" enctype="multipart/form-data">
         <div class="form-group">
             <label for="">Mã danh mục</label>
-            <input type="text" class="form-control" id="" placeholder="" name="MaDM" value="<?= $data['MaDM'] ?>">
+            <input type="text" class="form-control" id="" placeholder="" name="MaDM" value="<?= $data['CategoryID'] ?>">
         </div>
         <div class="form-group">
             <label for="">Tên danh mục</label>
-            <input type="text" class="form-control" id="" placeholder="" name="TenDM" value="<?= $data['TenDM'] ?>">
+            <input type="text" class="form-control" id="" placeholder="" name="TenDM" value="<?= $data['CategoryName'] ?>">
         </div>
-        <button type="submit" class="btn btn-primary">Cập nhật</button>
+        <button type="submit" class="btn btn-primary">Sửa</button>
     </form>
 </table>

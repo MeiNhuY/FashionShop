@@ -1,6 +1,6 @@
 <?php if(isset($data) and $data != null){ ?>
-<a href="?mod=hoadon&act=xetduyet&id=<?= $data['0']['MaHD'] ?>" class="btn btn-success">Duyệt hóa đơn</a>
-<a href="?mod=hoadon&act=delete&id=<?= $data['0']['MaHD'] ?>" onclick="return confirm('Bạn có thật sự muốn xóa ?');" type="button" class="btn btn-danger">Xóa</a>
+<a href="?mod=hoadon&act=xetduyet&id=<?= $data['0']['OrderID'] ?>" class="btn btn-success">Duyệt hóa đơn</a>
+<a href="?mod=hoadon&act=delete&id=<?= $data['0']['OrderID'] ?>" onclick="return confirm('Bạn có thật sự muốn xóa ?');" type="button" class="btn btn-danger">Xóa</a>
 <?php } ?>
 <?php if (isset($_COOKIE['msg'])) { ?>
     <div class="alert alert-success">
@@ -20,10 +20,10 @@
     <tbody>
         <?php foreach ($data as $row) { ?>
             <tr>
-                <td><?= $row['Ten'] ?></td>
-                <td><?= number_format($row['DonGia']) ?> VNĐ</td>
-                <td><?= $row['SoLuong'] ?></td>
-                <td><?= number_format($row['DonGia'] * $row['SoLuong']) ?> VNĐ</td>
+                <td><?= $row['Name'] ?></td>
+                <td><?= number_format($row['UnitPrice']) ?> VNĐ</td>
+                <td><?= $row['Quantity'] ?></td>
+                <td><?= number_format($row['UnitPrice'] * $row['Quantity']) ?> VNĐ</td>
             </tr>
         <?php } ?>
 </table>

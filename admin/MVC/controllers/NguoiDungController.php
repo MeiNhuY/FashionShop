@@ -28,16 +28,16 @@ class NguoiDungController
     public function store()
     {
         $data = array(
-            'Ho' =>    $_POST['Ho'],
-            'Ten'  =>   $_POST['Ten'],
-            'GioiTinh' => $_POST['GioiTinh'],
-            'SDT' => $_POST['SDT'],
+            'FirstName' =>    $_POST['Ho'],
+            'LastName'  =>   $_POST['Ten'],
+            'Gender' => $_POST['GioiTinh'],
+            'PhoneNumber' => $_POST['SDT'],
             'Email' =>    $_POST['Email'],
-            'DiaChi'  =>   $_POST['DiaChi'],
-            'TaiKhoan' => $_POST['TaiKhoan'],
-            'MatKhau' => md5($_POST['MatKhau']),
-            'MaQuyen' =>  '2',
-            'TrangThai'  =>  '1'
+            'Address'  =>   $_POST['DiaChi'],
+            'Username' => $_POST['TaiKhoan'],
+            'Password' => md5($_POST['MatKhau']),
+            'RoleID' =>  '2',
+            'Status'  =>  '1'
         );
         foreach ($data as $key => $value) {
             if (strpos($value, "'") != false) {
@@ -62,17 +62,17 @@ class NguoiDungController
     public function update()
     {
         $data = array(
-            'MaND' => $_POST['MaND'],
-            'Ho' =>    $_POST['Ho'],
-            'Ten'  =>   $_POST['Ten'],
-            'GioiTinh' => $_POST['GioiTinh'],
-            'SDT' => $_POST['SDT'],
+            'UserID' => $_POST['MaND'],
+            'FirstName' =>    $_POST['Ho'],
+            'LastName'  =>   $_POST['Ten'],
+            'Gender' => $_POST['GioiTinh'],
+            'PhoneNumber' => $_POST['SDT'],
             'Email' =>    $_POST['Email'],
-            'DiaChi'  =>   $_POST['DiaChi'],
-            'TaiKhoan' => $_POST['TaiKhoan'],
-            'MatKhau' => md5($_POST['MatKhau']),
-            'MaQuyen' =>  $_POST['MaQuyen'],
-            'TrangThai'  =>  $_POST['TrangThai'],
+            'Address'  =>   $_POST['DiaChi'],
+            'Username' => $_POST['TaiKhoan'],
+            'Password' => md5($_POST['MatKhau']),
+            'RoleID' =>  $_POST['MaQuyen'],
+            'Status'  =>  $_POST['TrangThai'],
         );
         foreach ($data as $key => $value) {
             if (strpos($value, "'") != false) {

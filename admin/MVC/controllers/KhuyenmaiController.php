@@ -25,11 +25,11 @@ class KhuyenmaiController
 		date_default_timezone_set('Asia/Ho_Chi_Minh');
 		$NgayBD =  date('Y-m-d H:i:s');
 		$data = array(
-			'TenKM' => $_POST['TenKM'],
-			'LoaiKM' => $_POST['LoaiKM'],
-			'GiaTriKM' => $_POST['GiaTriKM'],
-			'NgayBD' => $NgayBD,
-			'TrangThai' => '1'
+			'PromotionName' => $_POST['TenKM'],
+			'PromotionType' => $_POST['LoaiKM'],
+			'PromotionValue' => $_POST['GiaTriKM'],
+			'StartDate' => $NgayBD,
+			'Status' => '1'
 		);
 		foreach ($data as $key => $value) {
             if (strpos($value, "'") != false) {
@@ -64,12 +64,12 @@ class KhuyenmaiController
 		date_default_timezone_set('Asia/Ho_Chi_Minh');
 		$NgayBD =  date('Y-m-d H:i:s');
 		$data = array(
-			'MaKM' => $_POST['MaKM'],
-			'TenKM' => $_POST['TenKM'],
-			'LoaiKM' => $_POST['LoaiKM'],
-			'GiaTriKM' => $_POST['GiaTriKM'],
-			'NgayBD' => $NgayBD,
-			'TrangThai' => $_POST['TrangThai']
+			'PromotionID' => $_POST['MaKM'],
+			'PromotionName' => $_POST['TenKM'],
+			'PromotionType' => $_POST['LoaiKM'],
+			'PromotionValue' => $_POST['GiaTriKM'],
+			'StartDate' => $NgayBD,
+			'Status' => $_POST['TrangThai']
 		);
 		foreach ($data as $key => $value) {
             if (strpos($value, "'") != false) {
