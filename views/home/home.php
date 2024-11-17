@@ -57,16 +57,16 @@
         <div class="suite-wrap overlap-image-1">
             <div class="suite">
                 <div class="image-stack">
-                    <div class="image-stack-item image-stack-item-top" data-jarallax-element="-50">
+                    <!-- <div class="image-stack-item image-stack-item-top" data-jarallax-element="-50">
                         <div class="overlay"></div>
                         <img src="public/images/page/maunam.jpg" alt="Image" class="img-fluid pic1">
-                    </div>
+                    </div> -->
                     <div class="image-stack-item image-stack-item-bottom">
                         <div class="overlay"></div>
                         <img src="public/images/page/maunu.jpg" alt="Image" class="img-fluid pic2">
                     </div>
                 </div>
-            </div> <!-- .suite -->
+            </div> 
 
             <div class="suite-contents" data-jarallax-element="50">
                 <h2 class="suite-title" >Thời trang Nam</h2>
