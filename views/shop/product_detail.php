@@ -1,4 +1,5 @@
 <!-- Banner Phần Chi Tiết Sản Phẩm -->
+<?php if ($data != null) { ?>
 <div class="page-heading bg-light" style="background-image: url('public/images/banner/bannerCart.png'); background-size: cover; height: 400px;">
   <div class="container">
     <div class="row align-items-end text-center">
@@ -17,8 +18,8 @@
     <div class="col-lg-6">
       <div class="flip-image-container">
         <div class="flip-image">
-          <img src="public/images/banner/style.jpg" alt="Ảnh trước" class="front-img">
-          <img src="public/images/banner/style_seoul.jpg" alt="Ảnh sau" class="back-img">
+          <img src="public/<?= $data['Image'] ?>" alt="Ảnh trước" class="front-img">
+          <img src="public/<?= $data['Image'] ?>" alt="Ảnh sau" class="back-img">
         </div>
       </div>
     </div>
@@ -27,18 +28,16 @@
     <div class="col-lg-6">
     <div class="row">
      <div class="col-md-12 text-left mb-2">
-        <h3 class="text-black h4 text-uppercase">Váy họa tiết chấm bi</h3>
+        <h3 class="text-black h4 text-uppercase"><b style="color: #a35f0c;"><?= $data['ProductName'] ?></b></h3>
      </div>
    </div>  
-      <p class="price"><h4><b>Giá: 1.200.000Đ</b></h4></p>
-      <label for=""><b>Mô tả:</b></label>
-      <ul class="description">
-        <li>Chất liệu: vải đũi mềm mịn không kích ứng da.</li>
-        <li>Brand: Lseoul</li>
-        <li>Số lượng: 200</li>
-        <li>Xuất xứ: Việt Nam</li>
-      </ul>
-      <label for=""><b>Đánh giá:</b></label>
+      <p class="price"><h3><b>Giá: <?=number_format($data['Price'])?> VNĐ</b></h3></p>
+      
+      <h4><label for=""><b>Mô tả: </b></label> <?= $data['Description'] ?></h4>
+      <h4><label for=""><b>Số lượng: </b></label> <?= $data['Quantity'] ?></h4>
+      <h4><label for=""><b>Nguồn gốc: </b></label> <?= $data['Origin'] ?></h4>
+      <h4><label for=""><b>Chất liệu: </b></label> <?= $data['Material'] ?></h4>
+      <h4><label for=""><b>Đánh giá: </b></label> <?= $data['Rating'] ?></h4>
       <div class="rating" style="color: #FFD700;">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
@@ -47,34 +46,34 @@
                     <i class="fa fa-star-half-alt"></i> <!-- half-star for 4.5 rating, or use fa-star for full -->
       </div>
       <!-- Chọn kích thước -->
-      <div class="product-option mb-3">
-        <label for="size">Kích thước:</label>
-        <div class="size-options">
+      <!-- <div class="product-option mb-3">
+      <h4><label for="">Kích thước: </label> </h4>
+      <div class="size-options">
           <button class="size-btn">S</button>
           <button class="size-btn">M</button>
           <button class="size-btn">L</button>
           <button class="size-btn">XL</button>
         </div>
-      </div>
+      </div> -->
 
       <!-- Chọn màu sắc -->
-      <div class="product-option mb-3">
-        <label for="color">Màu sắc:</label>
+      <!-- <div class="product-option mb-3">
+        <h4><label for="color">Màu sắc:</label></h4>
         <div class="color-options">
           <button class="color-btn" style="background-color: red;" title="Đỏ"></button>
           <button class="color-btn" style="background-color: blue;" title="Xanh"></button>
           <button class="color-btn" style="background-color: black;" title="Đen"></button>
           <button class="color-btn" style="background-color: white; border: 1px solid #ccc;" title="Trắng"></button>
         </div>
-      </div>
+      </div> -->
 
       <!-- Chọn số lượng -->
-      <div class="product-option mb-3">
-        <label for="quantity">Số lượng:</label>
+      <!-- <div class="product-option mb-3">
+      <h4><label for="quantity">Số lượng:</label></h4>
         <input type="number" id="quantity" class="form-control quantity-input" min="1" value="1" style="width: 50%;">
-      </div>
+      </div> -->
 
-      <a href="?act=cart"><button class="btn btn-primary mt-3">Thêm vào giỏ hàng</button>
+      <a href="?act=cart&xuli=add&id=<?=$data['ProductID']?>"><button class="btn btn-primary mt-3">Thêm vào giỏ hàng</button>
       </a>
     </div>
   </div>
@@ -218,3 +217,6 @@
       </div>
     </div>
 
+    <?php } else {
+    require_once("Views/error-404.php");
+} ?>

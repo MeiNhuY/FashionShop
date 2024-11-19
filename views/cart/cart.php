@@ -4,7 +4,7 @@
       <div class="row align-items-end text-center">
         <div class="col-lg-7 mx-auto">
           <h1>Giỏ hàng</h1>  
-          <p class="mb-4"><a href="index.html">Trang chủ</a> / <strong>Giỏ hàng</strong></p>        
+          <p class="mb-4"><a href="act=?shop">Trang chủ</a> / <strong>Giỏ hàng</strong></p>        
         </div>
       </div>
     </div>
@@ -23,7 +23,7 @@
       <div class="row mb-5">
         <form class="col-md-12" method="post">
           <div class="site-blocks-table">
-            <table class="table table-bordered" id="call">
+            <table class="table table-bordered" id="dxd">
               <thead>
                 <tr>
                   <th class="product-thumbnail">Hình ảnh</th>
@@ -42,28 +42,26 @@
 								foreach ($_SESSION['product'] as $value) { ?>
                 <tr>
                     <td class="product-thumbnail">
-                        <a href="?act=detail&id=<?= $value['ProductID'] ?>"><img src="public/images/products/<?= $value['Image'] ?>" alt="Image" class="img-fluid"/></a>
-                        <!-- <img src="public/images/products/jacket-1-min.jpg" alt="Image" class="img-fluid"> -->
+                        <a href="?act=detail&id=<?= $value['ProductID'] ?>"><img src="public/<?= $value['Image']?>" alt="Image" class="img-fluid"/></a>
                     </td>
                     <td class="product-name">
                        <h2 class="h5 text-black"><a href="?act=detail&id=<?= $value['ProductID'] ?>"><?= $value['ProductName'] ?></a></h2>
                     </td>
-                    <td><?($value['Price']) ?> VNĐ</td>
+                    <td><?= number_format($value['Price']) ?> VNĐ</td>
       
                     <td>
-                      <div class="input-group mb-3" style="max-width: 120px;">
-                        <div class="input-group-prepend">
-                          <button class="btn btn-outline-black js-btn-minus" type="button"><a href="?act=cart&xuli=delete&id=<?=$value['MaSP']?>" ></a>&minus;</button>
-                        </div>
-                        <input type="text" class="form-control text-center" name="Quantity" value="<?= $value['Quantity'] ?>" aria-label="Example text with button addon" aria-describedby="button-addon1">
-                        <div class="input-group-append">
-                          <button class="btn btn-outline-black js-btn-plus" type="button"><a href="?act=cart&xuli=update&id=<?=$value['MaSP']?>"></a>&plus;</button>
-                        </div>
-                      </div>
-                    </td>
+											<form action="" method="POST">
+												<div class="plus-minus">
+													<a href="?act=cart&xuli=delete&id=<?=$value['ProductID']?>" class="dec qtybutton" type="button">-</a>
+													<b class="plus-minus-box"><?= $value['Quantity'] ?></b>
+													<a href="?act=cart&xuli=update&id=<?=$value['ProductID']?>" class="inc qtybutton" type="button">+</a>
+												</div>
+											</form>
+										</td>
+                    
 
-                    <td><strong><?($value['ThanhTien']) ?> VNĐ</strong></td>
-                    <td><a href="?act=cart&xuli=deleteall&id=<?= $value['ProductID'] ?>"><i class="btn btn-black btn-sm" title="Remove this product"></i>X</a></td>
+                    <td><strong><?= number_format($value['TotalPrice']) ?> VNĐ</strong></td>
+                    <td><a href="?act=cart&xuli=deleteall&id=<?= $value['ProductID'] ?>"><i class="btn fa-solid fa-trash-can" title="Remove this product" style="font-size: x-large;color: #a35f0c;"></i></a></td>
                 </tr>
                 <?php }
 							} ?>
@@ -79,10 +77,10 @@
         <div class="col-md-6">
           <div class="row mb-5">
             <div class="col-md-6 mb-3 mb-md-0">
-              <button class="btn btn-black btn-sm btn-block">Thêm sản phẩm</button>
+              <button class="btn btn-black btn-sm btn-block" type="submit">Thêm sản phẩm</button>
             </div>
             <div class="col-md-6">
-              <button class="btn btn-outline-black btn-sm btn-block">Quay lại cửa hàng</button>
+              <button class="btn btn-outline-black btn-sm btn-block" type="submit">Quay lại cửa hàng</button>
             </div>
           </div>
           <div class="row">
@@ -98,7 +96,7 @@
               <input type="text" class="form-control py-3" id="coupon" placeholder="Nhập mã giảm giá tại đây">
             </div>
             <div class="col-md-4">
-              <button class="btn btn-black">Áp dụng</button>
+              <button class="btn btn-black" type="submit">Áp dụng</button>
             </div>
           </div>
         </div>
@@ -116,7 +114,7 @@
                   <strong class="text-black">Tổng giỏ hàng</strong>
                 </div>
                 <div class="col-md-6 text-right">
-                  <span class="text-black"><? ($count) ?> <span> VND</spp></span>
+                  <span class="text-black"><?= number_format($count) ?> VNĐ</spp></span>
                 </div>
               </div>
 

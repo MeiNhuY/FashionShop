@@ -39,208 +39,60 @@
       <div class="row">
 
       <div class="col-md-2">
+        <?php    $i = 1; foreach ($data_chitietDM as $row) { ?>
+
           <ul class="list-unstyled categories">
-            <li><a href="#">Sản phẩm mới <span></span></a></li>
-            <li><a href="#">Thời trang nam <span></span></a></li>
-            <li><a href="#">Thời trang nữ <span></span></a></li>
-            <li><a href="#">Váy thời trang<span></span></a></li>
-            <li><a href="#">Quần Jean<span></span></a></li>
-            <li><a href="#">Quần tây<span></span></a></li>
-            <li><a href="#">Áo Sơmi<span></span></a></li>
-            <li><a href="#">Áo Polo<span></span></a></li>
+          
+            <li>
+              <?php foreach ($row as $value) { ?>
+                <a href="?act=shop&sp=<?= $value['CategoryID'] ?>&loai=<?= $value['ProductTypeName'] ?>"><?= $value['ProductTypeName'] ?></a>
+              <?php } ?>
+            </li>
+
           </ul>
+          <?php $i++;
+             } ?>
         </div>
         <div class="col-md-10">
-          <div class="row">
+            <div class="row">
+              <?php 
+              if (isset($data) && $data != NULL) {
+                  foreach ($data as $value) {		
+              ?>
+              <div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4">
+                <!-- product -->
+                <div class="product-item">
+                    <a href="?act=detail&id=<?=$value['ProductID']?>" class="product-img">
+                        <div class="label new top-right"><div class='content'>New</div></div>
+                        <img src="public/<?=$value['Image']?>" alt="Image" class="img-fluid">
+                        <div class="overlay">
+                            <div class="icons">
+                                <a href="?act=detail&id=<?=$value['ProductID']?>" class="favorite"><i class="fa-solid fa-eye"></i></a>
+                                <a href="?act=detail&id=<?= $value['ProductID'] ?>" class="add-to-cart"><i class="fa fa-shopping-cart"></i></a>
+                            </div>
+                        </div>
+                    </a>
 
-          <div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4">
-            
-            <!-- product -->
-              <div class="product-item">
-                  <a href="shop-single.php" class="product-img">
-                      <div class="label new top-right"><div class='content'>New</div> </div>
-                      <img src="public/images/products/jacket-1-min.jpg" alt="Image" class="img-fluid">
-                      <div class="overlay">
-                          <div class="icons">
-                              <a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
-                              <a href="?act=cart&xuli=add&id=<?= $value['ProductID'] ?>" class="add-to-cart">
-                                  <i class="fa fa-shopping-cart"></i>
-                              </a>
-
-                          </div>
-                      </div>
-                  </a>
-            <!-- star -->
-                  <div class="rating" style="color: #FFD700;">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-half-alt"></i> <!-- half-star for 4.5 rating, or use fa-star for full -->
-                  </div>
-            <!-- star -->
-             
-                  <h3 class="title"><a href="#">Dark Jacket</a></h3>
-                  <div class="price"><span>£69.00</span></div>
-              </div>
-          </div>
-
-
-<<<<<<< HEAD
-
-          <div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4">
-            <!-- product -->
-              <div class="product-item">
-                  <a href="shop-single.php" class="product-img">
-                      <div class="label new top-right">
-                          <div class='content'>New</div>
-                      </div>
-                      <img src="public/images/products/jacket-1-min.jpg" alt="Image" class="img-fluid">
-                      <div class="overlay">
-                          <div class="icons">
-                              <a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
-                              <a href="?act=cart" class="add-to-cart">
-                                  <i class="fa fa-shopping-cart"></i>
-                                  <span class="cart-count">1</span>
-                              </a>
-                          </div>
-                      </div>
-                  </a>
-                  <div class="rating" style="color: #FFD700;">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-half-alt"></i> <!-- half-star for 4.5 rating, or use fa-star for full -->
-                  </div>
-                  <h3 class="title"><a href="#">Dark Jacket</a></h3>
-                  <div class="price">
-                      <span>£69.00</span>
-                  </div>
-              </div>
-          </div>
-
-            <div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4">
-              <div class="product-item">
-                <a href="shop-single.php" class="product-img">
-                  <img src="public/images/products/shoe-1-min.jpg" alt="Image" class="img-fluid">
-                  <div class="overlay">
-                          <div class="icons">
-                              <a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
-                              <a href="?act=cart" class="add-to-cart">
-                                  <i class="fa fa-shopping-cart"></i>
-                                  <span class="cart-count">1</span>
-                              </a>
-                          </div>
-                      </div>
-                </a>
-                <div class="rating" style="color: #FFD700;">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-half-alt"></i> <!-- half-star for 4.5 rating, or use fa-star for full -->
-                  </div>
-                <h3 class="title"><a href="#">Brown Shoe</a></h3>
-                <div class="price">
-                  <span>£29.00</span>
+                    <p><a href="?act=detail&id=<?=$value['ProductID']?>"><?=$value['ProductName']?></a></p>
+                    <div class="rating" style="color: #FFD700;">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-alt"></i>
+                    </div>
+                    <h3 class="title"><a href="?act=detail&id=<?=$value['ProductID']?>"><?=$value['ProductName']?></a></h3>
+                    <div class="price"><span><?=number_format($value['Price'])?> VNĐ</span></div>
                 </div>
               </div>
-            </div>
-
-            <div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4">
-              <div class="product-item">
-                <a href="shop-single.html" class="product-img">
-                  <img src="public/images/products/sock-1-min.jpg" alt="Image" class="img-fluid">
-                  <div class="overlay">
-                          <div class="icons">
-                              <a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
-                              <a href="?act=cart" class="add-to-cart">
-                                  <i class="fa fa-shopping-cart"></i>
-                                  <span class="cart-count">1</span>
-                              </a>
-                          </div>
-                      </div>
-                </a>
-                <div class="rating" style="color: #FFD700;">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-half-alt"></i> <!-- half-star for 4.5 rating, or use fa-star for full -->
-                  </div>
-                <h3 class="title"><a href="#">The Modern Sock</a></h3>
-                <div class="price">
-                  <span>£29.00</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4">
-              <div class="product-item">
-                <a href="shop-single.html" class="product-img">
-                  <div class="label sale top-right">
-                    <div class='content'>Sale</div>
-                  </div>
-                  <img src="public/images/products/sweater-2-min.jpg" alt="Image" class="img-fluid">
-                  <div class="overlay">
-                          <div class="icons">
-                              <a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
-                              <a href="?act=cart" class="add-to-cart">
-                                  <i class="fa fa-shopping-cart"></i>
-                                  <span class="cart-count">1</span>
-                              </a>
-                          </div>
-                      </div>
-                </a>
-                <div class="rating" style="color: #FFD700;">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-half-alt"></i> <!-- half-star for 4.5 rating, or use fa-star for full -->
-                  </div>
-                <h3 class="title"><a href="#">Double Knit Sweater</a></h3>
-                <div class="price">
-                  <del>£99.00</del> &mdash; <span>£69.00</span>
-                </div>
-              </div>
-            </div>
-=======
-          
->>>>>>> 3349799ec890e8fefe9822c196fc5b05dd4c2adc
-
-            <div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4">
-              <div class="product-item">
-                <a href="shop-single.html" class="product-img">
-                  <div class="label sale top-right">
-                    <div class='content'>Sale</div>
-                  </div>
-                  <img src="public/images/products/watch-1-min.jpg" alt="Image" class="img-fluid">
-                  <div class="overlay">
-                          <div class="icons">
-                              <a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
-                              <a href="?act=cart" class="add-to-cart">
-                                  <i class="fa fa-shopping-cart"></i>
-                                  <span class="cart-count">1</span>
-                              </a>
-                          </div>
-                      </div>
-                </a>
-                <div class="rating" style="color: #FFD700;">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-half-alt"></i> <!-- half-star for 4.5 rating, or use fa-star for full -->
-                  </div>
-                <h3 class="title"><a href="#">The Murray</a></h3>
-                <div class="price">
-                  <del>£99.00</del> &mdash; <span>£69.00</span>
-                </div>
-              </div>
+              <?php 
+                  }
+              } else {
+                  echo '<p> KHÔNG CÓ DỮ LIỆU </p>';
+              }
+              ?>
             </div>
           </div>
+
 
           <div class="row mt-5 pb-5">
             <div class="col-lg-12">
@@ -254,11 +106,15 @@
                       </svg>                      
                     </a>
                   </li>
-                  <li class="active"><span>1</span></li>
-                  <li><a href="#">2</a></li>
-                  <li><a href="#">3</a></li>
-                  <li><a href="#">4</a></li>
-                  <li><a href="#">5</a></li>
+
+                  <?php 
+                  if ($data_tong > 9 and isset($test)) {
+										for ($i = 1; $i <= $data_tong / 9; $i++) { ?>
+                      <li><a href="?act=shop&trang=<?= $i ?>"><?= $i ?></a></li>
+                  <?php }
+									}
+									?>
+                  
                   <li>
                     <a href="#">
                       <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -273,7 +129,6 @@
           </div>
 
 
-        </div>
       </div>
     </div> <!-- /.untree_co-section -->
 

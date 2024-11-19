@@ -71,11 +71,68 @@ body {
   display: block;
 }
 
+/* cart */
+.plus-minus-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px; /* Kích thước tổng thể của khối */
+  border: 2px solid #ccc; /* Viền cho khối */
+  border-radius: 10px; /* Bo tròn góc của khối */
+  background-color: #f9f9f9; /* Nền sáng cho khối */
+  padding: 5px;
+}
+
+.qtybutton {
+  display: inline-block;
+  width: 50px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  border-radius: 10%;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.qtybutton:hover {
+  background-color: #333; /* Hiệu ứng hover */
+}
+
+.plus-minus-box {
+  display: inline-block;
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 10%;
+  border: 2px solid #dad9d9;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.plus-minus-box:hover {
+  background-color: #dadada; /* Hiệu ứng hover cho số lượng */
+  transform: scale(1.05); /* Hiệu ứng phóng to nhẹ khi hover */
+}
+
+/* Tạo phân cách giữa các phần tử */
+.plus-minus-container .qtybutton {
+  border-right: 2px solid #ccc;
+}
+
 
 
     /* shop */
 .custom-pagination ul {
-  padding-left: 200px; /* Tăng khoảng cách từ lề trái cho cả danh sách */
+  padding-left: 490px; /* Tăng khoảng cách từ lề trái cho cả danh sách */
   padding-top: 40px;
 }
 

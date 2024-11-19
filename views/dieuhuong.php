@@ -7,7 +7,7 @@ switch ($act) {
     case "shop":
         require_once("shop/shop.php");
         break;
-    case "shop-single":
+    case "detail":
         require_once("shop/product_detail.php");
         break;
     case "page":

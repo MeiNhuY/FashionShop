@@ -4,13 +4,48 @@ $mod = isset($_GET['act']) ? $_GET['act'] : "home";
 switch ($mod) {
     case 'home':
         require_once('controllers/HomeController.php');
-        $controller_obj = new homeController();
+        $controller_obj = new HomeController();
         $controller_obj->list();
+        break;
+    case 'shop':
+        require_once('controllers/ShopController.php');
+        $controller_obj = new ShopController();
+        $controller_obj->list();
+        break;
+    case 'detail':
+        require_once('controllers/DetailController.php');
+        $controller_obj = new DetailController();
+        $controller_obj->list();
+        break;
+    case 'cart':
+        $act = isset($_GET['xuli']) ? $_GET['xuli'] : "list";
+        require_once('controllers/CartController.php');
+        $controller_obj = new CartController();
+        switch ($act) {
+            case 'list':
+                $controller_obj->list_cart();
+                break;
+            case 'update':
+                $controller_obj->update_cart();
+                break;
+            case 'add':
+                $controller_obj->add_cart();
+                break;
+            case 'delete':
+                $controller_obj->delete_cart();
+                break;
+            case 'deleteall':
+                $controller_obj->deleteall_cart();
+                break;
+            default:
+                $controller_obj->list_cart();
+                break;
+        }
         break;
     case 'taikhoan':
         $act = isset($_GET['xuli']) ? $_GET['xuli'] : "taikhoan";
         require_once('controllers/LoginController.php');
-        $controller_obj = new loginController();
+        $controller_obj = new LoginController();
         if ((isset($_SESSION['isLogin']) && $_SESSION['isLogin'] == true)) {
             switch ($act) {
                 case 'dangxuat':
