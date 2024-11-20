@@ -13,9 +13,9 @@
 
 <!-- Phần Chi Tiết Sản Phẩm với Hình Ảnh Lật -->
 <div class="product-detail-section container my-5">
-  <div class="row" style="margin-left: 70px;">
+  <div class="row" style="margin-left: 70px; ">
     <!-- Hình ảnh lật -->
-    <div class="col-lg-6">
+    <div class="col-lg-6" style="margin-top: 30px;">
       <div class="flip-image-container">
         <div class="flip-image">
           <img src="public/<?= $data['Image'] ?>" alt="Ảnh trước" class="front-img">
@@ -27,7 +27,7 @@
     <!-- Thông tin chi tiết sản phẩm -->
     <div class="col-lg-6">
     <div class="row">
-     <div class="col-md-12 text-left mb-2">
+     <div class="col-md-12 text-left mb-2" style="margin-top: 30px;">
         <h3 class="text-black h4 text-uppercase"><b style="color: #a35f0c;"><?= $data['ProductName'] ?></b></h3>
      </div>
    </div>  
@@ -43,7 +43,7 @@
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
-                    <i class="fa fa-star-half-alt"></i> <!-- half-star for 4.5 rating, or use fa-star for full -->
+                    <i class="fa fa-star-half-alt"></i> 
       </div>
       <!-- Chọn kích thước -->
       <!-- <div class="product-option mb-3">
@@ -82,12 +82,11 @@
 
 
 
-<div class="untree_co-section">
-      <div class="container">
-        <div class="row mb-5 align-items-center">
-          <div class="col-md-6">
-            <h1 class="h3"><b>Sản phẩm phổ biến</b></h1>        
-          </div>
+<div class="untree_co-section"> 
+    <div class="container">
+        
+       <div class="row mb-5 align-items-center">
+          <div class="col-md-6"><h1 class="h3"><b>Sản phẩm tương tự</b></h1>  </div> 
           <div class="col-sm-6 carousel-nav text-sm-right">
             <a href="#" class="prev js-custom-prev-v2">
               <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-left-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -105,111 +104,41 @@
             </a>
           </div>
         </div> <!-- /.heading -->
+
+
         <div class="owl-3-slider owl-carousel">
+          <?php foreach ($data_lq as $row) { ?>
           <div class="item">
-            <div class="product-item">
+            <div class="product-item"> 
               <a href="shop-single.html" class="product-img">
-                <div class="label sale top-right">
-                  <div class='content'>Sale</div>
-                </div>
-                <img src="public/images/products/watch-1-min.jpg" alt="Image" class="img-fluid">
-                <div class="overlay">
-                          <div class="icons">
-                              <a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
-                              <a href="?act=cart" class="add-to-cart">
-                                  <i class="fa fa-shopping-cart"></i>
-                                  <span class="cart-count">1</span>
-                              </a>
-                          </div>
+                  <div class="label sale top-right"><div class='content'>Sale</div> </div>
+                  <a href="?act=detail&id=<?= $row['ProductID'] ?>"><img src="public/<?= $row['Image'] ?>" alt="Image" class="img-fluid" style="border-radius:10px;"/></a>
+                  <div class="overlay">
+                      <div class="icons">
+                          <a href="?act=detail&id=<?=$row['ProductID']?>" class="favorite"><i class="fa-solid fa-eye"></i></a>
+                          <a href="?act=detail&id=<?= $row['ProductID'] ?>" class="add-to-cart"><i class="fa fa-shopping-cart"></i></a>
                       </div>
+                  </div>
               </a>
-              <h3 class="title"><a href="#">The Murray</a></h3>
-              <div class="price">
-                <del>£99.00</del> &mdash; <span>£69.00</span>
+              <p style="font-size: 19px; margin-top: 20px;"><a href="?act=detail&id=<?=$row['ProductID']?>"><?=$row['ProductName']?></a></p>
+              <div class="rating" style="color: #FFD700;">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half-alt"></i>
               </div>
+              <div class="price"><span><?=number_format($row['Price'])?> VNĐ</span></div>
             </div>
           </div> <!-- /.item -->
-
-
-          <div class="item">
-            <div class="product-item">
-              <a href="shop-single.html" class="product-img">
-
-                <div class="label new top-right">
-                  <div class='content'>New</div>
-                </div>
-                <img src="public/images/products/jacket-1-min.jpg" alt="Image" class="img-fluid">
-                <div class="overlay">
-                          <div class="icons">
-                              <a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
-                              <a href="?act=cart" class="add-to-cart">
-                                  <i class="fa fa-shopping-cart"></i>
-                                  <span class="cart-count">1</span>
-                              </a>
-                          </div>
-                      </div>
-              </a>
-              <h3 class="title"><a href="#">Dark Jacket</a></h3>
-              <div class="price">
-                <span>£69.00</span>
-              </div>
-            </div>
-          </div> <!-- /.item -->
-
-
-          <div class="item">
-            <div class="product-item">
-              <a href="shop-single.html" class="product-img">
-                <div class="label new top-right">
-                  <div class='content'>New</div>
-                </div>
-
-                <div class="label sale top-right second">
-                  <div class='content'>Sale</div>
-                </div>
-                <img src="public/images/products/bottoms-1-min.jpg" alt="Image" class="img-fluid">
-                <div class="overlay">
-                          <div class="icons">
-                              <a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
-                              <a href="?act=cart" class="add-to-cart">
-                                  <i class="fa fa-shopping-cart"></i>
-                                  <span class="cart-count">1</span>
-                              </a>
-                          </div>
-                      </div>
-              </a>
-              <h3 class="title"><a href="#">Chino Bottoms</a></h3>
-              <div class="price">
-                <del>£99.00</del> &mdash; <span>£69.00</span>
-              </div>
-            </div>
-          </div> <!-- /.item -->
-
-          <div class="item">
-            <div class="product-item">
-              <a href="shop-single.html" class="product-img">
-                <img src="public/images/products/sock-1-min.jpg" alt="Image" class="img-fluid">
-                <div class="overlay">
-                          <div class="icons">
-                              <a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
-                              <a href="?act=cart" class="add-to-cart">
-                                  <i class="fa fa-shopping-cart"></i>
-                                  <span class="cart-count">1</span>
-                              </a>
-                          </div>
-                      </div>
-              </a>
-              <h3 class="title"><a href="#">The Modern Sock</a></h3>
-              <div class="price">
-                <span>£29.00</span>
-              </div>
-            </div>
-          </div> <!-- /.item -->
-
+          <?php } ?>
         </div>
-      </div> 
-    </div>
 
+
+    </div> 
+</div>
+
+<!-- 
+Loading -->
     <div id="overlayer"></div>
     <div class="loader">
       <div class="spinner-border" role="status">
@@ -220,3 +149,26 @@
     <?php } else {
     require_once("Views/error-404.php");
 } ?>
+
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId: '2652621865018691',
+            xfbml: true,
+            version: 'v7.0'
+        });
+        FB.AppEvents.logPageView();
+    };
+
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+<!-- quick view end -->
