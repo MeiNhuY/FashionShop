@@ -179,7 +179,7 @@
           <div class="item">
             <div class="product-item"> 
               <a href="shop-single.html" class="product-img">
-                  <div class="label new top-right"><div class='content'><?=$row['PromotionID']?></div></div>
+                  <div class="label sale top-right"><div class='content'>Sale</div> </div>
                   <a href="?act=detail&id=<?= $row['ProductID'] ?>"><img src="public/<?= $row['Image'] ?>" alt="Image" class="img-fluid" style="border-radius:10px;"/></a>
                   <div class="overlay">
                       <div class="icons">
@@ -189,13 +189,13 @@
                   </div>
               </a>
               <p style="font-size: 19px; margin-top: 20px;"><a href="?act=detail&id=<?=$row['ProductID']?>"><?=$row['ProductName']?></a></p>
-              <div class="price"><span><?=number_format($row['Price'])?> VNĐ</span></div>
               <div class="rating" style="color: #FFD700;">
                   <i class="fa fa-star"></i>
                   <i class="fa fa-star"></i>
                   <i class="fa fa-star"></i>
                   <i class="fa fa-star-half-alt"></i>
               </div>
+              <div class="price"><span><?=number_format($row['Price'])?> VNĐ</span></div>
             </div>
           </div> <!-- /.item -->
           <?php } ?>
