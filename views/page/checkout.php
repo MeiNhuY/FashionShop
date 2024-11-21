@@ -16,7 +16,9 @@
       <div class="row mb-5">
         <div class="col-md-12">
           <div class="border p-4 rounded" role="alert">
-            <a href="?act=login">Click here để Đăng Nhập</a>
+          <a href="?act=orderHistory">
+              <i class="fas fa-history"></i> Lịch sử đơn hàng
+          </a>
           </div>
         </div>
       </div>
@@ -30,27 +32,27 @@
           <div class="p-3 p-lg-5 border">
             <div class="form-group row">
               <div class="col-md-12">
-                <label for="c_fname" class="text-black">Tên người nhận <span class="text-danger">*</span></label>
-                <input type="text" class="form-control" id="c_fname" name="c_fname" placeholder="Tên người nhận">
+                <label for="c_fname" class="text-black">Tên người nhận <span class="text-danger"></span></label>
+                <input type="text" class="form-control" id="c_fname" name="c_fname" placeholder="Tên người nhận" value="<?php echo $_SESSION['login']['FirstName']." ".$_SESSION['login']['LastName']  ?>">
               </div>
             </div>
 
             <div class="form-group row mb-5">
               <div class="col-md-6">
-                <label for="c_email_address" class="text-black">Email<span class="text-danger">*</span></label>
-                <input type="text" class="form-control" id="c_email_address" name="c_email_address" placeholder="Email">
+                <label for="c_email_address" class="text-black">Email<span class="text-danger"></span></label>
+                <input type="text" class="form-control" id="c_email_address" name="c_email_address" placeholder="Email" value="<?=$_SESSION['login']['Email']?>">
               </div>
 
               <div class="col-md-6">
-                <label for="c_phone" class="text-black">Số điện thoại<span class="text-danger">*</span></label>
-                <input type="text" class="form-control" id="c_phone" name="c_phone" placeholder="Số điện thoại">
+                <label for="c_phone" class="text-black">Số điện thoại<span class="text-danger"></span></label>
+                <input type="text" class="form-control" id="c_phone" name="c_phone" placeholder="Số điện thoại" value="<?=$_SESSION['login']['PhoneNumber']?>">
               </div>
             </div>
 
             <div class="form-group row">
               <div class="col-md-12">
-                <label for="c_address" class="text-black">Địa chỉ<span class="text-danger">*</span></label>
-                <input type="text" class="form-control" id="c_address" name="c_address" placeholder="Địa chỉ nhận hàng">
+                <label for="c_address" class="text-black">Địa chỉ<span class="text-danger"></span></label>
+                <input type="text" class="form-control" id="c_address" name="c_address" placeholder="Địa chỉ nhận hàng" value="<?=$_SESSION['login']['Address']?>">
               </div>
             </div>
 
@@ -84,23 +86,63 @@
                   </thead>
 
                   <tbody>
+                
                     <tr>
-                      <td>Áo polo cao cấp</td>
-                      <td>1</td>
-                      <td>$250.00</td>
+                    <?php if (isset($_SESSION['product'])) {
+									  foreach ($_SESSION['product'] as $value) { ?>
+                      <td><?=$value['ProductName']?></td>
+                      <td><?=$value['Quantity']?></td>
+                      <td><?=$value['TotalPrice']?>VNĐ</td>
                     </tr>
-                    <tr>
-                      <td class="text-black font-weight-bold"><strong>Giảm giá</strong></td>
-                      <td class="text-black">20<span> %</span></td>
-                    </tr>
+                    <?php }
+								  } ?>
+                     
+
+                    <?php
+                      if (isset($_SESSION['promotion'])) {
+                          $promotion_value = $_SESSION['promotion']; // Truy cập trực tiếp giá trị khuyến mãi
+                    ?>
+                      <tr>
+                        <td class="text-black font-weight-bold"><strong>Giảm giá</strong></td>
+                        <td></td>
+                        <td class="text-black"><?= number_format($promotion_value) ?><span>VNĐ</span></td>
+                      </tr>
+                    <?php
+                      }
+                      ?>
+
                     <tr>
                       <td class="text-black font-weight-bold"><strong>Vận chuyển</strong></td>
-                      <td class="text-black">25000<span> VND</span></td>
+                      <td></td>
+                      <td class="text-black">25000<span> VNĐ</span></td>
                     </tr>
+
+                    <?php 
+                        $totalPrice = 0; 
+                        $shippingFee = 25000; // Phí vận chuyển cố định
+
+                        if (isset($_SESSION['product'])) {
+                            foreach ($_SESSION['product'] as $value) {
+                                $totalPrice += $value['TotalPrice']; // Cộng giá từng sản phẩm vào tổng
+                            }
+                        }
+
+                        // Áp dụng khuyến mãi (nếu có)
+                        $promotion = isset($_SESSION['promotion']) ? $_SESSION['promotion'] : 0;
+
+                        // Tính tổng thanh toán cuối cùng
+                        $finalTotal = $totalPrice + $shippingFee - $promotion;
+                    ?>
+
                     <tr>
                       <td class="text-black font-weight-bold"><strong>Tổng thanh toán</strong></td>
-                      <td class="text-black">360000<span> VND</span></td>
+                      <td></td>
+                      <td class="text-black"> 
+                      <?= number_format($finalTotal) ?>
+                      <span> VND</span></td>
                     </tr>
+                  
+               
                   </tbody>
                 </table>
 

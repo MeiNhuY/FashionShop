@@ -70,18 +70,21 @@
 </div>
 
 <div class="card-container col-lg-2">
-<a href="?act=shop_single">
-  <div class="card_sale">
-  <div class="side">
-      <img src="public/images/banner/style_seoul2.jpg" alt="" style="width: 100%; height: 100%;">
-    </div>
-    <div class="side back">
-      <i class="fa-solid fa-tag fa-3x"></i>
-        <p>Mã giảm giá: SALE_80</p>
-        <span>Giảm 80%</span>
-    </div>
-  </div>
-  </a>
+    <a href="?act=shop_single">
+        <div class="card_sale">
+            <div class="side">
+                <img src="public/images/banner/style_seoul2.jpg" alt="" style="width: 100%; height: 100%;">
+            </div>
+            <div class="side back">
+              <div class="discount-icon">
+                  <i class="fa-solid fa-tag fa-3x"></i>
+              </div>
+              <div class="discount-text">
+                  <span class="discount-code">SALE_80</span>
+              </div>
+            </div>
+        </div>
+      </a>
 </div>
 
 <div class="card-container col-lg-2">

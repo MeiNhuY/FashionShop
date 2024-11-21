@@ -1,5 +1,6 @@
 <?php
 require_once("models/Cart.php");
+
 class CartController
 {
     var $cart_model;
@@ -22,6 +23,7 @@ class CartController
             foreach ($_SESSION['product'] as $value) {
                 $count += $value['TotalPrice'];
             }
+
         }
         require_once('views/index.php');
     }
@@ -37,6 +39,7 @@ class CartController
             $_SESSION['product'][$id] = $arr;
         } else {
             $arr['ProductID'] = $data['ProductID'];
+            $arr['PromotionID'] = $data['PromotionID'];
             $arr['ProductName'] = $data['ProductName'];
             $arr['Price'] = $data['Price'];
             $arr['Quantity'] = 1;
@@ -77,4 +80,6 @@ class CartController
         unset($_SESSION['product'][$_GET['id']]);
         header('Location: ?act=cart#dxd');
     }
+
+
 }

@@ -17,11 +17,18 @@ switch ($mod) {
         $controller_obj = new DetailController();
         $controller_obj->list();
         break;
+    
+    case 'promotion':
+        require_once('controllers/PromotionController.php');
+        $controller_obj = new PromotionController();
+        $controller_obj->apply_discount();
+        break;
     case 'cart':
         $act = isset($_GET['xuli']) ? $_GET['xuli'] : "list";
         require_once('controllers/CartController.php');
         $controller_obj = new CartController();
         switch ($act) {
+            
             case 'list':
                 $controller_obj->list_cart();
                 break;

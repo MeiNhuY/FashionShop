@@ -130,6 +130,115 @@ body {
 
 
 
+/* Phần Bình luận và đánh giá */
+
+
+
+.product-review {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-review h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.rating {
+  margin-bottom: 30px;
+}
+
+.stars i {
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+textarea.form-control {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+button.btn-primary {
+  background-color: #a35f0c;
+  border-color: #a35f0c;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.btn-primary:hover {
+  background-color: #8c4b0a;
+  border-color: #8c4b0a;
+}
+
+/* Danh sách bình luận */
+.comments .comment {
+  background-color: #f8f9fa;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comments .comment-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.comments .comment-header .avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.comments .comment p {
+  font-size: 14px;
+  color: #555;
+}
+
+.comments .comment .stars i {
+  font-size: 16px;
+  margin-right: 4px;
+}
+
+/* Tạo hiệu ứng cho ảnh đại diện */
+.comments .comment-header .avatar {
+  width: 60px; /* Kích thước ảnh đại diện */
+  height: 60px;
+  border-radius: 50%; /* Bo tròn ảnh */
+  margin-right: 15px;
+  object-fit: cover; /* Giữ tỷ lệ ảnh khi cắt */
+  border: 3px solid #FFD700; /* Viền vàng quanh ảnh */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Bóng đổ nhẹ */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng chuyển động */
+}
+
+/* Hiệu ứng hover */
+.comments .comment-header .avatar:hover {
+  transform: scale(1.1); /* Phóng to khi hover */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Tăng độ bóng khi hover */
+}
+
+/* Thêm hiệu ứng gradient cho nền ảnh nếu cần */
+.comments .comment-header .avatar {
+  background: linear-gradient(to bottom, #ff7e5f, #feb47b); /* Màu gradient cho nền ảnh */
+}
+
+
+
+
     /* shop */
 .custom-pagination ul {
   padding-left: 490px; /* Tăng khoảng cách từ lề trái cho cả danh sách */

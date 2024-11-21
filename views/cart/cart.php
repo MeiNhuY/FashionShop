@@ -1,5 +1,14 @@
+<?php
+  $promotionID = ''; // Khởi tạo biến PromotionID
 
-  <div class="page-heading bg-light" style="background-image: url('public/images/banner/bannerCart.png'); background-size: cover;  height: 400px;">
+  // Kiểm tra giỏ hàng và lấy PromotionID
+  if (isset($_SESSION['product']) && !empty($_SESSION['product'])) {
+      // Lấy PromotionID của sản phẩm đầu tiên (hoặc sản phẩm bất kỳ nếu có nhiều hơn)
+      $promotionID = current($_SESSION['product'])['PromotionID'];
+  }
+?>
+ 
+ <div class="page-heading bg-light" style="background-image: url('public/images/banner/bannerCart.png'); background-size: cover;  height: 400px;">
     <div class="container">
       <div class="row align-items-end text-center">
         <div class="col-lg-7 mx-auto">
@@ -81,7 +90,7 @@
               </a>
           </div>
             <div class="col-md-6">
-              <a href="?act=promotion"><button class="btn btn-outline-black btn-sm btn-block" type="submit">Xem mã giảm giá</button></a>
+              <a href="?act=promotion"><button class="btn btn-outline-black btn-sm btn-block" type="submit">Lịch Sử Đơn Hàng</button></a>
             </div>
           </div>
           <div class="row">
@@ -91,14 +100,15 @@
                         <h3 class="text-black h4 text-uppercase">Mã giảm giá</h3>
                       </div>
                 </div>                 
-                <p>Nhập mã giảm giá của bạn nếu có</p>
             </div>
             <div class="col-md-8 mb-3 mb-md-0">
-              <input type="text" class="form-control py-3" id="coupon" placeholder="Nhập mã giảm giá tại đây" name="coupon">
+              <input type="text" class="form-control py-3" id="coupon" placeholder="Nhập mã giảm giá tại đây" name="coupon" value="<?= $value['PromotionID']?>">
             </div>
-            <div class="col-md-4">
-              <button class="btn btn-black" type="submit">Áp dụng</button>
+            <form action="?act=promotion&id=<?=$value['PromotionID']?>" method="POST">
+            <div class="col-md-5">
+              <button class="btn btn-black" style="width: 150px;" type="submit">Áp dụng</button>
             </div>
+            </form>
           </div>
         </div>
         <div class="col-md-6 pl-5">
@@ -121,11 +131,19 @@
 
               <div class="row mb-3">
                 <div class="col-md-6">
-                  <strong class="text-black">Giảm giá</strong>
-                </div>
-                <div class="col-md-6 text-right">
-                  <span class="text-black">20000<span>VND</span></span>
-                </div>
+                      <strong class="text-black">Giảm giá</strong>
+                  </div>
+                  <?php
+                      if (isset($_SESSION['promotion'])) {
+                          $promotion_value = $_SESSION['promotion']; // Truy cập trực tiếp giá trị khuyến mãi
+                          ?>
+                          <div class="col-md-6 text-right">
+                              <span class="text-black"><?= number_format($promotion_value) ?> VND</span>
+                          </div>
+                          <?php
+                      }
+                      ?>
+
               </div>
 
               <div class="row mb-3">
@@ -142,15 +160,14 @@
                   <strong class="text-black"style="padding-top: 50px;" >Tổng cộng</strong>
                 </div>
                 <div class="col-md-6 text-right">
-                  <span class="text-black" style="color:brown;"><?($count+25000)?><span> VND</span></span>
+                  <span class="text-black" style="color:brown;"><?= number_format($count + 25000 - $promotion_value) ?> VND<span> VND</span></span>
                 </div>
               </div>
 
               <div class="row">
                 <div class="col-md-12">
                   <!-- <button class="btn btn-black btn-lg py-3 btn-block" onclick="window.location='?act=checkout.php'">Mua hàng</button> -->
-                  <button class="btn btn-black btn-lg py-3 btn-block" href="?act=checkout.php" aria-label="Mua hàng">Đặt hàng</button>
-
+                  <a href="?act=checkout"><button class="btn btn-black btn-lg py-3 btn-block" aria-label="Mua hàng" type="submit">Đặt hàng</button></a>
                   
                 </div>
               </div>

@@ -1,3 +1,28 @@
+<style>
+  /* Tạo kiểu dáng cho tem HOT */
+.hot{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 3;
+    background-color: #ff4d4d; /* Màu đỏ nổi bật */
+    color: white;
+    padding: 15px 25px;
+    font-size: 25px; /* Kích thước chữ */
+    font-weight: bold;
+    border-radius: 50px; /* Tạo hình tròn hoặc bo góc cho tem */
+    transform: rotate(15deg); /* Nghiêng tem một chút */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Thêm bóng cho tem */
+}
+
+/* Tạo hiệu ứng cho chữ trong tem */
+.hot .content {
+    text-transform: uppercase; /* Viết hoa chữ "HOT" */
+    letter-spacing: 2px; /* Khoảng cách giữa các chữ */
+}
+
+</style>
+
 <!-- Banner Phần Chi Tiết Sản Phẩm -->
 <?php if ($data != null) { ?>
 <div class="page-heading bg-light" style="background-image: url('public/images/banner/bannerCart.png'); background-size: cover; height: 400px;">
@@ -17,9 +42,12 @@
     <!-- Hình ảnh lật -->
     <div class="col-lg-6" style="margin-top: 30px;">
       <div class="flip-image-container">
+        <div class="hot">
+          <div class='content'>HOT</div>
+      </div>
         <div class="flip-image">
           <img src="public/<?= $data['Image'] ?>" alt="Ảnh trước" class="front-img">
-          <img src="public/<?= $data['Image'] ?>" alt="Ảnh sau" class="back-img">
+          <img src="public/<?= $data['Image2'] ?>" alt="Ảnh sau" class="back-img">
         </div>
       </div>
     </div>
@@ -28,23 +56,21 @@
     <div class="col-lg-6">
     <div class="row">
      <div class="col-md-12 text-left mb-2" style="margin-top: 30px;">
-        <h3 class="text-black h4 text-uppercase"><b style="color: #a35f0c;"><?= $data['ProductName'] ?></b></h3>
+        <h2 class="text-black h2 text-uppercase"><b style="color: #a35f0c;"><?= $data['ProductName'] ?></b></h2>
      </div>
    </div>  
-      <p class="price"><h3><b>Giá: <?=number_format($data['Price'])?> VNĐ</b></h3></p>
-      
-      <h4><label for=""><b>Mô tả: </b></label> <?= $data['Description'] ?></h4>
-      <h4><label for=""><b>Số lượng: </b></label> <?= $data['Quantity'] ?></h4>
-      <h4><label for=""><b>Nguồn gốc: </b></label> <?= $data['Origin'] ?></h4>
-      <h4><label for=""><b>Chất liệu: </b></label> <?= $data['Material'] ?></h4>
-      <h4><label for=""><b>Đánh giá: </b></label> <?= $data['Rating'] ?></h4>
-      <div class="rating" style="color: #FFD700;">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-half-alt"></i> 
+      <p class="price"><h3 style="color: green;"><b><?=number_format($data['Price'])?> VNĐ</b></h3></p>
+
+      <div class="product-description">
+          <p><b>Mã giảm giá: </b></label> <?= $data['PromotionID'] ?></p>
+          <p><b>Số lượng: </b></label> <?= $data['Quantity'] ?></p>
+          <p><b>Nguồn gốc: </b></label> <?= $data['Origin'] ?></p>
+          <p><b>Chất liệu: </b></label> <?= $data['Material'] ?></p>
+          <p><b>Mô tả: </b><?=$data['Description']?></p>
       </div>
+      
+
+     
       <!-- Chọn kích thước -->
       <!-- <div class="product-option mb-3">
       <h4><label for="">Kích thước: </label> </h4>
@@ -78,6 +104,48 @@
     </div>
   </div>
 </div>
+
+
+<!-- Mô tả sản phẩm -->
+
+<!-- Phần Bình luận và đánh giá sản phẩm -->
+<div class="product-review container my-5">
+    <h3><b>Bình luận và đánh giá</b></h3>
+    
+    <!-- Đánh giá sản phẩm -->
+    <div class="rating">
+        <label for="rating"><b>Đánh giá sản phẩm: </b></label>
+        <div class="stars">
+            <i class="fa fa-star" style="color: #FFD700;"></i>
+            <i class="fa fa-star" style="color: #FFD700;"></i>
+            <i class="fa fa-star" style="color: #FFD700;"></i>
+            <i class="fa fa-star-half-alt" style="color: #FFD700;"></i>
+            <i class="fa fa-star-half-alt" style="color: #FFD700;"></i>
+        </div>
+        <p><b>Đánh giá của bạn:</b></p>
+        <textarea class="form-control" rows="3" placeholder="Viết bình luận của bạn ở đây..."></textarea>
+        <button class="btn btn-primary mt-3">Gửi đánh giá</button>
+    </div>
+
+    <!-- Danh sách các bình luận của khách hàng -->
+    <div class="comments mt-5">
+        <div class="comment">
+        <div class="comment-header">
+            <img src="public/images/banner/style.jpg" alt="Avatar" class="avatar">
+            <p><b>Nguyễn Văn A</b> - 20/11/2024</p>
+        </div>
+            <div class="stars">
+                <i class="fa fa-star" style="color: #FFD700;"></i>
+                <i class="fa fa-star" style="color: #FFD700;"></i>
+                <i class="fa fa-star" style="color: #FFD700;"></i>
+                <i class="fa fa-star-half-alt" style="color: #FFD700;"></i>
+                <i class="fa fa-star-half-alt" style="color: #FFD700;"></i>
+            </div>
+            <p>Sản phẩm tuyệt vời, chất lượng cao và đúng mô tả!</p>
+        </div>
+    </div>
+</div>
+
 
 
 
@@ -136,6 +204,9 @@
 
     </div> 
 </div>
+
+
+
 
 <!-- 
 Loading -->

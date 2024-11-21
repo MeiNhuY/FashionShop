@@ -68,20 +68,19 @@
                         <div class="overlay">
                             <div class="icons">
                                 <a href="?act=detail&id=<?=$value['ProductID']?>" class="favorite"><i class="fa-solid fa-eye"></i></a>
-                                <a href="?act=detail&id=<?= $value['ProductID'] ?>" class="add-to-cart"><i class="fa fa-shopping-cart"></i></a>
+                                <a href="?act=cart&xuli=add&id=<?=$value['ProductID']?>" class="add-to-cart"><i class="fa fa-shopping-cart"></i></a>
                             </div>
                         </div>
                     </a>
 
-                    <p><a href="?act=detail&id=<?=$value['ProductID']?>"><?=$value['ProductName']?></a></p>
+                    <p style="font-size: 22px;"><a href="?act=detail&id=<?=$value['ProductID']?>"><?=$value['ProductName']?></a></p>
+                    <div class="price"><h5><span><?=number_format($value['Price'])?> VNĐ</span></h5></div>
                     <div class="rating" style="color: #FFD700;">
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star-half-alt"></i>
                     </div>
-                    <h3 class="title"><a href="?act=detail&id=<?=$value['ProductID']?>"><?=$value['ProductName']?></a></h3>
-                    <div class="price"><span><?=number_format($value['Price'])?> VNĐ</span></div>
                 </div>
               </div>
               <?php 
