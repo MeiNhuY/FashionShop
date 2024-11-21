@@ -39,7 +39,7 @@
 </div>
 <div class="card-main row">
   <div class="card-container col-lg-2">
-  <a href="?act=shop_single">
+  <a href="?act=">
     <div class="card_sale">
       <div class="side">
         <img src="public/images/banner/style.jpg" alt="" style="width: 100%; height: 100%; border-radius: 10px;">

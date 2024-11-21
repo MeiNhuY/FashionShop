@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         scrollTimeout = setTimeout(function() {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            const threshold = bannerHeight * 0.3; // 30% chiều cao của banner
+            const threshold = bannerHeight * 0.2; // 30% chiều cao của banner
 
             if (scrollTop > lastScrollTop) {
                 // Lướt xuống

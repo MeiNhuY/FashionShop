@@ -54,16 +54,16 @@
              } ?>
         </div>
         <div class="col-md-10">
-            <div class="row">
+            <div class="row" data-aos="fade-up">
               <?php 
               if (isset($data) && $data != NULL) {
                   foreach ($data as $value) {		
               ?>
-              <div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4">
+              <div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4" data-aos="fade-up">
                 <!-- product -->
                 <div class="product-item">
                     <a href="?act=detail&id=<?=$value['ProductID']?>" class="product-img">
-                        <div class="label new top-right"><div class='content'>New</div></div>
+                        <div class="label new top-right"><div class='content'><?=$value['PromotionID']?></div></div>
                         <img src="public/<?=$value['Image']?>" alt="Image" class="img-fluid">
                         <div class="overlay">
                             <div class="icons">
@@ -94,7 +94,7 @@
           </div>
 
 
-          <div class="row mt-5 pb-5">
+          <div class="row mt-5 pb-5" data-aos="fade-up">
             <div class="col-lg-12">
               <div class="custom-pagination">
                 <ul class="list-unstyled">
@@ -170,11 +170,11 @@
 
     <div class="untree_co-section">
       <div class="container">
-        <div class="row mb-5 align-items-center">
+        <div class="row mb-5 align-items-center" data-aos="fade-up">
           <div class="col-md-6">
             <h1 class="h3"><b>Sản phẩm phổ biến</b></h1>        
           </div>
-          <div class="col-sm-6 carousel-nav text-sm-right">
+          <div class="col-sm-6 carousel-nav text-sm-right" >
             <a href="#" class="prev js-custom-prev-v2">
               <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-left-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>

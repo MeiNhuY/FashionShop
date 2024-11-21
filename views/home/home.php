@@ -92,7 +92,7 @@
 
 		<div class="row justify-content-center text-center">  
 				<div class="col-lg-6 section-heading" data-aos="fade-up">
-					<h3 class="text-center">Bộ Sưu Tập Thu Đông</h3>
+					<h3 class="text-center">Sản phẩm bán chạy</h3>
 				</div>
 		</div>
 
@@ -295,7 +295,7 @@
 
 				<div class="row justify-content-center text-center">  
 					<div class="col-lg-6 section-heading" data-aos="fade-up">
-						<h3 class="text-center">Sản phẩm bán chạy</h3>
+						<h3 class="text-center">Sản phẩm mới nhất</h3>
 					</div>
 				</div>
 

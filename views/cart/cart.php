@@ -77,10 +77,11 @@
         <div class="col-md-6">
           <div class="row mb-5">
             <div class="col-md-6 mb-3 mb-md-0">
-              <button class="btn btn-black btn-sm btn-block" type="submit">Thêm sản phẩm</button>
-            </div>
+              <a href="?act=shop"><button class="btn btn-black btn-sm btn-block" type="submit">Thêm sản phẩm</button>
+              </a>
+          </div>
             <div class="col-md-6">
-              <button class="btn btn-outline-black btn-sm btn-block" type="submit">Quay lại cửa hàng</button>
+              <a href="?act=promotion"><button class="btn btn-outline-black btn-sm btn-block" type="submit">Xem mã giảm giá</button></a>
             </div>
           </div>
           <div class="row">
@@ -93,7 +94,7 @@
                 <p>Nhập mã giảm giá của bạn nếu có</p>
             </div>
             <div class="col-md-8 mb-3 mb-md-0">
-              <input type="text" class="form-control py-3" id="coupon" placeholder="Nhập mã giảm giá tại đây">
+              <input type="text" class="form-control py-3" id="coupon" placeholder="Nhập mã giảm giá tại đây" name="coupon">
             </div>
             <div class="col-md-4">
               <button class="btn btn-black" type="submit">Áp dụng</button>
@@ -123,7 +124,7 @@
                   <strong class="text-black">Giảm giá</strong>
                 </div>
                 <div class="col-md-6 text-right">
-                  <span class="text-black">0<span> %</span></span>
+                  <span class="text-black">20000<span>VND</span></span>
                 </div>
               </div>
 
@@ -132,7 +133,7 @@
                   <strong class="text-black" >Vận chuyển</strong>
                 </div>
                 <div class="col-md-6 text-right">
-                  <span class="text-black">25000<span> VND</span></span>
+                  <span class="text-black">25000<span>VND</span></span>
                 </div>
               </div>
 
