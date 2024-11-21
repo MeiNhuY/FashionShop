@@ -49,7 +49,7 @@
 
     <div class="row justify-content-center text-center">  
         <div class="col-lg-6 section-heading" data-aos="fade-up">
-            <h3 class="text-center">Thời trang</h3>
+            <h3 class="text-center">Xu hướng thời trang</h3>
         </div>
     </div>
 
@@ -57,10 +57,10 @@
         <div class="suite-wrap overlap-image-1">
             <div class="suite">
                 <div class="image-stack">
-                    <!-- <div class="image-stack-item image-stack-item-top" data-jarallax-element="-50">
+                    <div class="image-stack-item image-stack-item-top" data-jarallax-element="-50">
                         <div class="overlay"></div>
                         <img src="public/images/page/maunam.jpg" alt="Image" class="img-fluid pic1">
-                    </div> -->
+                    </div>
                     <div class="image-stack-item image-stack-item-bottom">
                         <div class="overlay"></div>
                         <img src="public/images/page/maunu.jpg" alt="Image" class="img-fluid pic2">
@@ -190,98 +190,8 @@
 					</div>
 				</div>
 
-				<div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4">
-
-					<div class="product-item">
-						<a href="?act=shop-single" class="product-img">
-							<img src="public/images/products/sock-1-min.jpg" alt="Image" class="img-fluid">
-							<div class="overlay">
-							<div class="icons">
-							<a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
-								<a href="?act=cart" class="add-to-cart">
-									<i class="fa fa-shopping-cart"></i>
-									<span class="cart-count">1</span>
-								</a>
-							</div>
-                      		</div>
-						</a>
-						<div class="rating" style="color: #FFD700;">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star-half-alt"></i> <!-- half-star for 4.5 rating, or use fa-star for full -->
-						</div>
-						<h3 class="title"><a href="#">The Modern Sock</a></h3>
-						<div class="price">
-							<span>£29.00</span>
-						</div>
-					</div>
-
-				</div>
-				<div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4">
-
-					<div class="product-item">
-						<a href="?act=shop-single" class="product-img">
-							<div class="label sale top-right">
-								<div class='content'>Sale</div>
-							</div>
-							<img src="public/images/products/sweater-2-min.jpg" alt="Image" class="img-fluid">
-							<div class="overlay">
-							<div class="icons">
-							<a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
-								<a href="?act=cart" class="add-to-cart">
-									<i class="fa fa-shopping-cart"></i>
-									<span class="cart-count">1</span>
-								</a>
-							</div>
-                      		</div>
-						</a>
-						<div class="rating" style="color: #FFD700;">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star-half-alt"></i> <!-- half-star for 4.5 rating, or use fa-star for full -->
-						</div>
-						<h3 class="title"><a href="#">Double Knit Sweater</a></h3>
-						<div class="price">
-							<del>£99.00</del> &mdash; <span>£69.00</span>
-						</div>
-					</div>
-
-
-				</div>
-				<div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4">
-
-					<div class="product-item">
-						<a href="?act=shop-single" class="product-img">
-							<div class="label sale top-right">
-								<div class='content'>Sale</div>
-							</div>
-							<img src="public/images/products/watch-1-min.jpg" alt="Image" class="img-fluid">
-							<div class="overlay">
-							<div class="icons">
-							<a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
-								<a href="?act=cart" class="add-to-cart">
-									<i class="fa fa-shopping-cart"></i>
-									<span class="cart-count">1</span>
-								</a>
-							</div>
-                      		</div>
-						</a>
-						<div class="rating" style="color: #FFD700;">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star-half-alt"></i> <!-- half-star for 4.5 rating, or use fa-star for full -->
-						</div>
-								<h3 class="title"><a href="#">The Murray</a></h3>
-						<div class="price">
-							<del>£99.00</del> &mdash; <span>£69.00</span>
-						</div>
-					</div>
+				
+				
 
 
 				</div>
@@ -289,174 +199,92 @@
 		</div>
 	</div>
 	
-	<!-- product2 -->
-	<div class="untree_co-section" id="khoangcach2">
-		<div class="container">
-
-				<div class="row justify-content-center text-center">  
+<!-- Product Mới nhất--> 
+<div class="untree_co-section" style="padding-bottom: 40%spx;">
+    <div class="container">
+	  <div class="row justify-content-center text-center">  
 					<div class="col-lg-6 section-heading" data-aos="fade-up">
 						<h3 class="text-center">Sản phẩm mới nhất</h3>
 					</div>
 				</div>
-
-				<div class="col-sm-6 carousel-nav text-sm-right">
-					<a href="#" class="prev js-custom-prev-v2">
-						<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-left-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-							<path fill-rule="evenodd" d="M8.354 11.354a.5.5 0 0 0 0-.708L5.707 8l2.647-2.646a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708 0z"/>
-							<path fill-rule="evenodd" d="M11.5 8a.5.5 0 0 0-.5-.5H6a.5.5 0 0 0 0 1h5a.5.5 0 0 0 .5-.5z"/>
-						</svg>
-					</a>
-					<a href="#" class="next js-custom-next-v2">
-						<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-							<path fill-rule="evenodd" d="M7.646 11.354a.5.5 0 0 1 0-.708L10.293 8 7.646 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0z"/>
-							<path fill-rule="evenodd" d="M4.5 8a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5z"/>
-						</svg>
-					</a>
-				</div>
-			</div>
-			<div class="owl-3-slider owl-carousel">
-				<div class="item">
-					<div class="product-item">
-						<a href="?act=shop-single" class="product-img">
-							<div class="label sale top-right">
-								<div class='content'>Sale</div>
-							</div>
-							<img src="public/images/products/watch-1-min.jpg" alt="Image" class="img-fluid">
-							<div class="overlay">
+        <div class="row mb-5 align-items-center" data-aos="fade-up">
+          <div class="col-md-6">  </div>
+          <div class="col-sm-6 carousel-nav text-sm-right" >
+            <a href="#" class="prev js-custom-prev-v2">
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-left-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                <path fill-rule="evenodd" d="M8.354 11.354a.5.5 0 0 0 0-.708L5.707 8l2.647-2.646a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708 0z"/>
+                <path fill-rule="evenodd" d="M11.5 8a.5.5 0 0 0-.5-.5H6a.5.5 0 0 0 0 1h5a.5.5 0 0 0 .5-.5z"/>
+              </svg>
+            </a>
+            <a href="#" class="next js-custom-next-v2">
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                <path fill-rule="evenodd" d="M7.646 11.354a.5.5 0 0 1 0-.708L10.293 8 7.646 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0z"/>
+                <path fill-rule="evenodd" d="M4.5 8a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5z"/>
+              </svg>
+            </a>
+          </div>
+        </div> <!-- /.heading -->
+        <div class="owl-3-slider owl-carousel">
+			<?php for ($i = 0; $i < 2; $i++) { ?>
+          	<div class="item">
+		 		<?php
+                    if ($data_arr[$i] != null) {
+                        foreach ($data_arr[$i] as  $row) { ?>
+						<!-- single product end -->
+            	<div class="product-item">
+              		<a href="product_detail.php" class="product-img">
+						<div class="label sale top-right">
+							<div class="label new top-right"><div class='content'><?=$row['PromotionID']?></div></div>
+						</div>
+						<a href="?act=detail&id=<?= $row['ProductID'] ?>"><img src="public/<?= $row['Image'] ?>" alt="Image" class="img-fluid" style="border-radius:10px;"/></a>
+						<div class="overlay">
 							<div class="icons">
-							<a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
-							<a href="?act=cart" class="add-to-cart">
-									<i class="fa fa-shopping-cart"></i>
-									<span class="cart-count">1</span>
-								</a>
+								<a href="?act=detail&id=<?=$row['ProductID']?>" class="favorite"><i class="fa-solid fa-eye"></i></a>
+								<a href="?act=detail&id=<?= $row['ProductID'] ?>" class="add-to-cart"><i class="fa fa-shopping-cart"></i></a>
 							</div>
-                      		</div>
-						</a>
-						<div class="rating" style="color: #FFD700;">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star-half-alt"></i> <!-- half-star for 4.5 rating, or use fa-star for full -->
 						</div>
-						<h3 class="title"><a href="#">The Murray</a></h3>
-						<div class="price">
-							<del>£99.00</del> &mdash; <span>£69.00</span>
-						</div>
-					</div>
-				</div>
-
-
-				<div class="item">
-					<div class="product-item">
-						<a href="?act=shop-single" class="product-img">
-
-							<div class="label new top-right">
-								<div class='content'>New</div>
-							</div>
-							<img src="public/images/products/jacket-1-min.jpg" alt="Image" class="img-fluid">
-							<div class="overlay">
-							<div class="icons">
-							<a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
-							<a href="?act=cart" class="add-to-cart">
-									<i class="fa fa-shopping-cart"></i>
-									<span class="cart-count">1</span>
-								</a>
-							</div>
-                      		</div>
-						</a>
-						<div class="rating" style="color: #FFD700;">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star-half-alt"></i> <!-- half-star for 4.5 rating, or use fa-star for full -->
-						</div>
-						<h3 class="title"><a href="#">Dark Jacket</a></h3>
-						<div class="price">
-							<span>£69.00</span>
-						</div>
-					</div>
-				</div>
-
-
-				<div class="item">
-					<div class="product-item">
-						<a href="?act=shop-single" class="product-img">
-							<div class="label new top-right">
-								<div class='content'>New</div>
-							</div>
-
-							<div class="label sale top-right second">
-								<div class='content'>Sale</div>
-							</div>
-							<img src="public/images/products/bottoms-1-min.jpg" alt="Image" class="img-fluid">
-							<div class="overlay">
-							<div class="icons">
-							<a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
-							<a href="?act=cart" class="add-to-cart">
-									<i class="fa fa-shopping-cart"></i>
-									<span class="cart-count">1</span>
-								</a>
-							</div>
-                      		</div>
-						</a>
-						<div class="rating" style="color: #FFD700;">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star-half-alt"></i> <!-- half-star for 4.5 rating, or use fa-star for full -->
-						</div>
-						<h3 class="title"><a href="#">Chino Bottoms</a></h3>
-						<div class="price">
-							<del>£99.00</del> &mdash; <span>£69.00</span>
-						</div>
-					</div>
-				</div>
-
-				<div class="item">
-					<div class="product-item">
-						<a href="s?act=shop-single" class="product-img">
-							<img src="public/images/products/sock-1-min.jpg" alt="Image" class="img-fluid">
-							<div class="overlay">
-							<div class="icons">
-							<a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
-							<a href="?act=cart" class="add-to-cart">
-									<i class="fa fa-shopping-cart"></i>
-									<span class="cart-count">1</span>
-								</a>
-							</div>
-                      		</div>
-						</a>
-						<div class="rating" style="color: #FFD700;">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star-half-alt"></i> <!-- half-star for 4.5 rating, or use fa-star for full -->
-						</div>
-						<h3 class="title"><a href="#">The Modern Sock</a></h3>
-						<div class="price">
-							<span>£29.00</span>
-						</div>
-					</div>
-				</div>
+              		</a>
 				
-			</div>
-		</div>
-	</div> 
+					<p style="font-size: 19px; margin-top: 20px;"><a href="?act=detail&id=<?=$row['ProductID']?>"><?=$row['ProductName']?></a></p>
+					<div class="price"><span><?= number_format($row['Price']) ?> VNĐ</span> </div>
+              		<div class="rating" style="color: #FFD700;">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star-half-alt"></i>
+             	 	</div>
 
+          	  	</div>
+				<?php }
+                	} ?>
+
+          	</div> <!-- /.item -->	
+		 	<?php } ?>
+        </div>
+	</div>
+</div>
+
+
+
+
+
+
+	<!-- giữ khoảng cách -->
+	<div class="untree_co-section" id="khoangcach2">
+	</div> 
 	<div id="overlayer"></div>
+	
+	
+	<!-- loading -->
     <div class="loader">
       <div class="spinner-border" role="status">
         <span class="sr-only">Loading...</span>
       </div>
     </div>
 
-    
-    <script>
+
+<script>
     AOS.init();
 </script>

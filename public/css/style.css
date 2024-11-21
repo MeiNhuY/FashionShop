@@ -304,9 +304,13 @@ button.btn-primary:hover {
 
 /* Hiệu ứng zoom khi hover vào ảnh */
 /* Thêm overlay cho các icon */
+
+#anhshop .overlay {
+  top: 0px;
+}
 .product-item .overlay {
   position: absolute;
-  top: 0;
+  top: 30px;
   left: 0;
   right: 0;
   bottom: 0;

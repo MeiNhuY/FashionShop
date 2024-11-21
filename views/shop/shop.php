@@ -61,7 +61,7 @@
               ?>
               <div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4" data-aos="fade-up">
                 <!-- product -->
-                <div class="product-item">
+                <div class="product-item" id="anhshop">
                     <a href="?act=detail&id=<?=$value['ProductID']?>" class="product-img">
                         <div class="label new top-right"><div class='content'><?=$value['PromotionID']?></div></div>
                         <img src="public/<?=$value['Image']?>" alt="Image" class="img-fluid">
@@ -73,7 +73,7 @@
                         </div>
                     </a>
 
-                    <p style="font-size: 22px;"><a href="?act=detail&id=<?=$value['ProductID']?>"><?=$value['ProductName']?></a></p>
+                    <p style="font-size: 20px;"><a href="?act=detail&id=<?=$value['ProductID']?>"><?=$value['ProductName']?></a></p>
                     <div class="price"><h5><span><?=number_format($value['Price'])?> VNĐ</span></h5></div>
                     <div class="rating" style="color: #FFD700;">
                         <i class="fa fa-star"></i>
@@ -171,7 +171,7 @@
       <div class="container">
         <div class="row mb-5 align-items-center" data-aos="fade-up">
           <div class="col-md-6">
-            <h1 class="h3"><b>Sản phẩm phổ biến</b></h1>        
+            <h1 class="h3"><b>Sản phẩm bán chạy</b></h1>        
           </div>
           <div class="col-sm-6 carousel-nav text-sm-right" >
             <a href="#" class="prev js-custom-prev-v2">
