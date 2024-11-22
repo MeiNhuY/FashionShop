@@ -28,6 +28,12 @@ switch ($act) {
     case "intro":
         require_once("page/intro.php");
         break;  
+    case 'history_order':
+        require_once("page/history_order.php");
+        break; 
+    case 'order_detail':
+        require_once("page/order_detail.php");
+        break; 
 
     case "taikhoan":
         $act = isset($_GET['xuli']) ? $_GET['xuli'] : "login";

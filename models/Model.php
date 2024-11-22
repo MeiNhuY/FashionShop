@@ -73,4 +73,37 @@ class Model
 
         return $data;
     }
+
+    // function getUserById($id){
+
+    //     $query = "SELECT * FROM `users` WHERE `UserID` = '$id'";
+    //     require("result.php");
+    //     return $data;
+    // }
+    
+    
+    // function getListOrder($id_customer){
+    
+    //     $id_customer = $_SESSION['login'];
+    //     $query = "SELECT * FROM `orders` WHERE `UserID` = '$id_customer'";
+    //     require("result.php");
+    //     return $data;
+    // }
+    
+    
+    
+    // function getListOrderByIDOrder($id){
+    
+    //    $query = "SELECT * FROM `orderdetails` WHERE `OrderID` = '$id'";
+    //    require("result.php");
+    //    return $data;
+    // }
+    
+    
+    // function getProductByID($id){
+    
+    //     $query = "SELECT * FROM `products` WHERE `ProductID` = '$id'";
+    //     require("result.php");
+    //     return $data;
+    // }
 }

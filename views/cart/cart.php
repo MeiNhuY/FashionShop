@@ -1,12 +1,16 @@
 <?php
-  $promotionID = ''; // Khởi tạo biến PromotionID
+// Kiểm tra giỏ hàng và lấy PromotionID
+$promotionID = ''; // Khởi tạo biến PromotionID
 
-  // Kiểm tra giỏ hàng và lấy PromotionID
-  if (isset($_SESSION['product']) && !empty($_SESSION['product'])) {
-      // Lấy PromotionID của sản phẩm đầu tiên (hoặc sản phẩm bất kỳ nếu có nhiều hơn)
-      $promotionID = current($_SESSION['product'])['PromotionID'];
-  }
+if (isset($_SESSION['product']) && !empty($_SESSION['product'])) {
+    // Lấy PromotionID của sản phẩm đầu tiên (hoặc sản phẩm bất kỳ nếu có nhiều hơn)
+    $promotionID = current($_SESSION['product'])['PromotionID'];
+}
+
+// Kiểm tra xem có sản phẩm trong giỏ hàng và mã giảm giá có được áp dụng hay không
+$hasPromotion = isset($_SESSION['promotion']) && !empty($_SESSION['promotion']);
 ?>
+
  
  <div class="page-heading bg-light" style="background-image: url('public/images/banner/bannerCart.png'); background-size: cover;  height: 400px;">
     <div class="container">
@@ -45,10 +49,10 @@
               </thead>
               <tbody>
                
+
             <!-- product -->
-            <?php
-							if (isset($_SESSION['product'])) {
-								foreach ($_SESSION['product'] as $value) { ?>
+            <?php if (isset($_SESSION['product']) && !empty($_SESSION['product'])): ?>
+              <?php foreach ($_SESSION['product'] as $value): ?>
                 <tr>
                     <td class="product-thumbnail">
                         <a href="?act=detail&id=<?= $value['ProductID'] ?>"><img src="public/<?= $value['Image']?>" alt="Image" class="img-fluid"/></a>
@@ -72,8 +76,12 @@
                     <td><strong><?= number_format($value['TotalPrice']) ?> VNĐ</strong></td>
                     <td><a href="?act=cart&xuli=deleteall&id=<?= $value['ProductID'] ?>"><i class="btn fa-solid fa-trash-can" title="Remove this product" style="font-size: x-large;color: #a35f0c;"></i></a></td>
                 </tr>
-                <?php }
-							} ?>
+                <?php endforeach; ?>
+                    <?php else: ?>
+                        <tr>
+                            <td colspan="5" class="text-center">Không có sản phẩm nào</td>
+                        </tr>
+                    <?php endif; ?>
             <!-- product -->
 
               </tbody>
@@ -90,7 +98,7 @@
               </a>
           </div>
             <div class="col-md-6">
-              <a href="?act=promotion"><button class="btn btn-outline-black btn-sm btn-block" type="submit">Lịch Sử Đơn Hàng</button></a>
+              <a href="?act=history_order"><button class="btn btn-outline-black btn-sm btn-block" type="submit">Lịch Sử Đơn Hàng</button></a>
             </div>
           </div>
           <div class="row">
@@ -101,8 +109,9 @@
                       </div>
                 </div>                 
             </div>
+            
             <div class="col-md-8 mb-3 mb-md-0">
-              <input type="text" class="form-control py-3" id="coupon" placeholder="Nhập mã giảm giá tại đây" name="coupon" value="<?= $value['PromotionID']?>">
+              <input type="text" class="form-control py-3" id="coupon" placeholder="Thêm sản phẩm để có mã giảm giá" name="coupon" value="<?= isset($value['PromotionID']) ? $value['PromotionID'] : ''; ?>">
             </div>
             <form action="?act=promotion&id=<?=$value['PromotionID']?>" method="POST">
             <div class="col-md-5">
@@ -125,33 +134,30 @@
                   <strong class="text-black">Tổng giỏ hàng</strong>
                 </div>
                 <div class="col-md-6 text-right">
-                  <span class="text-black"><?= number_format($count) ?> VNĐ</spp></span>
+                  <span class="text-black"><?= number_format($totalPrice) ?> VNĐ</spp></span>
                 </div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-md-6">
-                      <strong class="text-black">Giảm giá</strong>
-                  </div>
-                  <?php
-                      if (isset($_SESSION['promotion'])) {
-                          $promotion_value = $_SESSION['promotion']; // Truy cập trực tiếp giá trị khuyến mãi
-                          ?>
-                          <div class="col-md-6 text-right">
-                              <span class="text-black"><?= number_format($promotion_value) ?> VND</span>
-                          </div>
-                          <?php
-                      }
-                      ?>
+                    <strong class="text-black">Giảm giá</strong>
+                </div>
+                <div class="col-md-6 text-right">
+                    <?php if ($hasPromotion): ?>
+                        <span class="text-black"><?= number_format($_SESSION['promotion']) ?> VND</span>
+                    <?php else: ?>
+                        <span class="text-black">0</span>
+                    <?php endif; ?>
+                </div>
+            </div>
 
-              </div>
 
               <div class="row mb-3">
                 <div class="col-md-6">
                   <strong class="text-black" >Vận chuyển</strong>
                 </div>
                 <div class="col-md-6 text-right">
-                  <span class="text-black">25000<span>VND</span></span>
+                  <span class="text-black">25,000 <span> VND</span></span>
                 </div>
               </div>
 
@@ -160,15 +166,23 @@
                   <strong class="text-black"style="padding-top: 50px;" >Tổng cộng</strong>
                 </div>
                 <div class="col-md-6 text-right">
-                  <span class="text-black" style="color:brown;"><?= number_format($count + 25000 - $promotion_value) ?> VND<span> VND</span></span>
+                  <span class="text-black" style="color:brown;"><?= number_format($finalTotal) ?><span> VND</span></span>
                 </div>
               </div>
 
               <div class="row">
                 <div class="col-md-12">
-                  <!-- <button class="btn btn-black btn-lg py-3 btn-block" onclick="window.location='?act=checkout.php'">Mua hàng</button> -->
-                  <a href="?act=checkout"><button class="btn btn-black btn-lg py-3 btn-block" aria-label="Mua hàng" type="submit">Đặt hàng</button></a>
-                  
+                <?php
+                    // Kiểm tra xem giỏ hàng (session['product']) có sản phẩm không
+                    if (isset($_SESSION['product']) && !empty($_SESSION['product'])) {
+                        // Nếu có sản phẩm trong giỏ hàng, hiển thị nút đặt hàng
+                        echo '<a href="?act=checkout"><button class="btn btn-black btn-lg py-3 btn-block" aria-label="Mua hàng" type="submit">Đặt hàng</button></a>';
+                    } else {
+                        // Nếu không có sản phẩm trong giỏ hàng, hiển thị thông báo yêu cầu thêm sản phẩm
+                        echo '<div class="alert alert-warning" role="alert">Bạn cần thêm sản phẩm vào giỏ hàng trước khi thanh toán!</div>';
+                    }
+                ?>
+
                 </div>
               </div>
             </div>

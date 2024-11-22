@@ -68,6 +68,7 @@
                         <div class="overlay">
                             <div class="icons">
                                 <a href="?act=detail&id=<?=$value['ProductID']?>" class="favorite"><i class="fa-solid fa-eye"></i></a>
+                                
                                 <a href="?act=cart&xuli=add&id=<?=$value['ProductID']?>" class="add-to-cart"><i class="fa fa-shopping-cart"></i></a>
                             </div>
                         </div>

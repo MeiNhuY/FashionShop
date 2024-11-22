@@ -23,6 +23,36 @@ switch ($mod) {
         $controller_obj = new PromotionController();
         $controller_obj->apply_discount();
         break;
+    case 'history_order':
+        require_once('controllers/HistoryController.php');
+        $controller_obj = new HistoryController();
+        $controller_obj->list();
+        break;
+    case 'order_detail':
+        require_once('controllers/OrderDetailController.php');
+        $controller_obj = new OrderDetailController();
+        $controller_obj->list();
+        break;
+
+    case 'checkout':
+        $act = isset($_GET['xuli']) ? $_GET['xuli'] : "list";
+        require_once('controllers/CheckoutController.php');
+        $controller_obj = new CheckoutController();
+        switch ($act) {
+            case 'list':
+                $controller_obj->list();
+                break;
+            case 'save':
+                $controller_obj->save();
+                break;
+            case 'order_complete':
+                $controller_obj->order_complete();
+                break;
+            default:
+                $controller_obj->list();
+                break;
+        }
+        break;
     case 'cart':
         $act = isset($_GET['xuli']) ? $_GET['xuli'] : "list";
         require_once('controllers/CartController.php');

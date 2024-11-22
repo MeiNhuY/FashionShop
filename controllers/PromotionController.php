@@ -29,6 +29,7 @@ class PromotionController
                 exit();
             } else {
                 $_SESSION['error'] = "Mã giảm giá không hợp lệ!";
+                unset($_SESSION['promotion']);
                 header("Location: ?act=cart");
                 exit();
             }
