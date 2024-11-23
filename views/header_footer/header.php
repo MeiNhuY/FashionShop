@@ -12,7 +12,6 @@
 					<span class="icofont-close js-close-search"></span>
 				</div>
 			</button>
-
 		</form>
 	</div>
 
