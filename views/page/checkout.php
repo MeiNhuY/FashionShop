@@ -136,32 +136,40 @@
                 </div>
 
                 <?php if (isset($_SESSION['login']) && !empty($_SESSION['login'])): ?>
-                  <form action="./views/page/Xulypay.php" method="POST">
-                      <!-- Tổng thanh toán -->
-                      <input type="hidden" name="amount" value="<?php echo isset($finalTotal) ? $finalTotal : 0; ?>">
+                  <?php if (empty($_SESSION['product'])): ?>
+                      <script type="text/javascript">
+                          alert('Chưa có sản phẩm trong giỏ hàng.');
+                          window.location.href = '?act=shop';  // Điều hướng về trang shop
+                          </script>
+                  <?php else: ?>
+                      <form action="./views/page/Xulypay.php" method="POST">
+                          <!-- Tổng thanh toán -->
+                          <input type="hidden" name="amount" value="<?php echo isset($finalTotal) ? $finalTotal : 0; ?>">
 
-                      <!-- Thông tin người dùng -->
-                      <input type="hidden" name="fullname" id="fullname" 
-                            value="<?php echo htmlspecialchars($_SESSION['login']['FirstName'] . ' ' . $_SESSION['login']['LastName'], ENT_QUOTES, 'UTF-8'); ?>">
+                          <!-- Thông tin người dùng -->
+                          <input type="hidden" name="fullname" id="fullname" 
+                              value="<?php echo htmlspecialchars($_SESSION['login']['FirstName'] . ' ' . $_SESSION['login']['LastName'], ENT_QUOTES, 'UTF-8'); ?>">
 
-                      <input type="hidden" name="email" id="email" 
-                            value="<?php echo htmlspecialchars($_SESSION['login']['Email'], ENT_QUOTES, 'UTF-8'); ?>">
+                          <input type="hidden" name="email" id="email" 
+                              value="<?php echo htmlspecialchars($_SESSION['login']['Email'], ENT_QUOTES, 'UTF-8'); ?>">
 
-                      <input type="hidden" name="address" id="address" 
-                            value="<?php echo htmlspecialchars($_SESSION['login']['Address'], ENT_QUOTES, 'UTF-8'); ?>">
+                          <input type="hidden" name="address" id="address" 
+                              value="<?php echo htmlspecialchars($_SESSION['login']['Address'], ENT_QUOTES, 'UTF-8'); ?>">
 
-                      <input type="hidden" name="phone" id="phone" 
-                            value="<?php echo htmlspecialchars($_SESSION['login']['PhoneNumber'], ENT_QUOTES, 'UTF-8'); ?>">
+                          <input type="hidden" name="phone" id="phone" 
+                              value="<?php echo htmlspecialchars($_SESSION['login']['PhoneNumber'], ENT_QUOTES, 'UTF-8'); ?>">
 
-                      <!-- Nút thanh toán -->
-                      <button class="btn btn-black btn-lg py-3 btn-block" name="redirect">
-                          Thanh toán trực tuyến
-                      </button>
+                          <!-- Nút thanh toán -->
+                          <button class="btn btn-black btn-lg py-3 btn-block" name="redirect">
+                              Thanh toán trực tuyến
+                          </button>
 
-                  </form>
-                <?php else: ?>
-                    <p style="color: red;">Vui lòng đăng nhập để thực hiện thanh toán.</p>
-                <?php endif; ?>
+                      </form>
+                  <?php endif; ?>
+              <?php else: ?>
+                  <p style="color: red;">Vui lòng đăng nhập để thực hiện thanh toán.</p>
+              <?php endif; ?>
+
 
 
 

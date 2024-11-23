@@ -36,11 +36,16 @@ class ShopController
                 $data_noibat = $this->shop_model->sanpham_noibat();
                 $data_count = $this->shop_model->count_sp_ctdm($_GET['sp'], $data_loai[0]['ProductTypeID']);
                 $data_tong = $data_count['tong'];
+                $data_sanpham1 = $this->shop_model->getLatestProducts(10);
+                $data_sp_best_seller= $this->shop_model->getBestSellingProducts(6);
+
             }
         } else {
             if (isset($_GET['sp'])) {
                 $data = $this->shop_model->getProductsByCategory(0, 9, $_GET['sp']);
                 $data_noibat = $this->shop_model->sanpham_noibat();
+                $data_sanpham1 = $this->shop_model->getLatestProducts(10);
+                $data_sp_best_seller= $this->shop_model->getBestSellingProducts(6);
                 $data_count = $this->shop_model->count_sp_dm($_GET['sp']);
                 $data_tong = $data_count['tong'];
             } else {
@@ -53,7 +58,8 @@ class ShopController
                     if (isset($_POST['keyword'])) {
                         $data = $this->shop_model->keywork($_POST['keyword']);
                         $data_noibat = $this->shop_model->sanpham_noibat();
-
+                        $data_sanpham1 = $this->shop_model->getLatestProducts(10);
+                        $data_sp_best_seller= $this->shop_model->getBestSellingProducts(6);
                         $data_tong = count($data);
                     } else {
                         $id = isset($_GET['trang']) ? $_GET['trang'] : 1;
@@ -61,6 +67,8 @@ class ShopController
                         $start = ($id - 1) * $limit;
                         $data = $this->shop_model->limit($start, $limit);
                         $data_noibat = $this->shop_model->sanpham_noibat();
+                        $data_sanpham1 = $this->shop_model->getLatestProducts(10);
+                        $data_sp_best_seller= $this->shop_model->getBestSellingProducts(6);
                         //$data_tong = 9;
                         // $data = $this->shop_model->limit(0, 9);
                         // $data_noibat = $this->shop_model->sanpham_noibat();
