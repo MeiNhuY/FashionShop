@@ -95,22 +95,23 @@
 					<h3 class="text-center">Sản phẩm bán chạy</h3>
 				</div>
 		</div>
-
+	 
 			<div class="row">
-				<div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4">
+			<?php if (!empty($data_sp_best_seller)): ?>
+				<?php foreach ($data_sp_best_seller as $product): ?>
+				<div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4" data-aos="fade-up">
 					<div class="product-item">
-						<a href="?act=shop-single" class="product-img">
+						<a href="?act=product_detail" class="product-img">
 
 							<div class="label new top-right">
-								<div class='content'>New</div>
+								<div class='content'><?=$product['PromotionID']?></div>
 							</div>
-							<img src="public/images/products/jacket-1-min.jpg" alt="Image" class="img-fluid">
-							<div class="overlay">
+							<img src="public/<?=$product['Image']?>" alt="Image" class="img-fluid">
+							<div class="overlay" style=" margin-top: -30px;">
 							<div class="icons">
-							<a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
-								<a href="?act=cart" class="add-to-cart">
-									<i class="fa fa-shopping-cart"></i>
-									<span class="cart-count">1</span>
+							<a href="?act=detail&id=<?= $product['ProductID'] ?>" class="favorite"><i class="fa-solid fa-eye" style="font-size: 50px;"></i></a>
+								<a href="?act=cart&xuli=add&id=<?= $product['ProductID'] ?>" class="add-to-cart">
+									<i class="fa fa-shopping-cart" style="font-size: 50px;"></i>
 								</a>
 							</div>
 						</div>
@@ -122,78 +123,16 @@
 							<i class="fa fa-star"></i>
 							<i class="fa fa-star-half-alt"></i> <!-- half-star for 4.5 rating, or use fa-star for full -->
 						</div>
-						<h3 class="title"><a href="#">Dark Jacket</a></h3>
+						<h3 class="title"><a href="#"><?=$product['ProductName']?></a></h3>
 						<div class="price">
-							<span>200.000VND</span>
+							<span><?=$product['Price']?></span>
 						</div>
 					</div>
 				</div>
-				<div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4">
-					<div class="product-item">
-						<a href="?act=shop-single" class="product-img">
-							<div class="label new top-right">
-								<div class='content'>New</div>
-							</div>
-
-							<div class="label sale top-right second">
-								<div class='content'>Sale</div>
-							</div>
-							<img src="public/images/products/bottoms-1-min.jpg" alt="Image" class="img-fluid">
-							<div class="overlay">
-							<div class="icons">
-							<a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
-								<a href="?act=cart" class="add-to-cart">
-									<i class="fa fa-shopping-cart"></i>
-									<span class="cart-count">1</span>
-								</a>
-							</div>
-                      </div>
-						</a>
-						<div class="rating" style="color: #FFD700;">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star-half-alt"></i> <!-- half-star for 4.5 rating, or use fa-star for full -->
-						</div>
-						<h3 class="title"><a href="#">Chino Bottoms</a></h3>
-						<div class="price">
-							<del>£99.00</del> &mdash; <span>£69.00</span>
-						</div>
-					</div>
-				</div>
-				<div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4">
-					<div class="product-item">
-						<a href="?act=shop-single" class="product-img">
-							<img src="public/images/products/shoe-1-min.jpg" alt="Image" class="img-fluid">
-							<div class="overlay">
-							<div class="icons">
-							<a href="?act=shop-single" class="favorite"><i class="fa-solid fa-eye"></i></a>
-								<a href="?act=cart" class="add-to-cart">
-									<i class="fa fa-shopping-cart"></i>
-									<span class="cart-count">1</span>
-								</a>
-							</div>
-                    	  </div>
-						</a>
-						<div class="rating" style="color: #FFD700;">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star-half-alt"></i> <!-- half-star for 4.5 rating, or use fa-star for full -->
-						</div>
-						<h3 class="title"><a href="#">Brown Shoe</a></h3>
-						<div class="price">
-							<span>£29.00</span>
-						</div>
-					</div>
-				</div>
-
-				
-				
-
-
+				<?php endforeach; ?>
+					<?php else: ?>
+						<p>Không có sản phẩm mới.</p>
+				<?php endif; ?>
 				</div>
 			</div>
 		</div>
@@ -226,43 +165,43 @@
             </a>
           </div>
         </div> <!-- /.heading -->
-        <div class="owl-3-slider owl-carousel">
-			<?php for ($i = 0; $i < 2; $i++) { ?>
-          	<div class="item">
-		 		<?php
-                    if ($data_arr[$i] != null) {
-                        foreach ($data_arr[$i] as  $row) { ?>
-						<!-- single product end -->
-            	<div class="product-item">
-              		<a href="product_detail.php" class="product-img">
-						<div class="label sale top-right">
-							<div class="label new top-right"><div class='content'><?=$row['PromotionID']?></div></div>
-						</div>
-						<a href="?act=detail&id=<?= $row['ProductID'] ?>"><img src="public/<?= $row['Image'] ?>" alt="Image" class="img-fluid" style="border-radius:10px;"/></a>
-						<div class="overlay">
-							<div class="icons">
-								<a href="?act=detail&id=<?=$row['ProductID']?>" class="favorite"><i class="fa-solid fa-eye"></i></a>
-								<a href="?act=detail&id=<?= $row['ProductID'] ?>" class="add-to-cart"><i class="fa fa-shopping-cart"></i></a>
+		<div class="owl-carousel owl-theme owl-3-slider">
+			<?php if (!empty($data_sanpham1)): ?>
+				<?php foreach ($data_sanpham1 as $product): ?>
+					<div class="item">
+						<div class="product-item">
+							<!-- Hình ảnh sản phẩm -->
+							<div class="label new top-right"><div class='content'><?=$product['PromotionID']?></div></div>
+							<a href="?act=detail&id=<?= $product['ProductID'] ?>" class="product-img">
+								<img src="public/<?= $product['Image'] ?>" alt="<?= $product['ProductName'] ?>" class="img-fluid" style="border-radius: 10px;"/>
+								<div class="overlay" style=" margin-top: -30px;">
+									<div class="icons">
+										<a href="?act=detail&id=<?= $product['ProductID'] ?>" class="favorite"><i class="fa-solid fa-eye" style="font-size: 50px;"></i></a>
+										<a href="?act=cart&xuli=add&id=<?= $product['ProductID'] ?>" class="add-to-cart"><i class="fa fa-shopping-cart" style="font-size: 50px;"></i></a>
+									</div>
+								</div>
+							</a>
+							<!-- Tên sản phẩm -->
+							<p style="font-size: 19px; margin-top: 20px;">
+								<a href="?act=detail&id=<?= $product['ProductID'] ?>"><?= $product['ProductName'] ?></a>
+							</p>
+							<!-- Giá sản phẩm -->
+							<div class="price"><span><?= number_format($product['Price']) ?> VNĐ</span></div>
+							<!-- Đánh giá -->
+							<div class="rating" style="color: #FFD700;">
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star-half-alt"></i>
 							</div>
 						</div>
-              		</a>
-				
-					<p style="font-size: 19px; margin-top: 20px;"><a href="?act=detail&id=<?=$row['ProductID']?>"><?=$row['ProductName']?></a></p>
-					<div class="price"><span><?= number_format($row['Price']) ?> VNĐ</span> </div>
-              		<div class="rating" style="color: #FFD700;">
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star-half-alt"></i>
-             	 	</div>
+					</div>
+				<?php endforeach; ?>
+			<?php else: ?>
+				<p>Không có sản phẩm mới.</p>
+			<?php endif; ?>
+		</div>
 
-          	  	</div>
-				<?php }
-                	} ?>
-
-          	</div> <!-- /.item -->	
-		 	<?php } ?>
-        </div>
 	</div>
 </div>
 
