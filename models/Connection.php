@@ -1,5 +1,5 @@
 <?php 
-    class Connection{
+    class Connection {
         var $conn;
         function __construct()
         {

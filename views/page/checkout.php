@@ -132,7 +132,10 @@
        </form>
 
                 <div class="form-group">
-                <a href="?act=checkout&xuli=save"> <button class="btn btn-black btn-lg py-3 btn-block">Thanh toán khi nhận hàng</button></a>
+                    <form action="?act=checkout&xuli=save" method="post">
+                       <input type="hidden" name="finalTotal" value="<?php echo $finalTotal; ?>">
+                       <button type="submit" class="btn btn-black btn-lg py-3 btn-block">Thanh toán khi nhận hàng</button>
+                    </form>
                 </div>
 
                 <?php if (isset($_SESSION['login']) && !empty($_SESSION['login'])): ?>
