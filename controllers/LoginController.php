@@ -10,7 +10,7 @@ class LoginController
     function login()
     {
         $category_data = $this->login_model->getCategories();
-
+        $data_banner = $this->login_model->getBanners(0,2);
         $category_details = array();
 
         for ($i = 1; $i <= count($category_data); $i++) {
@@ -32,6 +32,8 @@ class LoginController
             'matkhau' => $password,
         );
         $this->login_model->login_action($data);
+        $data_banner = $this->login_model->getBanners(0,2);
+
     }
     function register_action()
     {
@@ -68,6 +70,8 @@ class LoginController
         }
 
         $this->login_model->register_action($data, $check1, $check2);
+        $data_banner = $this->login_model->getBanners(0,2);
+
     }
     function dangxuat()
     {
@@ -93,7 +97,7 @@ class LoginController
             $data = array(
                 'FirstName' =>    $_POST['Ho'],
                 'LastName'  =>   $_POST['Ten'],
-                'Gender' => $_POST['GioiTinh'],
+                'Username' => $_POST['TaiKhoan'],
                 'PhoneNumber' => $_POST['SĐT'],
                 'Email' =>    $_POST['Email'],
                 'Address'  =>   $_POST['DiaChi'],
@@ -105,11 +109,12 @@ class LoginController
                 }
             }
             $this->login_model->update_account($data);
+            
         } else {
             if ($_POST['MatKhauMoi'] == $_POST['MatKhauXN']) {
-                if (md5($_POST['MatKhau']) == $_SESSION['login']['MatKhau']) {
+                if (md5($_POST['MatKhau']) == $_SESSION['login']['Password']) {
                     $data = array(
-                        'MatKhau' => md5($_POST['MatKhauMoi']),
+                        'Password' => md5($_POST['MatKhauMoi']),
                     );
                     $this->login_model->update_account($data);
                 } else {

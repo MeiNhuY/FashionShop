@@ -1,4 +1,4 @@
-<div class="page-heading bg-light" style="background-image: url('public/images/banner/banner5.png'); background-size: cover; height: 400px;">
+<div class="page-heading bg-light" style="background-image: url('public/images/page/banner5.png'); background-size: cover; height: 400px;">
   <div class="container">
     <div class="row align-items-end text-center">
       <div class="col-lg-7 mx-auto">
@@ -39,22 +39,34 @@
       <div class="col-lg-7 mr-auto order-1" data-aos="fade-up" data-aos-delay="200">
       <form action="?act=contact&method=gui" method="post">
         <div class="row">
-          <div class="col-6 mb-3">
-                <input type="text" class="form-control" name="NguoiNhan" placeholder="Họ và tên" value="<?php echo $_SESSION['login']['FirstName'] . ' ' . $_SESSION['login']['LastName']; ?>" required>
-              </div>
-              <div class="col-6 mb-3">
-                <input type="email" class="form-control" name="Email" placeholder="Email" value="<?php echo $_SESSION['login']['Email']; ?>" required>
+        <div class="col-6 mb-3">
+            <input 
+                type="text" 
+                class="form-control" 
+                name="NguoiNhan" 
+                placeholder="Họ và tên" 
+                value="<?php echo isset($_SESSION['login']) ? $_SESSION['login']['FirstName'] . ' ' . $_SESSION['login']['LastName'] : ''; ?>" 
+                required>
+        </div>
+        <div class="col-6 mb-3">
+          <input 
+              type="email" 
+              class="form-control" 
+              name="Email" 
+              placeholder="Email" 
+              value="<?php echo isset($_SESSION['login']) ? $_SESSION['login']['Email'] : ''; ?>" 
+              required>
               </div>
               <div class="col-12 mb-3">
-                <input type="text" class="form-control" name="subject" placeholder="Tiêu đề" required>
+                  <input type="text" class="form-control" name="subject" placeholder="Tiêu đề" required>
               </div>
               <div class="col-12 mb-3">
-                <textarea name="message" cols="30" rows="7" class="form-control" placeholder="Nội dung" required></textarea>
+                  <textarea name="message" cols="30" rows="7" class="form-control" placeholder="Nội dung" required></textarea>
               </div>
               <div class="col-12">
-                <input type="submit" value="Gửi" class="btn btn-primary">
+                  <input type="submit" value="Gửi" class="btn btn-primary">
               </div>
-            </div>
+
       </form>
 
       </div>

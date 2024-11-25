@@ -83,7 +83,7 @@ class Login extends Model
     
     function account()
     {
-        $id = $_SESSION['login']['ID'];
+        $id = $_SESSION['login']['UserID'];
         return $this->conn->query("SELECT * from users where UserID = $id")->fetch_assoc();
     }
     function update_account($data)

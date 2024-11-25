@@ -49,7 +49,7 @@
 <li class="nav-item">
   <a class="nav-link" href="?mod=hoadon">
     <i class="fas fa-fw fa-table"></i>
-    <span>Xét duyệt hóa đơn</span></a>
+    <span>Xét duyệt đơn hàng</span></a>
 </li>
 
 <li class="nav-item">
@@ -70,6 +70,12 @@
   <a class="nav-link" href="?mod=khuyenmai">
     <i class="fas fa-fw fa-table"></i>
     <span>Quản lý khuyến mãi</span></a>
+</li>
+
+<li class="nav-item">
+  <a class="nav-link" href="?mod=danhgia&act=list">
+    <i class="fas fa-fw fa-table"></i>
+    <span>Theo dõi đánh giá</span></a>
 </li>
 <!-- Sidebar Toggler (Sidebar) -->
 <div class="text-center d-none d-md-inline">

@@ -15,6 +15,7 @@
       <th scope="col">Đơn giá</th>
       <th scope="col">Số lượng</th>
       <th scope="col">Hình Ảnh</th>
+      <th scope="col">Hình Ảnh 2</th>
       <th scope="col">Trạng thái</th>
       <th>Tùy chọn</th>
     </tr>
@@ -27,6 +28,7 @@
         <td><?= $row['Price'] ?> VNĐ</td>
         <td><?= $row['Quantity'] ?></td>
         <td><?= $row['Image'] ?></td>
+        <td><?= $row['Image2'] ?></td>
         <td><?= $row['Status'] ?></td>
         <td>
           <a href="../index.php?act=detail&id=<?= $row['ProductID'] ?>" type="button" class="btn btn-success" target="_blank">Xem</a>

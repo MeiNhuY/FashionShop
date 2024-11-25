@@ -37,10 +37,14 @@
       <label for="">Hình ảnh</label>
       <input type="file" class="form-control" id="" placeholder="" name="HinhAnh">
     </div>
+    <div class="form-group">
+      <label for="">Hình ảnh 2</label>
+      <input type="file" class="form-control" id="" placeholder="" name="HinhAnh2">
+    </div>
 
     <div class="form-group">
             <label for="">Giới tính</label>
-            <input type="text" class="form-control" id="" placeholder="" name="GioiTinh"">
+            <input type="text" class="form-control" id="" placeholder="" name="GioiTinh">
         </div>
 
     <div class="form-group">

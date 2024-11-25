@@ -1,7 +1,9 @@
+<?php foreach ($data_banner as  $value) { 
+ if($value['BannerID'] == 2) {?>
 <div class="page-heading bg-light animated-banner" style="height: 500px;">
-    <div class="slide active" style="background-image: url('public/images/banner/man_style.jpg'); background-position: cover; "></div>
-    <div class="slide" style="background-image: url('public/images/banner/style_seoul.jpg');background-position: auto;"></div>
-    <div class="slide" style="background-image: url('public/images/banner/clothes.jpg');background-position: auto;"></div>
+    <div class="slide active" style="background-image: url('public/<?= $value['Image'] ?>'); background-position: cover; "></div>
+    <div class="slide" style="background-image: url('public/<?= $value['Image2'] ?>');background-position: auto;"></div>
+    <div class="slide" style="background-image: url('public/<?= $value['Image3'] ?>');background-position: auto;"></div>
     <div class="container">
         <div class="row align-items-end text-center">
             <div class="col-lg-7 mx-auto">
@@ -11,6 +13,11 @@
         </div>
     </div>
 </div>
+<?php 
+    break; // Thoát khỏi vòng lặp sau lần đầu thỏa mãn
+    }
+}
+?>
 
 
   <div class="untree_co-section pt-3">
@@ -22,15 +29,19 @@
         </div>
         <div class="col-lg-4">
         <div class="d-flex sort align-items-center justify-content-lg-end">
-            <strong class="mr-2"><b>Sắp xếp sản phẩm:</b></strong>
-            <form action="#">
-              <select class="" required>
-                <option value="1">Sản phẩm mới nhất</option>
-                <option value="2">Sản phẩm bán chạy</option>
-                <option value="3">Giá: tăng dần</option>
-                <option value="4">Giá: giảm dần</option>
-              </select>
-
+            <strong class="mr-2"><b>Sắp xếp sản phẩm: </b></strong>
+            <form action="" method="GET"> 
+                <!-- Luôn gửi act=shop -->
+                <input type="hidden" name="act" value="shop">
+                
+                <!-- Select để sắp xếp -->
+                <select name="sort" onchange="this.form.submit()">
+                    <option value="">Sắp xếp theo</option>
+                    <option value="price_low">Giá &lt; 300.000VND</option>
+                    <option value="price_high">Giá &gt; 300.000VND</option>
+                    <option value="price_asc">Giá: tăng dần</option>
+                    <option value="price_desc">Giá: giảm dần</option>
+                </select>
             </form>
           </div>
         </div>
@@ -39,20 +50,27 @@
       <div class="row">
 
       <div class="col-md-2">
-        <?php    $i = 1; foreach ($data_chitietDM as $row) { ?>
+          <?php 
+          $i = 1; 
+          $displayedNames = []; // Mảng lưu trữ các tên đã hiển thị
+          foreach ($data_chitietDM as $row) { ?>
+              <ul class="list-unstyled categories">
+                  <li>
+                      <?php foreach ($row as $value) { 
+                          // Kiểm tra nếu tên chưa được hiển thị
+                          if (!in_array($value['Name'], $displayedNames)) {
+                              echo '<label for="" style="text-transform: uppercase; "><b>' . $value['Name'] . '</b></label>';
+                              echo '<hr>';
+                              $displayedNames[] = $value['Name']; // Thêm tên vào mảng đã hiển thị
+                          }
+                      ?>
+                          <a href="?act=shop&sp=<?= $value['CategoryID'] ?>&loai=<?= $value['ProductTypeName'] ?>"><?= $value['ProductTypeName'] ?></a>
+                      <?php } ?>
+                  </li>
+              </ul>
+          <?php $i++; } ?>
+      </div>
 
-          <ul class="list-unstyled categories">
-          
-            <li>
-              <?php foreach ($row as $value) { ?>
-                <a href="?act=shop&sp=<?= $value['CategoryID'] ?>&loai=<?= $value['ProductTypeName'] ?>"><?= $value['ProductTypeName'] ?></a>
-              <?php } ?>
-            </li>
-
-          </ul>
-          <?php $i++;
-             } ?>
-        </div>
         <div class="col-md-10">
             <div class="row" data-aos="fade-up">
               <?php 
@@ -67,7 +85,7 @@
                         <img src="public/<?=$value['Image']?>" alt="Image" class="img-fluid">
                         <div class="overlay">
                             <div class="icons">
-                                <a href="?act=detail&id=<?=$value['ProductID']?>" class="favorite"><i class="fa-solid fa-eye"></i></a>
+                                <a href="?act=detail&xuli=list&id=<?=$value['ProductID']?>" class="favorite"><i class="fa-solid fa-eye"></i></a>
                                 
                                 <a href="?act=cart&xuli=add&id=<?=$value['ProductID']?>" class="add-to-cart"><i class="fa fa-shopping-cart"></i></a>
                             </div>
@@ -77,10 +95,21 @@
                     <p style="font-size: 20px;"><a href="?act=detail&id=<?=$value['ProductID']?>"><?=$value['ProductName']?></a></p>
                     <div class="price"><h5><span><?=number_format($value['Price'])?> VNĐ</span></h5></div>
                     <div class="rating" style="color: #FFD700;">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-half-alt"></i>
+                    <?php
+                      // Kiểm tra nếu không có giá trị averageRating, gán giá trị mặc định là 0
+                      $averageRating = isset($value['averageRating']) ? $value['averageRating'] : 0;
+
+                      for ($i = 1; $i <= 5; $i++) {
+                          if ($i <= floor($averageRating)) {
+                              echo '<i class="fa fa-star"></i>'; // Sao đầy
+                          } elseif ($i - $averageRating < 1) {
+                              echo '<i class="fa fa-star-half-alt"></i>'; // Sao nửa
+                          } else {
+                              echo '<i class="fa fa-star-o"></i>'; // Sao trống
+                          }
+                      }
+                      ?>
+
                     </div>
                 </div>
               </div>
@@ -96,38 +125,60 @@
 
 
           <div class="row mt-5 pb-5" data-aos="fade-up">
-            <div class="col-lg-12">
-              <div class="custom-pagination">
-                <ul class="list-unstyled">
-                  <li>
-                    <a href="#">
-                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M5.854 4.646a.5.5 0 0 1 0 .708L3.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0z"/>
-                        <path fill-rule="evenodd" d="M2.5 8a.5.5 0 0 1 .5-.5h10.5a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-                      </svg>                      
-                    </a>
-                  </li>
+                <div class="col-lg-12">
+                    <table class="table-pagination">
+                        <tr>
+                            <!-- Cột trái -->
+                            <td class="left-column"></td>
 
-                  <?php 
-                  if ($data_tong > 9 and isset($test)) {
-										for ($i = 1; $i <= $data_tong / 9; $i++) { ?>
-                      <li><a href="?act=shop&trang=<?= $i ?>"><?= $i ?></a></li>
-                  <?php }
-									}
-									?>
-                  
-                  <li>
-                    <a href="#">
-                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M10.146 4.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L12.793 8l-2.647-2.646a.5.5 0 0 1 0-.708z"/>
-                        <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8z"/>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-              </div>
+                            <!-- Cột giữa (Phân trang) -->
+                            <td class="center-column">
+                                <div class="custom-pagination">
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="#">
+                                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" d="M5.854 4.646a.5.5 0 0 1 0 .708L3.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0z"/>
+                                                    <path fill-rule="evenodd" d="M2.5 8a.5.5 0 0 1 .5-.5h10.5a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                                                </svg>
+                                            </a>
+                                        </li>
+
+                                        <?php 
+                                        if ($data_tong > 9 && isset($test)) {
+                                            parse_str($_SERVER['QUERY_STRING'], $query);
+                                            unset($query['trang']);
+
+                                            for ($i = 1; $i <= ceil($data_tong / 9); $i++) { 
+                                                if (isset($data)) {
+                                                    $query['trang'] = $i;
+                                                    $new_query = http_build_query($query);
+                                                    ?>
+                                                    <li><a href="?<?= $new_query ?>"><?= $i ?></a></li>
+                                        <?php   }
+                                            }
+                                        }
+                                        ?>
+
+                                        <li>
+                                            <a href="#">
+                                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" d="M10.146 4.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L12.793 8l-2.647-2.646a.5.5 0 0 1 0-.708z"/>
+                                                    <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8z"/>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+
+                            <!-- Cột phải -->
+                            <td class="right-column"></td>
+                        </tr>
+                    </table>
+                </div>
             </div>
-          </div>
+
 
 
       </div>
@@ -160,16 +211,25 @@
                   </div>
                 </div>
                 </a>
-                <div class="rating" style="color: #FFD700;">
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star-half-alt"></i> <!-- half-star for 4.5 rating, or use fa-star for full -->
-                </div>
-                <h3 class="title"><a href="#"><?=$product['ProductName']?></a></h3>
+                <p style="font-size: 20px;"><a href="#"><?=$product['ProductName']?></a></p>
                 <div class="price">
-                  <span><?=$product['Price']?></span>
+                  <h5><span><?=$product['Price']?>VND</span></h5>
+                </div>
+                <div class="rating" style="color: #FFD700;">
+                <?php
+                      // Kiểm tra nếu không có giá trị averageRating, gán giá trị mặc định là 0
+                      $averageRating = isset($product['averageRating']) ? $product['averageRating'] : 0;
+
+                      for ($i = 1; $i <= 5; $i++) {
+                          if ($i <= floor($averageRating)) {
+                              echo '<i class="fa fa-star"></i>'; // Sao đầy
+                          } elseif ($i - $averageRating < 1) {
+                              echo '<i class="fa fa-star-half-alt"></i>'; // Sao nửa
+                          } else {
+                              echo '<i class="fa fa-star-o"></i>'; // Sao trống
+                          }
+                      }
+                      ?>
                 </div>
               </div>
             </div>
@@ -192,18 +252,25 @@
         <button id="prev-slide" class="slide-button material-symbols-rounded">
           chevron_left
         </button>
+        <?php foreach ($data_banner as  $value) { 
+          if($value['BannerID'] == 2) {?>
         <ul class="image-list">
-          <img class="image-item" src="public/images/banner/Lseoul.jpg" alt="img-1" />
-          <img class="image-item" src="public/images/banner/style_seoul.jpg" alt="img-2" />
-          <img class="image-item" src="public/images/banner/slider.jpg" alt="img-3" />
-          <img class="image-item" src="public/images/banner/style.jpg" alt="img-4" />
-          <img class="image-item" src="public/images/banner/man_style.jpg" alt="img-5" />
-          <img class="image-item" src="public/images/banner/style_seoul2.jpg" alt="img-6" />
-          <img class="image-item" src="public/images/banner/walk_style.jpg" alt="img-7" />
-          <img class="image-item" src="public/images/banner/style_winter.jpg" alt="img-8" />
-          <img class="image-item" src="public/images/banner/kendall.jpg" alt="img-9" />
-          <img class="image-item" src="public/images/banner/Lseoul.jpg" alt="img-10" />
+          <img class="image-item" src="public/<?= $value['Image4'] ?>" alt="img-1" />
+          <img class="image-item" src="public/<?= $value['Image2'] ?>" alt="img-2" />
+          <img class="image-item" src="public/<?= $value['Image5'] ?>" alt="img-3" />
+          <img class="image-item" src="public/<?= $value['Image6'] ?>" alt="img-4" />
+          <img class="image-item" src="public/<?= $value['Image'] ?>" alt="img-5" />
+          <img class="image-item" src="public/<?= $value['Image7'] ?>" alt="img-6" />
+          <img class="image-item" src="public/<?= $value['Image8'] ?>" alt="img-7" />
+          <img class="image-item" src="public/<?= $value['Image9'] ?>" alt="img-8" />
+          <img class="image-item" src="public/<?= $value['Image10'] ?>" alt="img-9" />
+          <img class="image-item" src="public/<?= $value['Image4'] ?>" alt="img-10" />
         </ul>
+        <?php 
+              break; // Thoát khỏi vòng lặp sau lần đầu thỏa mãn
+              }
+          }
+          ?>
         <button id="next-slide" class="slide-button material-symbols-rounded">
           chevron_right
         </button>
@@ -263,13 +330,23 @@
                     <a href="?act=detail&id=<?= $product['ProductID'] ?>"><?= $product['ProductName'] ?></a>
                   </p>
                   <!-- Giá sản phẩm -->
-                  <div class="price"><span><?= number_format($product['Price']) ?> VNĐ</span></div>
+                  <div class="price"><h5><span><?= number_format($product['Price']) ?> VNĐ</span></h5></div>
                   <!-- Đánh giá -->
                   <div class="rating" style="color: #FFD700;">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-half-alt"></i>
+                  <?php
+                      // Kiểm tra nếu không có giá trị averageRating, gán giá trị mặc định là 0
+                      $averageRating = isset($product['averageRating']) ? $product['averageRating'] : 0;
+
+                      for ($i = 1; $i <= 5; $i++) {
+                          if ($i <= floor($averageRating)) {
+                              echo '<i class="fa fa-star"></i>'; // Sao đầy
+                          } elseif ($i - $averageRating < 1) {
+                              echo '<i class="fa fa-star-half-alt"></i>'; // Sao nửa
+                          } else {
+                              echo '<i class="fa fa-star-o"></i>'; // Sao trống
+                          }
+                      }
+                      ?>
                   </div>
                 </div>
               </div>

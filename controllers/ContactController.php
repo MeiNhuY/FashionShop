@@ -23,7 +23,7 @@ class ContactController
             </script>";
             exit(); // Dừng chương trình nếu chưa đăng nhập
         }
-
+        $data_banner = $this->contact_model->getBanners(0,2);
         // Gọi model để xử lý gửi email
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $this->contact_model->gui($_POST);

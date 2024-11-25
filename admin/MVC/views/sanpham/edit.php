@@ -39,7 +39,15 @@
             <label for="">Hình ảnh </label>
             <img src="../public/<?=$data['Image']?>" height="200px" width="200px">
             <input type="file" class="form-control" id="" placeholder="" name="HinhAnh" value="<?=$data['Image']?>">
+        </div>  
+
+
+        <div class="form-group">
+            <label for="">Hình ảnh 2</label>
+            <img src="../public/<?=$data['Image2']?>" height="200px" width="200px">
+            <input type="file" class="form-control" id="" placeholder="" name="HinhAnh2" value="<?=$data['Image2']?>">
         </div>
+
         <div class="form-group">
             <label for="">Giới tính</label>
             <input type="text" class="form-control" id="" placeholder="" name="GioiTinh" value="<?=$data['Gender']?>">

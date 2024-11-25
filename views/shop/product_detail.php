@@ -68,36 +68,6 @@
           <p><b>Chất liệu: </b></label> <?= $data['Material'] ?></p>
           <p><b>Mô tả: </b><?=$data['Description']?></p>
       </div>
-      
-
-     
-      <!-- Chọn kích thước -->
-      <!-- <div class="product-option mb-3">
-      <h4><label for="">Kích thước: </label> </h4>
-      <div class="size-options">
-          <button class="size-btn">S</button>
-          <button class="size-btn">M</button>
-          <button class="size-btn">L</button>
-          <button class="size-btn">XL</button>
-        </div>
-      </div> -->
-
-      <!-- Chọn màu sắc -->
-      <!-- <div class="product-option mb-3">
-        <h4><label for="color">Màu sắc:</label></h4>
-        <div class="color-options">
-          <button class="color-btn" style="background-color: red;" title="Đỏ"></button>
-          <button class="color-btn" style="background-color: blue;" title="Xanh"></button>
-          <button class="color-btn" style="background-color: black;" title="Đen"></button>
-          <button class="color-btn" style="background-color: white; border: 1px solid #ccc;" title="Trắng"></button>
-        </div>
-      </div> -->
-
-      <!-- Chọn số lượng -->
-      <!-- <div class="product-option mb-3">
-      <h4><label for="quantity">Số lượng:</label></h4>
-        <input type="number" id="quantity" class="form-control quantity-input" min="1" value="1" style="width: 50%;">
-      </div> -->
 
       <a href="?act=cart&xuli=add&id=<?=$data['ProductID']?>"><button class="btn btn-primary mt-3">Thêm vào giỏ hàng</button>
       </a>
@@ -106,43 +76,86 @@
 </div>
 
 
+
+
 <!-- Mô tả sản phẩm -->
 
-<!-- Phần Bình luận và đánh giá sản phẩm -->
-<div class="product-review container my-5">
-    <h3><b>Bình luận và đánh giá</b></h3>
-    
-    <!-- Đánh giá sản phẩm -->
-    <div class="rating">
-        <label for="rating"><b>Đánh giá sản phẩm: </b></label>
-        <div class="stars">
-            <i class="fa fa-star" style="color: #FFD700;"></i>
-            <i class="fa fa-star" style="color: #FFD700;"></i>
-            <i class="fa fa-star" style="color: #FFD700;"></i>
-            <i class="fa fa-star-half-alt" style="color: #FFD700;"></i>
-            <i class="fa fa-star-half-alt" style="color: #FFD700;"></i>
-        </div>
-        <p><b>Đánh giá của bạn:</b></p>
-        <textarea class="form-control" rows="3" placeholder="Viết bình luận của bạn ở đây..."></textarea>
-        <button class="btn btn-primary mt-3">Gửi đánh giá</button>
+
+
+    <!-- Phần Bình luận và đánh giá sản phẩm -->
+    <div class="product-review container my-5">
+        <h3><b>Bình luận và đánh giá</b></h3>
+        
+        <!-- Đánh giá sản phẩm -->
+        
+        <div class="rating">
+        <form action="?act=detail&xuli=review&id=<?=$data['ProductID']?>" method="POST">
+            <label for="rating"><b>Đánh giá sản phẩm: </b></label>
+            <div class="stars">
+                <span class="star" data-value="1"><i class="fa fa-star"></i></span>
+                <span class="star" data-value="2"><i class="fa fa-star"></i></span>
+                <span class="star" data-value="3"><i class="fa fa-star"></i></span>
+                <span class="star" data-value="4"><i class="fa fa-star"></i></span>
+                <span class="star" data-value="5"><i class="fa fa-star"></i></span>
+            </div>
+            <input type="hidden" name="DanhGia" id="rating-value" required>
+            <p><b>Bình luận của bạn:</b></p>
+            <textarea name="BinhLuan" class="form-control" rows="3" placeholder="Viết bình luận của bạn ở đây..." required></textarea>
+            <input type="hidden" name="product_id" value="<?= htmlspecialchars($productId) ?>">
+            <button type="submit" class="btn btn-primary mt-3">Gửi đánh giá</button>
+        </form>
     </div>
 
+    <!-- Thêm script để xử lý việc chọn sao -->
+    <script>
+        const stars = document.querySelectorAll('.star');
+        const ratingValue = document.getElementById('rating-value');
+
+        stars.forEach(star => {
+            star.addEventListener('click', function() {
+                const value = this.getAttribute('data-value');
+                ratingValue.value = value; // Lưu giá trị vào input hidden
+                updateStars(value); // Cập nhật màu sắc sao
+            });
+        });
+
+        function updateStars(value) {
+            stars.forEach(star => {
+                const starValue = star.getAttribute('data-value');
+                if (starValue <= value) {
+                    star.querySelector('i').style.color = '#FFD700'; // Màu vàng cho sao đã chọn
+                } else {
+                    star.querySelector('i').style.color = '#ccc'; // Màu xám cho sao chưa chọn
+                }
+            });
+        }
+    </script>
+
+
+
     <!-- Danh sách các bình luận của khách hàng -->
+<!-- Danh sách các bình luận -->
     <div class="comments mt-5">
-        <div class="comment">
-        <div class="comment-header">
-            <img src="public/images/banner/style.jpg" alt="Avatar" class="avatar">
-            <p><b>Nguyễn Văn A</b> - 20/11/2024</p>
-        </div>
-            <div class="stars">
-                <i class="fa fa-star" style="color: #FFD700;"></i>
-                <i class="fa fa-star" style="color: #FFD700;"></i>
-                <i class="fa fa-star" style="color: #FFD700;"></i>
-                <i class="fa fa-star-half-alt" style="color: #FFD700;"></i>
-                <i class="fa fa-star-half-alt" style="color: #FFD700;"></i>
-            </div>
-            <p>Sản phẩm tuyệt vời, chất lượng cao và đúng mô tả!</p>
-        </div>
+        <h4><b>Các bình luận:</b></h4>
+        <?php if (!empty($reviews)): ?>
+            <?php foreach ($reviews as $review): ?>
+                <div class="comment mt-4">
+                    
+                    <div class="comment-header">
+                        <img src="public/images/banner/style.jpg" alt="Avatar" class="avatar">
+                        <p><b><?= htmlspecialchars($review['Name']) ?></b> - <?= date("d/m/Y", strtotime($review['CreatedAt'])) ?></p>
+                    </div>
+                    <div class="stars">
+                        <?php for ($i = 1; $i <= 5; $i++): ?>
+                            <i class="fa <?= $i <= $review['Rating'] ? 'fa-star' : 'fa-star-o' ?>" style="color: #FFD700;"></i>
+                        <?php endfor; ?>
+                    </div>
+                    <p><?= htmlspecialchars($review['Comment']) ?></p>
+                </div>
+            <?php endforeach; ?>
+        <?php else: ?>
+            <p>Chưa có bình luận nào.</p>
+        <?php endif; ?>
     </div>
 </div>
 
@@ -178,7 +191,7 @@
           <?php foreach ($data_lq as $row) { ?>
           <div class="item">
             <div class="product-item"> 
-              <a href="shop-single.html" class="product-img">
+              <a href="?act=shop" class="product-img">
                   <div class="label sale top-right"><div class='content'>Sale</div> </div>
                   <a href="?act=detail&id=<?= $row['ProductID'] ?>"><img src="public/<?= $row['Image'] ?>" alt="Image" class="img-fluid" style="border-radius:10px;"/></a>
                   <div class="overlay">

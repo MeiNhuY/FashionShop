@@ -41,12 +41,12 @@ class SanphamController
             $HinhAnh =  "images/products/" . basename($_FILES["HinhAnh"]["name"]);
         }
 
-        // $HinhAnh2 = "";
-        // $target_file = $target_dir . basename($_FILES["HinhAnh2"]["name"]); // link sẽ upload file lên
-        // $status_upload = move_uploaded_file($_FILES["HinhAnh2"]["tmp_name"], $target_file);
-        // if ($status_upload) { // nếu upload file không có lỗi 
-        //     $HinhAnh2 =  "/img/products/" . basename($_FILES["HinhAnh2"]["name"]);
-        // }
+        $HinhAnh2 = "";
+        $target_file = $target_dir . basename($_FILES["HinhAnh2"]["name"]); // link sẽ upload file lên
+        $status_upload = move_uploaded_file($_FILES["HinhAnh2"]["tmp_name"], $target_file);
+        if ($status_upload) { // nếu upload file không có lỗi 
+            $HinhAnh2 =  "images/products/" . basename($_FILES["HinhAnh2"]["name"]);
+        }
 
         // $HinhAnh3 = "";
         // $target_file = $target_dir . basename($_FILES["HinhAnh3"]["name"]); // link sẽ upload file lên
@@ -69,6 +69,7 @@ class SanphamController
             'Price' => $_POST['DonGia'],
             'Quantity' => $_POST['SoLuong'],
             'Image' => $HinhAnh,
+            'Image2' => $HinhAnh2,
             'Gender' => $_POST['GioiTinh'],
             'PromotionID' =>  $_POST['MaKM'],
             'Origin' => $_POST['XuatXu'],
@@ -116,6 +117,13 @@ class SanphamController
             $HinhAnh = "images/products/" .basename($_FILES["HinhAnh"]["name"]);
         }
 
+        $HinhAnh2 = "";
+        $target_file = $target_dir . basename($_FILES["HinhAnh2"]["name"]); // link sẽ upload file lên
+        $status_upload = move_uploaded_file($_FILES["HinhAnh2"]["tmp_name"], $target_file);
+        if ($status_upload) { // nếu upload file không có lỗi 
+            $HinhAnh2 =  "images/products/" . basename($_FILES["HinhAnh2"]["name"]);
+        }
+
         $TrangThai = 0;
         if (isset($_POST['TrangThai'])) {
             $TrangThai = $_POST['TrangThai'];
@@ -130,6 +138,7 @@ class SanphamController
             'Price' => $_POST['DonGia'],
             'Quantity' => $_POST['SoLuong'],
             'Image' => $HinhAnh,
+            'Image2' => $HinhAnh2,
             'Gender' => $_POST['GioiTinh'],
             'PromotionID' =>  $_POST['MaKM'],
             'Origin' => $_POST['XuatXu'],

@@ -3,9 +3,11 @@
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 </head>
 
+<?php foreach ($data_banner as  $value) { 
+	if($value['BannerID']==1) {?>
 	<div class="owl-carousel owl-single home-slider">
 		<div class="item">
-			<div class="untree_co-hero" style="background-image: url('public/images/banner/slider.jpg');">
+			<div class="untree_co-hero" style="background-image: url('public/<?= $value['Image'] ?>');">
 				<div class="container">		
 					<div class="row align-items-center">
 						<div class="col-lg-6">
@@ -25,7 +27,7 @@
 
 
 		<div class="item">
-			<div class="untree_co-hero" style="background-image: url('public/images/banner/balace.jpg');">
+			<div class="untree_co-hero" style="background-image: url('public/<?= $value['Image2'] ?>');">
 				<div class="container">
 					<div class="row align-items-center">
 						<div class="col-lg-6">
@@ -59,14 +61,16 @@
                 <div class="image-stack">
                     <div class="image-stack-item image-stack-item-top" data-jarallax-element="-50">
                         <div class="overlay"></div>
-                        <img src="public/images/page/maunam.jpg" alt="Image" class="img-fluid pic1">
+                        <img src="public/<?= $value['Image3'] ?>" alt="Image" class="img-fluid pic1">
                     </div>
                     <div class="image-stack-item image-stack-item-bottom">
                         <div class="overlay"></div>
-                        <img src="public/images/page/maunu.jpg" alt="Image" class="img-fluid pic2">
+                        <img src="public/<?= $value['Image4'] ?>" alt="Image" class="img-fluid pic2">
                     </div>
                 </div>
             </div> 
+
+		
 
             <div class="suite-contents" data-jarallax-element="50">
                 <h2 class="suite-title" >Thời trang Nam</h2>
@@ -84,7 +88,11 @@
     </div>
 </div>
 
-
+<?php 
+        break; // Thoát khỏi vòng lặp sau lần đầu thỏa mãn
+    }
+}
+?>
 
 	<!-- product1 -->
 	<div class="untree_co-section" id="khoangcach1">
@@ -116,16 +124,25 @@
 							</div>
 						</div>
 						</a>
-						<div class="rating" style="color: #FFD700;">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star-half-alt"></i> <!-- half-star for 4.5 rating, or use fa-star for full -->
-						</div>
-						<h3 class="title"><a href="#"><?=$product['ProductName']?></a></h3>
+						<p style="font-size: 20px;"><a href="#"><?=$product['ProductName']?></a></p>
 						<div class="price">
-							<span><?=$product['Price']?></span>
+							<span style="font-size: 20px;"><?=$product['Price']?>VND</span>
+						</div>
+						<div class="rating" style="color: #FFD700;">
+						<?php
+							// Kiểm tra nếu không có giá trị averageRating, gán giá trị mặc định là 0
+							$averageRating = isset($product['averageRating']) ? $product['averageRating'] : 0;
+
+							for ($i = 1; $i <= 5; $i++) {
+								if ($i <= floor($averageRating)) {
+									echo '<i class="fa fa-star"></i>'; // Sao đầy
+								} elseif ($i - $averageRating < 1) {
+									echo '<i class="fa fa-star-half-alt"></i>'; // Sao nửa
+								} else {
+									echo '<i class="fa fa-star-o"></i>'; // Sao trống
+								}
+							}
+                      ?>
 						</div>
 					</div>
 				</div>
@@ -186,13 +203,23 @@
 								<a href="?act=detail&id=<?= $product['ProductID'] ?>"><?= $product['ProductName'] ?></a>
 							</p>
 							<!-- Giá sản phẩm -->
-							<div class="price"><span><?= number_format($product['Price']) ?> VNĐ</span></div>
+							<div class="price"><span style="font-size: 20px;"><?= number_format($product['Price']) ?> VNĐ</span></div>
 							<!-- Đánh giá -->
 							<div class="rating" style="color: #FFD700;">
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star-half-alt"></i>
+							<?php
+									// Kiểm tra nếu không có giá trị averageRating, gán giá trị mặc định là 0
+									$averageRating = isset($product['averageRating']) ? $product['averageRating'] : 0;
+
+									for ($i = 1; $i <= 5; $i++) {
+										if ($i <= floor($averageRating)) {
+											echo '<i class="fa fa-star"></i>'; // Sao đầy
+										} elseif ($i - $averageRating < 1) {
+											echo '<i class="fa fa-star-half-alt"></i>'; // Sao nửa
+										} else {
+											echo '<i class="fa fa-star-o"></i>'; // Sao trống
+										}
+									}
+									?>
 							</div>
 						</div>
 					</div>

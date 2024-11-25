@@ -30,6 +30,17 @@ class HomeController
 
         $data_sp_best_seller= $this->home_model->getBestSellingProducts(6);
 
+        foreach ($data_sp_best_seller as &$product) {
+            $product['averageRating'] = $this->home_model->getAverageRating($product['ProductID']) ?: 0;
+        }
+
+        foreach ($data_sanpham1 as &$product) {
+            $product['averageRating'] = $this->home_model->getAverageRating($product['ProductID']) ?: 0;
+        }
+
+        
+
+
         require_once('views/index.php');
     }
 }

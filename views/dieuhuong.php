@@ -45,6 +45,9 @@ switch ($act) {
                 case 'account':
                     require_once("login/my-account.php");
                     break;
+                case 'update':
+                    require_once("login/forget_pass.php");
+                    break;
                 default:
                     require_once("login/login.php");
                     break;
@@ -57,6 +60,9 @@ switch ($act) {
                         break;
                     case 'account':
                         require_once("login/my-account.php");
+                        break;
+                    case 'update':
+                        require_once("login/forget_pass.php");
                         break;
                     default:
                         require_once("login/login.php");

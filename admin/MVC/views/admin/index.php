@@ -30,6 +30,9 @@
   <link type="text/css" rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
 
   <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+  <!-- chart -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 
 <body id="page-top">
@@ -105,6 +108,13 @@
                           break;
                       }
                       break;
+                    case 'danhgia':
+                        switch ($act) {
+                          case 'list':
+                            require_once('MVC/views/danhgia/list.php');
+                            break;
+                        }
+                        break;
                     case 'nguoidung':
                       switch ($act) {
                         case 'list':

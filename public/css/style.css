@@ -71,6 +71,10 @@ body {
   display: block;
 }
 
+/* search */
+
+
+
 /* cart */
 .plus-minus-container {
   display: flex;
@@ -128,6 +132,7 @@ body {
   border-right: 2px solid #ccc;
 }
 
+/* shop_danhmuc */
 
 
 /* Phần Bình luận và đánh giá */
@@ -240,19 +245,43 @@ button.btn-primary:hover {
 
 
     /* shop */
-.custom-pagination ul {
-  padding-left: 490px; /* Tăng khoảng cách từ lề trái cho cả danh sách */
-  padding-top: 40px;
-}
+    .table-pagination {
+      width: 100%;
+      table-layout: fixed; /* Đảm bảo các cột có độ rộng bằng nhau */
+    }
+    
+    .table-pagination .left-column,
+    .table-pagination .right-column {
+        width: 33%;
+        text-align: center; /* Căn giữa nội dung */
+    }
+    
+    .table-pagination .center-column {
+        width: 33%;
+        text-align: center; /* Căn giữa phân trang */
+    }
+    
+    .custom-pagination ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: inline-flex;
+        gap: 10px; /* Khoảng cách giữa các nút */
+    }
+    
+    .custom-pagination li a {
+        text-decoration: none;
+        padding: 0px 10px 10px 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        color: #333;
+        transition: 0.3s;
+    }
 
-.custom-pagination ul li {
-  margin-left: 10px; /* Tăng khoảng cách giữa các nút phân trang */
-}
-
-.custom-pagination ul li :hover {
-  background-color: #a35f0c; /* Màu nền khi hover */
-  cursor: pointer; /* Thêm hiệu ứng con trỏ */
-}
+    .custom-pagination ul li :hover {
+      background-color: #a35f0c; /* Màu nền khi hover */
+      cursor: pointer; /* Thêm hiệu ứng con trỏ */
+    }
 .img-fluid{
   width: 100%; /* Chiếm toàn bộ chiều rộng của cột */
   object-fit: cover; /* Cắt ảnh nếu cần để phù hợp khung */
@@ -1990,13 +2019,14 @@ room */
         margin-bottom: 10px;
         padding: 15px 10px; /* Tăng khoảng cách bên trong */
         border-radius: 8px; /* Bo tròn góc */
-        background-color: #ffffff; /* Màu nền cho li */
+        background-color: #cdbba1; /* Màu nền cho li */
         border: 1px solid #f8f9fa; /* Thêm viền nhẹ cho li */
         transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng chuyển màu nền và bóng đổ */
     }
     
     /* Định dạng cho liên kết */
     .categories li a {
+        font-size: 17px;
         color: #000000; /* Màu chữ */
         display: block;
         position: relative;
@@ -2007,7 +2037,7 @@ room */
     .categories li a span {
         position: absolute;
         right: 0;
-        font-size: 12px;
+        font-size: 17px;
         color: #ccc; /* Màu chữ cho span */
         top: 50%;
         transform: translateY(-50%); /* Định vị span chính xác ở giữa */
@@ -2020,18 +2050,20 @@ room */
     
     /* Hiệu ứng hover cho li */
     .categories li:hover {
-        background-color: #f8f9fa; /* Màu nền khi hover */
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ khi hover */
+        background-color: #fbfbfb; /* Màu nền khi hover */
+        box-shadow: 0 4px 15px rgba(70, 66, 61, 0.1); /* Thêm bóng đổ khi hover */
+
     }
     
     /* Hiệu ứng thêm cho li khi hover */
     .categories li:hover a {
+        font-size: 18px;
         color: #a35f0c; /* Thay đổi màu chữ của liên kết khi hover */
     }
     
 
 .custom-pagination ul li {
-  display: inline !important; }
+  display: flex !important; }
   .custom-pagination ul li a, .custom-pagination ul li span {
     display: inline-block;
     width: 40px;

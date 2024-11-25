@@ -74,6 +74,14 @@ class Model
         return $data;
     }
 
+    function getProductsByGender($start, $limit, $gender){
+        $query = "SELECT * FROM products WHERE Status = 1 AND Gender = $gender ORDER BY CreatedAt DESC LIMIT $start, $limit";
+
+        require("result.php");
+
+        return $data;
+    }
+
     // function getUserById($id){
 
     //     $query = "SELECT * FROM `users` WHERE `UserID` = '$id'";
