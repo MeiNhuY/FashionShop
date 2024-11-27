@@ -25,7 +25,7 @@
 
 <!-- Banner Phần Chi Tiết Sản Phẩm -->
 <?php if ($data != null) { ?>
-<div class="page-heading bg-light" style="background-image: url('public/images/banner/bannerCart.png'); background-size: cover; height: 400px;">
+<div class="page-heading bg-light" style="background-image: url('public/images/page/banner5.png'); background-size: cover; height: 400px;">
   <div class="container">
     <div class="row align-items-end text-center">
       <div class="col-lg-7 mx-auto">

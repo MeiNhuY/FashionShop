@@ -5,7 +5,7 @@
                 <div class="card">
                     <div class="row g-0">
                         <div class="col-md-6 col-lg-5 d-none d-md-block">
-                            <img src="public/images/page/mau1.jpg" alt="login form" class="img-fluid" style="height: 100%; object-fit: cover;" />
+                            <img src="public/images/page/dangnhap.png" alt="login form" class="img-fluid" style="height: 100%; object-fit: cover;" />
                         </div>
 
                         <div class="col-md-6 col-lg-7 d-flex align-items-center">
